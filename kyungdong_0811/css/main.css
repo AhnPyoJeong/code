@@ -1,0 +1,71 @@
+@import url(default.css);
+
+
+.business {
+    margin: 0 0 80px 0;
+}
+.business h2 {
+    padding: 80px 0 20px 0;
+    text-align: center;
+    font-size: 45px;
+    font-family: 700;
+}
+.business ul li {
+    float: left;
+    width: 290px;
+    margin: 0 40px 0 0;
+}
+.business ul li:last-child {
+    margin-right: 0;
+}
+.business ul li strong {
+    display: block;
+    margin: 7px 0 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.business ul li p {
+    letter-spacing: -0.06em;
+}
+
+
+.tech {
+    height: 762px;
+    margin: 168px 0 0 0;
+    background-image: url(../images/tech_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tech h2 {
+    padding: 80px 0 20px 0;
+    text-align: center;
+    font-size: 45px;
+    font-family: 700;
+}
+.tech ul li {
+    margin: 0 40px 0 0;
+    color: #ffffff;
+    text-align: center;
+}
+.tech ul li:last-child {
+    margin-right: 0;
+}
+.tech ul li.new {
+    float: left;
+    background-image: url(../images/tech01.png);
+    width: 620px;
+    height: 514px;
+}
+.tech ul li.system {
+    float: left;
+    background-image: url(../images/tech02.png);
+    width: 620px;
+    height: 514px;
+}
+.tech ul li strong {
+    display: block;
+    margin: 196px 0 10px 0;
+    font-size: 35px;
+    font-weight: 700;
+}
