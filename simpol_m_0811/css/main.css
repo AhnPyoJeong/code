@@ -1,0 +1,87 @@
+/* main.css에 default.css 호출(삽입) */
+@import url(default.css);
+
+
+.category .tit {
+    color: #1d1d1d;
+    margin: 0 0 35px 0;
+}
+.category .tit strong {
+    display: block;
+    margin: 135px 0 0 0;
+    font-weight: 700;
+}
+.category .tit h2 {
+    line-height: 1.1; /* "strong" 과 "h2" 사이의 행간 때문에 발생한 여백 삭제 */
+    font-size: 50px;
+    font-weight: 300;
+}
+.category ul li {
+    float: left;
+    width: 240px;
+    margin: 0 20px 0 0;
+}
+.category ul li:last-child { /* "li" 중에서 마지막 "li" 를 선택하는 값 */
+    margin-right: 0;
+}
+.category ul li a {
+    display: block;
+}
+.category ul li a strong {
+    display: block;
+    margin: 10px 0 0 0;
+    font-weight: 400;
+}
+@media screen and (max-width:450px) {
+    .category .tit strong {
+        margin: 71px 0 0 0;
+    }
+    .category .tit h2 {
+        margin: 0 0 26px 0;
+        font-size: 30px;
+    }
+    .category ul li {
+        width: 48%;
+        margin: 0 4% 0 0;
+    }
+    .category ul li:nth-child(2), .category ul li:nth-child(4) {
+        margin-right: 0;
+    }
+    .category ul li:last-child { /* "li" 중에서 마지막 "li" 를 선택하는 값 */
+        display: none;
+    }
+    .category ul li a img {
+        width: 100%;
+    }
+    .category ul li a strong {
+        margin: 10px 0 14px 0;
+    }
+} /* "media" 종료 */
+
+
+.network {
+    height: 505px;
+    margin: 148px 0 0 0;
+    background-image: url(../images/network_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+.network h2 {
+    padding: 120px 0 0 0;
+    line-height: 1.25;
+    font-size: 40px;
+    font-weight: 400;
+}
+.network p {
+    margin: 20px 0 40px 0;
+}
+.network a { /* "a" 태그는 일반적으로 "display: block" 적용하고 시작, 범위가 이상하면 "inline-block" 으로 수정해볼 것 */
+    display: block;
+    float: left; /* "a" 태그 사이의 여백 없이 나란히 배치하기 위해 사용함 */
+    padding: 10px 30px;
+    margin: 0 5px 0 0;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 4px;
+}
