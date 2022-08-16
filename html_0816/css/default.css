@@ -49,5 +49,6 @@ html, body {
             margin: 0 20px;
         }
 }
+
 .clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
 .clearfix{display:block;}
