@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
 
 /* 모든 태그에 브라우저에서 주는 여백을 삭제 */
-body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, li, address, strong, span, em, p {
+body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, li, address, strong, span, em, p, i {
     padding: 0;
     margin: 0;
     box-sizing: border-box; /* "width / height" 와 "padding" 이 결합되면 사이즈가 늘어나는데 이걸 막기 위한 스타일
@@ -21,6 +21,17 @@ em, address {
 /* 항목 앞에 동그라미 삭제 */
 ul, li {
     list-style: none;
+}
+button {
+    background-color: transparent; /* 투명 */
+    border: 0;
+    color: inherit;
+    font-family: inherit; /* 서체 상속 ("button" 태그는 "form" 태그여서 "body" 에서 지정한 서체를 상속받지 않기 때문) */
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    cursor: pointer; /* 마우스 오버 시 손바닥 모양 */
 }
 html, body {
     min-width: 1280px;   /* 브라우저에 가로 스크롤이 생겼을 때, 배경이 짤리지 않기 위해 최소 넓이를 지정함 */
