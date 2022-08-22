@@ -477,7 +477,7 @@ footer .fnav li.privacy {
 }
 footer .fnav li::after {
     position: absolute;
-    right: -3px;
+    right: -2px;
     top: 6px;
     width: 1px;
     height: 10px;
@@ -499,4 +499,41 @@ footer .finfo {
 }
 footer .copyright {
     margin: 0 0 71px 0;
+}
+@media screen and (max-width:640px) {
+    footer {
+        padding: 30px 0 87px 0;
+    }
+    footer .family {
+        float: none;
+    }
+    footer .family button { /* "button" 태그는 기본적으로 높이를 주면 글자가 가운데 세로 정렬을 함.
+                                "a" 태그였다면 "padding" 이나 "line-height" 로 세로 정렬값을 별도로 주어야 함. */
+        width: 150px;
+        height: 33px;
+        padding: 0 14px;
+    }
+    footer .inner {
+        float: none;
+    }
+    footer .fnav {
+        margin: 30px 0 0 0;
+    }
+    footer .fnav li::after {
+        right: -2px;
+        height: 8px;
+    }
+    footer .fnav li:last-child::after {
+        display: none;
+    }
+    footer .fnav li a {
+        display: block;
+        padding: 0 14px;
+    }
+    footer .finfo {
+        margin: 30px 0 10px 0;
+    }
+    footer .copyright {
+        margin: 0;
+    }
 }
