@@ -10,7 +10,7 @@
     <title>을유문화사</title>
 </head>
 <body>
-    <div class="wrap"> <!-- 홈페이지 전체를 감싸는 요소 -->
+    <div id="wrap"> <!-- 홈페이지 전체를 감싸는 요소 -->
         <header>
             <div class="wrapper">
                 <h1><a href="#">을유문화사 로고</a></h1>
@@ -27,15 +27,15 @@
                 </nav>
                 <div class="tnb">
                     <ul>
-                        <li>
+                        <li class="mypage">
                             <button>
-                                <span>마이 페이지</span>
+                                <span>회원 서비스 열기</span>
                                 <i class="material-symbols-rounded">person_filled</i>
                             </button>
                         </li>
-                        <li>
+                        <li class="search">
                             <button>
-                                <span>검색</span>
+                                <span>검색 열기</span>
                                 <i class="material-symbols-rounded">search</i>
                             </button>
                         </li>
@@ -57,12 +57,94 @@
         </section>
         <section class="book">
             <div class="wrapper">
-
+                <div class="tit clearfix">
+                    <h2>책</h2>
+                    <p>을유문화사에서<br />
+                        발간한 도서목록입니다.</p>
+                    <div class="btn">
+                        <button>
+                            <span>이전 책 보기</span>
+                            <i class="material-symbols-rounded">chevron_left</i>
+                        </button>
+                        <button>
+                            <span>다음 책 보기</span>
+                            <i class="material-symbols-rounded">chevron_right</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="list">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#">
+                                <img src="images/book01.png" alt="현대 예술의 거장 에릭 로메르 표지" />
+                                <strong class="subject">현대 예술의 거장 에릭 로메르</strong>
+                                <span class="writer">앙투안 드 베크, 노엘 에르프, 임세은</span>
+                                <span class="cnt">시네필의 서재에 없어서는 안 될 에릭 로메르를 다룬 첫 전기, ‘누벨바그’라는 격랑의 진정한 생존자 에릭 로메르의 아마추어 정신을</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/book02.png" alt="을유사상고전 고문진보 후집 표지" />
+                                <strong class="subject">을유사상고전 고문진보 후집</strong>
+                                <span class="writer">황견, 이장우, 우재호, 박세욱</span>
+                                <span class="cnt">도연명, 이백, 백거이, 왕희지, 소식 등 대가들의 명문장이 한자리에 ‘옛글 가운데서 참된 보물’만을 모은 고전 중의 고전 우리나라에서</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/book03.png" alt="의지와 표상으로서의 세계 표지" />
+                                <strong class="subject">의지와 표상으로서의 세계</strong>
+                                <span class="writer">아르투어 쇼펜하우어, 홍성광</span>
+                                <span class="cnt">아르투어 쇼펜하우어가 가진 절대적 영향력의 근원 의지를 초월했을 때, 삶의 고통은 무無가 된다. 19세기 서양 철학의 정수, 이제는 완결판</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/book04.png" alt="아다지에토 표지" />
+                                <strong class="subject">아다지에토</strong>
+                                <span class="writer">유대얼</span>
+                                <span class="cnt">악보에서 ‘천천히, 매우 느리게’를 뜻하는 아다지오(adagio)보다 조금 빠르게 연주하라는 의미. 또한 말러 교향곡 제5번 4악장의 대명사</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/book05.png" alt="그림 속 소녀의 웃음이 내 마음에 표지" />
+                                <strong class="subject">그림 속 소녀의 웃음이 내 마음에</strong>
+                                <span class="writer">선동기</span>
+                                <span class="cnt">“누구나 가슴속에 명화 하나쯤은 간직하는 거 아닌가요?” 혹시 이 말을 듣고 떠오르는 그림이 누구나 흔히 알 만한 유명 화가의 작품이라</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/book06.png" alt="헤세가 사랑한 순간들 표지" />
+                                <strong class="subject">헤세가 사랑한 순간들</strong>
+                                <span class="writer">헤르만 헤세, 배수아</span>
+                                <span class="cnt">오래전 그땐 제대로 볼 수 없었던, 소설 뒤의 헤세를 만나다. 처음 만났을 때와는 다른 느낌의 때로는 삐딱하고, 때로는 인간미 넘치고,</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="interview">
             <div class="wrapper">
-
+                <h2>을유인터뷰</h2>
+                <div class="colgroup">
+                    <div class="pic_box">
+                        <img src="images/interview01.png" alt="서양고전학자 김헌 인터뷰 사진"/>
+                    </div>
+                    <div class="cnt_box">
+                        <div class="inner">
+                            <h3>『김헌의 그리스 로마 신화』 저자<br />
+                                서양고전학자 김헌</h3>
+                            <p>개인적으로도 그리스·로마 신화는 참 재미있습니다. 황당무계하고, 기발하고, 상상력이 풍부한 이야기들이 많아서 복잡하고 힘들 때 읽으면 그 시간을 재미있게 보낼 수 있습니다. 또 단순히 재미로만 그치는 것이 아니라, 이야기의 의미를 잘 새기다 보면 내가 부딪히는 개인적인 문제나 사회 문제에 대한 적절한 답을 찾는 경우가 있습니다.</p>
+                            <a href="#">
+                                <span>자세히 보기</span>
+                                <i class="material-symbols-rounded">chevron_right</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="news">

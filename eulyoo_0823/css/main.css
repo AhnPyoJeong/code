@@ -12,7 +12,7 @@ header { /* "body" 를 기준으로 정렬 */
 }
 header h1 {
     float: left;
-    margin: 34px 267px 0 0;
+    margin: 36px 267px 0 0;
 }
 header h1 a {
     display: block;
@@ -24,9 +24,80 @@ header h1 a {
 }
 header .gnb {
     float: left;
+    margin: 24px 0 0 0;
+}
+header .gnb button {
+    display: none; /* 모바일에서만 표시되는 버튼 (메뉴 여는 버튼) */
+}
+header .gnb ul li {
+    float: left;
+}
+header .gnb ul li a {
+    display: block;
+    padding: 10px 30px;
+    font-size: 22px;
 }
 header .tnb {
     float: right;
+    margin: 23px 0 0 0;
+}
+header .tnb ul li {
+    float: left;
+}
+header .tnb ul li button span {
+    display: none; /* 설명 문구 숨김 */
+}
+header .tnb ul li button i {
+    padding: 10px;
+    font-size: 34px;
+    font-weight: 300;
+}
+@media screen and (max-width:640px) {
+    header { /* "body" 를 기준으로 정렬 */
+        height: 45px;
+    }
+    header h1 {
+        margin: 13px 0 0 0;
+    }
+    header h1 a {
+        width: 114px;
+        height: 19px;
+    }
+    header .gnb {
+        float: right;
+        margin: 11px 0 0 8px;
+    }
+    /*
+        h1 / gnb / tnb
+        코딩 순서가 위와 같을 때
+        모든 요소에 "float: right" 를 주면
+        화면에 나타나는 순서는
+        tnb / gnb / h1 이 된다.
+        --> "float: right" 를 먼저 선언한 요소가 오른쪽 자리를 선점
+    */
+    header .gnb button {
+        display: block; /* 모바일에서만 표시되는 버튼 (메뉴 여는 버튼) */
+    }
+    header .gnb button span {
+        display: none;
+    }
+    header .gnb button i {
+        font-size: 24px;
+        font-weight: 300;
+    }
+    header .gnb ul {
+        display: none;
+    }
+    header .tnb {
+        margin: 11px 0 0 0;
+    }
+    header .tnb ul li.mypage {
+        display: none;
+    }
+    header .tnb ul li button i {
+        padding: 0;
+        font-size: 24px;
+    }
 }
 
 
@@ -68,5 +139,263 @@ header .tnb {
     }
     .visual .txt_mobile { /* 모바일에서만 보이는 글자이기 때문에 숨김 처리 */
         display: block;
+    }
+}
+
+
+.book {
+    margin: 113px 0 140px 0;
+}
+.book .tit {
+    float: left;
+}
+.book .tit h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+}
+.book .tit p {
+    margin: 17px 0 27px 0;
+}
+.book .tit .btn button {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+    border: 1px solid #666;
+}
+.book .tit .btn button span {
+    display: none;
+}
+.book .tit .btn button i {
+    margin: 8px 0 0 0px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #666;
+}
+/*
+    컨텐츠 영역 밖으로 나가는 리스트 - 스크롤 (모바일)
+    1. "ul" 을 감싸는 "div" 가 있어야함.
+    2. "ul" 을 감싸는 "div" 는 "overflow: auto" 값을 가지고 있어야함. (모바일에서만)
+    3. 넓이와 높이를 입력해주어야함.
+    4. "ul" 은 "li" 전체의 넓이를 가져야함. / 모든 "li" 는 한줄로 들어가야한다는 의미
+    5. "ul" 은 "position: absolute" 값을 가지고 있어야함. (모바일에서만) / 좌우 슬라이드는 "absolute" 만 가능
+*/
+.book .list {
+    margin-left: 330px;
+    /* ↑ 왼쪽 요소는 "float: left" 를 줌
+        오른쪽 요소는 "margin-left" 로 왼쪽 요소의 넓이만큼을 여백으로 준다.
+        오른쪽 요소는 "block" 이다.
+        오른쪽 요소가 왼쪽 요소를 인지하지 못하고 위로 올라오는 것.    
+    */
+}
+.book .list ul {
+    width: 1980px; /* 모든 "li" 가 한줄로 들어갈 수 있는 넓이 */
+}
+.book .list ul li {
+    float: left;
+    width: 290px;
+    margin-right: 40px;
+}
+.book .list ul li a {
+    display: block;
+}
+.book .list ul li a img {
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+}
+.book .list ul li a .subject {
+    display: block;
+    margin: 9px 0 0 0;
+    font-size: 20px;
+    font-weight: 400;
+    /* ↓ 무조건 1줄로 표시 (넓이가 있어야 하고 "block" 요소여야함.) */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.book .list ul li a .writer {
+    display: block;
+    margin: 5px 0 24px 0;
+    color: #666;
+}
+.book .list ul li a .cnt {
+    display: block;
+    /* ↓ 여러 줄로 표시 */
+    line-height: 1.5;
+    height: 4.5em; /* 행간 * 원하는 줄 수 */
+    overflow: hidden;
+}
+@media screen and (max-width:640px) {
+    .book {
+        margin: 26px 0;
+    }
+    .book .tit {
+        float: none;
+    }
+    .book .tit h2 {
+        float: left;
+        font-size: 25px;
+    }
+    .book .tit p {
+        display: none;
+    }
+    .book .tit .btn {
+        float: right;
+        margin: 7px 0 0 0;
+    }
+    .book .tit .btn button {
+        width: 24px;
+        height: 24px;
+        margin-right: 3px;
+    }
+    .book .tit .btn button i {
+        margin: 4px 0 0 0;
+        font-size: 14px;
+        font-weight: 300;
+        color: #666;
+    }
+    .book .list {
+        overflow-x: auto;
+        overflow-y: hidden; /* 가로 스크롤바가 생성되면 가로 스크롤바만큼 높이가 줄어서 세로 스크롤바가 생성되기 때문에 "y" 값에 "hidden" 을 주어 방지 */
+        width: calc(100% + 20px); /* "calc" 는 넓이나 높이의 수치를 계산할 때 사용, 대부분 "%" 와 "px" 를 혼용할 때 사용, "list" 와 "100%" 를 주면 "wrapper" 가 좌우에 여백 "20px" 을 준 안쪽으로 넓이가 생성된다. 그런데 오른쪽만 콘텐츠 영역 밖으로 더 나가고자하면 "calc(100% + 20px)" */
+        padding: 30px 0;
+        margin-left: 0;
+    }
+    .book .list ul {
+        width: 1020px;
+    }
+    .book .list ul li {
+        width: 150px;
+        margin-right: 20px;
+    }
+    .book .list ul li a img {
+        width: 100%;
+    }
+    .book .list ul li a .subject {
+        margin: 10px 0 10px 0;
+        font-size: 15px;
+        font-weight: 400;
+        white-space: normal;
+        line-height: 1.5;
+        height: 3em;
+        text-overflow: ellipsis;
+    }
+    .book .list ul li a .writer {
+        display: block;
+        margin: 0;
+        color: #666;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .book .list ul li a .cnt {
+        display: none;
+        font-size: 13px;
+    }
+}
+
+
+.interview {
+    padding: 0 0 143px 0;
+    background-color: #F8F5F0;
+}
+.interview h2 {
+    padding: 79px 0 56px 0;
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+}
+.interview .colgroup {
+    position: relative; /* "pic_box" 의 정렬 기준점 */
+}
+.interview .pic_box {
+    position: absolute;
+    left: 0;
+    top: 48px;
+}
+.interview .cnt_box {
+    height: 382px;
+    margin: 0 0 0 70px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.interview .cnt_box .inner {
+    padding: 48px 55px 0 610px;
+}
+.interview .cnt_box h3 {
+    font-size: 30px;
+    font-weight: 400;
+}
+.interview .cnt_box p {
+    padding: 23px 0 31px 0;
+}
+.interview .cnt_box a {
+    display: block;
+    width: 160px;
+    height: 40px;
+    padding: 0 2px 0 12px;
+    line-height: 40px; /* 버튼 디자인에서 글자를 위아래 중앙에 배치하기 위해서는 행간을 높이값과 동일하게 주는 것이 가장 쉬운 방법이다. */
+    white-space: nowrap; /* 행간을 높이값과 동일하게 주었을 때, 글자가 길어서 2줄로 변하는 것을 방지하기위해 주는 값 */
+    border: 1px solid #666;
+}
+.interview .cnt_box a span {
+    float: left;
+}
+.interview .cnt_box a i {
+    float: right;
+    margin: 7px 0 0 0;
+    color: #666;
+    font-weight: 300;
+}
+@media screen and (max-width:640px) {
+    .interview {
+        padding: 0 0 30px 0;
+    }
+    .interview h2 {
+        padding: 30px 0;
+        font-size: 25px;
+    }
+    .interview .pic_box {
+        position: relative;
+        left: auto;
+        top: auto;
+    }
+    .interview .pic_box img {
+        width: 100%;
+    }
+    .interview .cnt_box {
+        height: auto;
+        margin: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .interview .cnt_box .inner {
+        padding: 0;
+    }
+    .interview .cnt_box h3 {
+        margin: 20px 0;
+        font-size: 20px;
+    }
+    .interview .cnt_box p {
+        display: none;
+        padding: 0;
+    }
+    .interview .cnt_box a {
+        display: block;
+        width: 160px;
+        height: 40px;
+        padding: 0 2px 0 10px;
+        line-height: 40px; /* 버튼 디자인에서 글자를 위아래 중앙에 배치하기 위해서는 행간을 높이값과 동일하게 주는 것이 가장 쉬운 방법이다. */
+        white-space: nowrap; /* 행간을 높이값과 동일하게 주었을 때, 글자가 길어서 2줄로 변하는 것을 방지하기위해 주는 값 */
+        border: 1px solid #666;
+    }
+    .interview .cnt_box a span {
+        float: left;
+    }
+    .interview .cnt_box a i {
+        float: right;
+        margin: 10px 1px 0 0;
+        font-size: 18px;
     }
 }
