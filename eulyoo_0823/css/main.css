@@ -399,3 +399,190 @@ header .tnb ul li button i {
         font-size: 18px;
     }
 }
+
+
+.news {
+    margin: 126px 0 155px 0;
+}
+.news .tit h2 {
+    float: left;
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+}
+.news .tit .btn {
+    float: right;
+    margin: 27px 0 0 0;
+}
+.news .tit .btn button {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    border: 1px solid #666;
+}
+.news .tit .btn button:last-child {
+    margin-right: 0;
+}
+.news .tit .btn button span {
+    display: none;
+}
+.news .tit .btn button i {
+    margin: 8px 0 0 0px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #666;
+}
+.news .list ul {
+    width: 2640px;
+    margin: 31px 0 0 -330px;
+}
+.news .list ul li {
+    float: left;
+    width: 290px;
+    margin: 0 40px 0 0;
+}
+.news .list ul li a {
+    display: block;
+}
+.news .list ul li a img {
+    width: 100%;
+}
+.news .list ul li a .subject {
+    display: block;
+    margin: 19px 0 11px 0;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+    height: 3em;
+    overflow: hidden;
+}
+.news .list ul li a .cnt {
+    display: block;
+    line-height: 1.5;
+    max-height: 4.5em;
+    overflow: hidden;
+}
+@media screen and (max-width:640px) {
+    .news {
+        margin: 24px 0 0 0;
+    }
+    .news .tit h2 {
+        font-size: 25px;
+    }
+    .news .tit .btn {
+        margin: 0;
+    }
+    .news .tit .btn button {
+        width: 24px;
+        height: 24px;
+        margin: 7px 3px 0 0;
+    }
+    .news .tit .btn button i {
+        margin: 4px 0 0 0;
+        font-size: 14px;
+        font-weight: 300;
+        color: #666;
+    }
+    .news .list {
+        overflow-y: hidden;
+        overflow-x: auto;
+        width: calc(100% + 40px);
+        padding: 30px 0 30px 0;
+        margin: 0 0 0 -20px;
+    }
+    .news .list ul {
+        width: 1760px;
+        margin: 0 0 0 20px;
+    }
+    .news .list ul li {
+        width: 200px;
+        margin: 0 20px 0 0;
+    }
+    .news .list ul li a .subject {
+        margin: 10px 0 10px 0;
+        font-size: 15px;
+    }
+}
+
+
+footer {
+    padding: 79px 0 67px 0;
+    background-color: #756752;
+    color: rgba(255,255,255,0.8)
+}
+footer .flogo {
+    float: left;
+}
+footer .flogo img {
+    width: 180px;
+    opacity: 0.8;
+}
+footer .fnav {
+    float: left;
+    margin: 0 121px 0 98px;
+}
+footer .fnav ul li a {
+    display: block;
+    line-height: 25px;
+}
+footer .sns {
+    float: right;
+    font-size: 0;       /* 글자 없애기 */
+    line-height: 0;     /* 글자 없애기 */
+}
+footer .sns a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+footer .sns a.insta {
+    background: url(../images/sns_insta.svg) no-repeat center center;
+}
+footer .sns a.facebook {
+    background: url(../images/sns_facebook.svg) no-repeat center center;
+}
+footer .sns a.naver {
+    background: url(../images/sns_naver.svg) no-repeat center center;
+}
+footer .copyright {
+    float: left;
+    line-height: 25px;
+}
+@media screen and (max-width:640px) {
+    footer {
+        padding: 30px 0 60px 0;
+        text-align: center;
+    }
+    footer .flogo {
+        float: none;
+    }
+    footer .flogo img {
+        width: 180px;
+    }
+    footer .fnav {
+        float: none;
+        margin: 30px 0 30px 0;
+    }
+    footer .sns {
+        float: none;
+    }
+    footer .sns a {
+        width: 25px;
+        height: 25px;
+    }
+    footer .sns a.insta {
+        background-size: 19px auto; /* "background-size" : "%" 로 주면 "background" 가 들어간 영역의 넓이의 "%" 로 적용됨. 원래 배경 이미지의 비율로 계산 X */
+    }
+    footer .sns a.facebook {
+        background-size: 9px auto;
+    }
+    footer .sns a.naver {
+        background-size: 14px auto;
+    }
+    footer .copyright {
+        float: none;
+        margin: 31px 0 0 0;
+        line-height: 20px;
+    }
+}
