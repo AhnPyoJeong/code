@@ -27,7 +27,7 @@ $(document).ready(function(){
 
     /* ↓ 스크롤 할 때마다 실행 (스크롤 안하면 실행 X) */
     $(window).scroll(function(){
-        headerFixed // 함수의 실행
+        headerFixed() // 함수의 실행
     })
 
     function headerFixed(){ // 함수의 선언
