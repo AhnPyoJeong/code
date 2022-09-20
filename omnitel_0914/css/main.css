@@ -1,0 +1,117 @@
+@import url('default.css');
+
+
+.visual {
+    height: 850px;
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: #fff;
+}
+.visual h2 {
+    padding: 298px 0 0 0;
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 1;
+}
+.visual h2 span {
+    font-weight: 700;
+}
+
+.works {
+    height: 245px;
+    background-color: #F39800;
+    text-align: center;
+    color: #fff;
+}
+.works .inner h2 {
+    padding: 52px 0 10px 0;
+    font-size: 50px;
+}
+
+
+.biz {
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.2;
+}
+.biz ul li {
+    float: left;
+    width: 33.33%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+}
+.biz ul li a {
+    display: block;
+    height: 300px;
+}
+.biz ul li.mkt {
+    background-image: url(../images/img01.png);
+}
+.biz ul li.com {
+    background-image: url(../images/img02.png);
+}
+.biz ul li.over {
+    background-image: url(../images/img03.png);
+}
+.biz ul li a i {
+    margin: 82px 0 14px 0;
+    font-size: 50px;
+    font-weight: 300;
+}
+.biz ul li a p {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.news {
+    margin: 52px 0 97px 0;
+}
+.news h2 {
+    margin: 0 0 36px 0;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.news ul li {
+    float: left;
+    width: 400px;
+    margin: 0 40px 0 0;
+}
+.news ul li strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    height: 3em;
+    overflow: hidden;
+}
+.news ul li .date {
+    display: block;
+    padding: 10px 0 10px 0;
+    color: #666;
+}
+.news ul li p {
+    display: block;
+    line-height: 1.5;
+    height: 10.5em;
+    overflow: hidden;
+}
+
+.news ul li:last-child {
+    margin-right: 0;
+}
+
+
+footer {
+    padding: 61px 0 90px 0;
+    background-color: #3d3d3d;
+    color: rgba(255,255,255,0.8)
+}
+footer .inner {
+    position: relative;
+}
+footer .finfo {
+    margin: 0 0 17px 0;
+}

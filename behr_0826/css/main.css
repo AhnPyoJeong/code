@@ -398,9 +398,9 @@ header.open nav > ul > li > ul { /* 2차메뉴 */
         font-size: 14px;
     }
 }/* brand media 종료 */
-.service {
+/* .service {
     display: none;
-}
+} */
 .service ul li {
     float: left;
     width: 33.33%;
