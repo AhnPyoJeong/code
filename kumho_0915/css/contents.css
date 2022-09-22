@@ -1,0 +1,100 @@
+/* 각각의 콘텐츠 페이지의 스타일을 저장 */
+
+
+/* 회사소개 > ceo 인사말 */
+.cnt_ceo {
+    position: relative;
+}
+/*
+    이미지가 콘텐츠 영역 안에 있지만 일부가 밖으로 나가는 디자인
+    콘텐츠 영역 밖에 나간 이미지는 브라우저 사이즈가 줄어들었을 때 짤려도 상관 없어야함
+    position:absolute; left/right:50%; >> 이런 식으로 가운데를 기준으로 정렬해서 배치함
+        --> 브라우저 사이즈가 변경되어도 변하지 않는 위치는 가운데이기 때문
+        --> 왼쪽에 이미지가 있으면 right:50%; margin-right:여백;
+            오른쪽에 이미지가 있느면 left:50%; margin-left:여백;
+*/
+.cnt_ceo .ceo_pic {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    margin-right: 180px;
+}
+.cnt_ceo .inner {
+    margin: 0 0 0 600px;
+}
+.cnt_ceo .tit {
+    margin: 0 0 35px 0;
+    font-size: 30px;
+}
+.cnt_ceo .tit strong {
+    color: #ed1c24;
+    font-weight: 400;
+}
+.cnt_ceo .sign {
+    margin: 35px 0 0 0;
+    text-align: right;
+}
+@media screen and (max-width:640px) {
+    .cnt_ceo .ceo_pic {
+        display: none;
+    }
+    .cnt_ceo .inner {
+        margin: 0;
+    }
+    .cnt_ceo .tit {
+        margin: 0 0 20px 0;
+        font-size: 20px;
+    }
+    .cnt_ceo .sign {
+        margin: 20px 0 0 0;
+    }
+} /* cnt_ceo 반응형 종료 */
+
+
+/* 회사소개 > 연혁 */
+.cnt_historyN .tit {
+    font-size: 30px;
+    text-align: center;
+}
+.cnt_historyN .tit span {
+    display: block; /* pc에서만 줄바꿈 */
+}
+.cnt_historyN .history_wrap {
+    position: relative;
+    margin: 80px 0 0 0;
+}
+.cnt_historyN .history_wrap::before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ed1c24;
+    content: "";
+}
+.cnt_historyN .inner {
+    position: relative; /* year_tit 정렬의 기준 */
+}
+.cnt_historyN .year_tit {
+    position: absolute;
+    top: 0;
+}
+.cnt_historyN .year_tit.left {
+    left: 120px;
+}
+.cnt_historyN .year_tit.right {
+    right: 120px;
+}
+.cnt_historyN .year_tit .bg {
+    width: 480px;
+    height: 250px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cnt_historyN .year_tit .bg.year2000 {
+    background-image: url(../images/contents/historyN_img02.png);
+}
+.cnt_historyN .year_tit .bg.year2010 {
+    background-image: url(../images/contents/historyN_img01.png);
+}
