@@ -1,0 +1,226 @@
+@import url('default.css');
+@import url('common.css');
+
+
+.intro {
+    color: #FFF;
+}
+.intro .list ul {
+    display: flex;
+}
+.intro .list ul span {
+    font-weight: 700;
+}
+.intro .list ul li {
+    width: 50%;
+}
+.intro .list ul .left {
+    background-image: url(../images/introduce_bg01.jpg);
+    height: 800px;
+}
+.intro .list ul .right {
+    background-image: url(../images/introduce_bg02.jpg);
+    height: 800px;
+}
+.intro .list ul .left .col_box01 {
+    float: right;
+    margin: 331px 0 0 0;
+    background-color: #023665;
+    opacity: 0.9;
+    width: 500px;
+    height: 300px;
+    text-align: right;
+}
+.intro .list ul .left .col_box01 .text01 {
+    padding: 59px 60px 0 0;
+}
+.intro .list ul .left .col_box01 strong {
+    display: block;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.intro .list ul .left .col_box01 p {
+    margin: 10px 0 52px 0;
+    font-weight: 400;
+}
+.intro .list ul .right .col_box02 {
+    margin: 171px 0 0 0;
+    background-color: #B70002;
+    opacity: 0.9;
+    width: 500px;
+    height: 300px;
+    text-align: left;
+}
+.intro .list ul .right .col_box02 .text02 {
+    padding: 61px 0 0 60px;
+}
+.intro .list ul .right .col_box02 strong {
+    display: block;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.intro .list ul .right .col_box02 p {
+    margin: 10px 0 52px 0;
+    font-weight: 400;
+}
+@media screen and (max-width:640px) {
+    .intro .list ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro .list ul li {
+        width: auto;
+        
+    }
+    .intro .list ul .left {
+        background-image: url(../images/introduce_bg01.jpg);
+        height: 240px;
+    }
+    .intro .list ul .right {
+        background-image: url(../images/introduce_bg02.jpg);
+        height: 240px;
+    }
+    .intro .list ul .left .col_box01 {
+        float: right;
+        margin: 331px 0 0 0;
+        background-color: #023665;
+        opacity: 0.9;
+        width: 500px;
+        height: 300px;
+        text-align: right;
+    }
+    .intro .list ul .left .col_box01 .text01 {
+        padding: 59px 60px 0 0;
+    }
+    .intro .list ul .left .col_box01 strong {
+        display: block;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+    .intro .list ul .left .col_box01 p {
+        margin: 10px 0 52px 0;
+        font-weight: 400;
+    }
+    .intro .list ul .right .col_box02 {
+        margin: 171px 0 0 0;
+        background-color: #B70002;
+        opacity: 0.9;
+        width: 500px;
+        height: 300px;
+        text-align: left;
+    }
+    .intro .list ul .right .col_box02 .text02 {
+        padding: 61px 0 0 60px;
+    }
+    .intro .list ul .right .col_box02 strong {
+        display: block;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+    .intro .list ul .right .col_box02 p {
+        margin: 10px 0 52px 0;
+        font-weight: 400;
+    }
+} /* intro 반응형 종료 */
+
+
+
+.better {
+    background: url(../images/with_bg.jpg) no-repeat center center / cover;
+    height: 800px;
+    color: #FFF;
+    text-align: center;
+}
+.better .inner {
+    padding: 209px 0 0 0;
+}
+.better .inner h2 {
+    font-size: 15px;
+    font-weight: 700;
+}
+.better .inner span {
+    margin: 11px 0 6px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.better .inner p {
+    margin: 0 0 70px 0;
+}
+.better .inner ul {
+    display: inline-block;
+    text-align: center;
+}
+.better .inner ul li {
+    float: left;
+    width: 67px;
+    margin: 0 110px 0 0;
+}
+.better .inner ul li:last-child {
+    margin-right: 0;
+}
+.better .inner ul li i {
+    font-size: 50px;
+}
+.better .inner ul li p {
+    font-size: 17px;
+}
+
+
+.recruit {
+    background: url(../images/recruit_bg.jpg) no-repeat center center / cover;
+    height: 800px;
+    color: #FFF;
+    text-align: center;
+}
+.recruit .inner {
+    padding: 138px 0 0 0;
+}
+.recruit .inner h2 {
+    font-size: 15px;
+    font-weight: 700;
+}
+.recruit .inner .find {
+    margin: 11px 0 6px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.recruit .inner p {
+    margin: 0 0 83px 0;
+}
+.recruit .inner ul {
+    display: inline-block;
+}
+.recruit .inner ul strong {
+    display: block;
+}
+.recruit .inner ul li {
+    float: left;
+    background-color: #FFF;
+    
+    margin: 0 40px 0 0;
+    color: #3d3d3d;
+    text-align: left;
+}
+.recruit .inner ul li a {
+    display: block;
+    height: 316px;
+    margin: 51px 0 0 50px;
+}
+.recruit .inner ul li:last-child {
+    margin-left: 0;
+}
+.recruit .inner ul .no01 {
+    width: 510px;
+    background: url(../images/incruit.jpg) no-repeat center center / cover;
+    color: #FFF;
+}
+.recruit .inner ul .no01 strong {
+    
+    font-size: 30px;
+    font-weight: 700;
+}
