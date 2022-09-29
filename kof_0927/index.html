@@ -5,13 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/94a48106d1.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
     <title>한국해양재단</title>
 </head>
 <body>
     <div id="wrap">
-        <header class="header"></header>
+        <!-- 스크롤을 내려서 header가 상단 고정일 때 fixed 클래스 추가
+            메뉴에 마우스를 올리면 header에 menu_open 클래스 추가
+            모바일에서 메뉴를 열었을 때 header에 menu_mobile 클래스 추가 -->
+        <header class="header">
+            <h1 class="logo"><a href="index.html">한국해양재단 KOREA OCEAN FOUNDATION</a></h1>
+            <nav class="gnb">
+                <button class="gnb_open"><span>메뉴 열기</span><i class="fa-solid fa-bars"></i></button>
+                <ul>
+                    <li>
+                        <a href="contents/info01.html"><span>정보의장</span></a>
+                        <ul>
+                            <li><a href="contents/info01.html">해양산업과 경제</a></li>
+                            <li><a href="contents/info02.html">해양산업과 기술</a></li>
+                            <li><a href="contents/info03.html">해양산업과 기후</a></li>
+                            <li><a href="contents/info04.html">해양산업과 관광</a></li>
+                            <li><a href="contents/info05.html">해양영토</a></li>
+                            <li><a href="contents/info06.html">해운과 항만</a></li>
+                            <li><a href="contents/info07.html">해양문화</a></li>
+                            <li><a href="contents/info08.html">수산과 어업</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contents/greeting.html"><span>소개의장</span></a>
+                        <ul>
+                            <li><a href="contents/greeting.html">인사말</a></li>
+                            <li><a href="contents/introduce.html">재단소개</a></li>
+                            <li><a href="contents/logo.html">로고소개</a></li>
+                            <li><a href="contents/business.html">사업소개</a></li>
+                            <li><a href="contents/org.html">조직구성</a></li>
+                            <li><a href="contents/law.html">재단정관</a></li>
+                            <li><a href="contents/contact.html">찾아오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contents/part01.html"><span>참여의장</span></a>
+                        <ul>
+                            <li><a href="contents/part01.html">해양영토대장정</a></li>
+                            <li><a href="contents/part02.html">해양문학상</a></li>
+                            <li><a href="contents/part03.html">해양사진대전</a></li>
+                            <li><a href="contents/part04.html">유적지답사</a></li>
+                            <li><a href="contents/part05.html">해양교육관계자워크숍</a></li>
+                            <li><a href="contents/part06.html">해양교육동아리</a></li>
+                            <li><a href="contents/part07.html">해안누리길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contents/notice.html"><span>소통의장</span></a>
+                        <ul>
+                            <li><a href="contents/notice.html">공지사항</a></li>
+                            <li><a href="contents/board.html">자유게시판</a></li>
+                            <li><a href="contents/faq.html">자주하는질문</a></li>
+                            <li><a href="contents/survey.html">설문조사</a></li>
+                            <li><a href="contents/event.html">이벤트</a></li>
+                            <li><a href="contents/propose.html">사업제안</a></li>
+                            <li><a href="contents/press.html">보도자료</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contents/search.html"><span>해양학술정보DB센터</span></a>
+                        <ul>
+                            <li><a href="contents/search.html">통합검색</a></li>
+                            <li><a href="contents/data.html">기초자료</a></li>
+                            <li><a href="contents/book.html">발간단행본자료</a></li>
+                            <li><a href="contents/research.html">연구논문자료</a></li>
+                            <li><a href="contents/paper.html">학위논문자료</a></li>
+                            <li><a href="contents/continue.html">연속간행물자료</a></li>
+                            <li><a href="contents/edu.html">해양교육자료</a></li>
+                            <li><a href="contents/etc.html">기타자료</a></li>
+                            <li><a href="contents/use.html">이용안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="gnb_close"><span>메뉴 닫기</span><i class="fa-solid fa-xmark"></i></button>
+            </nav>
+        </header>
         <section class="visual">
             <!--
                 visual은 높이가 100%, 그 안에 들어가는 텍스트는 위아래 가운데일 때
@@ -50,7 +127,61 @@
                 </div>
             </div>
         </section>
-        <section class="part"></section>
+        <section class="part">
+            <div class="wrapper cnt_wrap">
+                <h2>해양 참여 행사</h2>
+                <div class="list">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="contents/part01.html">
+                                <div class="pic"><img src="images/main/part01.png" alt="국제해양법 모의재판대회 관련 사진" /></div>
+                                <h3>국제해양법 모의재판대회</h3>
+                                <p>한국해양재단은 대학(원)생에게 해양영토의 중요성과 함께 해양 전반에 대한 관심 증대 및 그 발전 가능성을 일깨우는 장을 제공할 것입니다.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contents/part02.html">
+                                <div class="pic"><img src="images/main/part02.png" alt="해양문화 대장정 관련 사진" /></div>
+                                <h3>해양문화 대장정</h3>
+                                <p>한국해양재단은 차세대 주역인 대학생들의 해양문화와 해양영토 의식 함양을 위한 2022년 해양문화 대장정을 아래와 같이 진행합니다. 패기와 열정이 넘치는 대학생 여러분들의 많은 참여를 바랍니다.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contents/part03.html">
+                                <div class="pic"><img src="images/main/part03.png" alt="해양유적지 답사 관련 사진" /></div>
+                                <h3>해양유적지 답사</h3>
+                                <p>장보고 해양 개척정신과 우리 선조들의 독립 의지를 국민에게 널리 알리기 위해 추진하는 ‘2019년 해양유적지 및 상해임시정부 답사’에 참가하실 선생님을 아래와 같이 모집합니다.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contents/part04.html">
+                                <div class="pic"><img src="images/main/part04.png" alt="해양교육관계자 워크숍 관련 사진" /></div>
+                                <h3>해양교육관계자 워크숍</h3>
+                                <p>한국해양재단은 해양직업의 세계와 진로탐구를 위해 전국 초·중·고 교장, 교감 및 장학관, 장학사 등을 대상으로 해양교육관계자 워크숍을 개최합니다.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contents/part05.html">
+                                <div class="pic"><img src="images/main/part05.png" alt="해양교육 동아리 공모 관련 사진" /></div>
+                                <h3>해양교육 동아리 공모</h3>
+                                <p>한국해양재단에서는 해양교육 활성화와 해양문화 저변 확대를 위해 『2021년 해양교육 동아리 공모 계획』을 아래와 같이 공고합니다.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contents/part06.html">
+                                <div class="pic"><img src="images/main/part06.png" alt="바다동요대회 공모 관련 사진" /></div>
+                                <h3>바다동요대회 공모</h3>
+                                <p>한국해양재단은 바다를 소재로 한 창작 동요의 공모·시상을 통해 미래 주역인 어린이들이 바다를 동경하고 바다에서 꿈을 키울 수 있는 문화기반 조성</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div> <!-- list 종료 -->
+                <a href="contents/part06.html" class="more">
+                    <span>더보기</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+        </section>
         <section class="notice"></section>
         <section class="book"></section>
         <section class="banner"></section>
