@@ -311,3 +311,30 @@ html, body {
         color: #004485;
     }
 } /* header 모바일 스타일 종료 */
+
+
+/*
+    common.css는 모든 페이지에서 호출함. .top이라고 스타일을 주면 다른 콘텐츠에서 .top이라는 이름을 가진 태그들에게
+    스타일이 모두 적용됨. 절대 콘텐츠 페이지에서 사용하지 않을만한 이름으로 주어야 함.
+    aside라는 태그는 거의 사용하지 않는 태그라서 aside.top라고 주었음.
+*/
+aside.top {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    z-index: 250;
+}
+aside.top button {
+    width: 45px;
+    height: 45px;
+    background-color: #0074BD;
+    border-radius: 25px;
+    color: #fff;
+}
+aside.top button span {
+    display: none;
+}
+aside.top button i {
+    font-size: 20px;
+}

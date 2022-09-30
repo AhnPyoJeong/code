@@ -14,13 +14,13 @@
 </head>
 <body>
     <div id="wrap">
-        <!-- 스크롤을 내려서 header가 상단 고정일 때 fixed 클래스 추가
-            메뉴에 마우스를 올리면 header에 menu_open 클래스 추가
-            모바일에서 메뉴를 열었을 때 header에 menu_mobile 클래스 추가 -->
+        <!-- 스크롤을 내려서 header가 상단 고정될때 fixed 클래스 추가 
+             메뉴에 마우스를 올리면 header에 menu_open 클래스 추가
+             모바일에서 메뉴를 열었을때 header에 menu_mobile 클래스 추가 -->
         <header class="header">
-            <h1 class="logo"><a href="index.html">한국해양재단 KOREA OCEAN FOUNDATION</a></h1>
+            <h1 class="logo"><a href="index.html4">한국해양재단 KOREA OCEAN FOUNDATION</a></h1>
             <nav class="gnb">
-                <button class="gnb_open"><span>메뉴 열기</span><i class="fa-solid fa-bars"></i></button>
+                <button class="gnb_open"><span>메뉴열기</span><i class="fa-solid fa-bars"></i></button>
                 <ul>
                     <li>
                         <a href="contents/info01.html"><span>정보의장</span></a>
@@ -86,44 +86,38 @@
                         </ul>
                     </li>
                 </ul>
-                <button class="gnb_close"><span>메뉴 닫기</span><i class="fa-solid fa-xmark"></i></button>
+                <button class="gnb_close"><span>메뉴닫기</span><i class="fa-solid fa-xmark"></i></button>
             </nav>
         </header>
         <section class="visual">
-            <!--
-                visual은 높이가 100%, 그 안에 들어가는 텍스트는 위아래 가운데일 때
-                -> visual의 자식으로 텍스트를 감싼 div가 있는 게 좋다
-                그래야 visual 높이의 위아래 가운데값을 계산하기 좋음
-                (wrapper 사용 X)
+            <!-- visual은 높이가 100% 그안에 들어가는 텍스트는 위아래 가운데 일때
+                 visual의 자식으로 텍스트를 감싼 div가 있는게 좋다.
+                 그래야 visual 높이의 위아래 가운데 계산하기 좋음
+                 (wrapper 사용X)
             -->
-            <div class="wrapper">
-                <div class="visual_wrap">
-                    <h2>무한한 잠재력과 가능성을 가진<br />
-                        생명의 근원이자 인류의 마지막 보고<br />
-                        <strong>해양은 우리의 미래입니다.</strong></h2>
-                    <div class="search">    
-                        <form>
-                            <fieldset>
-                                <legend>검색</legend>
-                                <label for="keyword">검색어</label>
-                                <input type="text" id="keyword" placeholder="검색어를 입력하세요" autocomplete="off" />
-                                <!--
-                                    input type="text", password는 반드시
-                                    무엇을 입력하는 항목인지 label을 써줘야함 (웹 접근성)
-                                    label의 for값과 input의 id값을 동일하게 입력하면 연결이 됨
-
-                                    검색 버튼은 type="submit" 또는 type="button" 또는 button 태그일 수도 있음
-                                    어떤 버튼을 사용하더라도 동일하게 구현되도록 코딩해야함
-
-                                    모든 코딩에서도 마찬가지로 a태그와 button은 혼용되는 경우가 많아서
-                                    둘 중에 어떤 태그를 쓰더라도 동일하게 구현되도록 하는 게 좋음
-                                -->
-                                <input type="submit" value="검색" class="btn" />
-                                <!-- <input type="button" value="검색" class="btn" /> -->
-                                <!-- <button class="btn"><span>검색</span><i class="fa-solid fa-magnifying-glass"></i></button> -->
-                            </fieldset>
-                        </form>
-                    </div>
+            <div class="visual_wrap">
+                <h2>무한한 잠재력과 가능성으로 <br />
+                    하늘만큼 높고 육지보다 넓은 곳<br />
+                    <strong>해양은 우리의 미래</strong></h2>
+                <div class="search">
+                    <form>
+                        <fieldset>
+                            <legend>검색</legend>
+                            <label for="keyword">검색어</label>
+                            <input type="text" id="keyword" placeholder="검색어를 입력하세요" autocomplete="off" />
+                            <!-- input type="text", password는 반드시  
+                            무엇을 입력하는 항목인지 label을 써줘야함 (웹접근성)
+                            label의 for 값과 input의 id값을 동일하게 입력하면 연결  
+                            
+                            검색버튼은 type="submit" 또는 type="button" 또는 button태그일 수도 있음
+                            어떤 버튼을 사용하더라도 동일하게 구현되도록 코딩
+                            모든 코딩에서도 마찬가지로 a태그와 button는 혼용되는 경우가 많아서
+                            둘중에 어떤 태그를 쓰더라도 동일하게 구현되도록 하는게 좋음 -->
+                            <input type="submit" value="검색" class="btn" />
+                            <!-- <input type="button" value="검색" class="btn" /> -->
+                            <!-- <button class="btn"><span>검색</span><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </section>
@@ -134,9 +128,9 @@
                     <ul class="clearfix">
                         <li>
                             <a href="contents/part01.html">
-                                <div class="pic"><img src="images/main/part01.png" alt="국제해양법 모의재판대회 관련 사진" /></div>
-                                <h3>국제해양법 모의재판대회</h3>
-                                <p>한국해양재단은 대학(원)생에게 해양영토의 중요성과 함께 해양 전반에 대한 관심 증대 및 그 발전 가능성을 일깨우는 장을 제공할 것입니다.</p>
+                                <div class="pic"><img src="images/main/part01.png" alt="해양사진대전 관련 사진" /></div>
+                                <h3>해양사진대전</h3>
+                                <p>일상에서 마주한 해양의 의미 및 가치를 담은 사진 해양문화,산업,레저 등 일상에서 우리 삶과 공존하는 바다의 소중한 가치와 의미를 알리고 해양의 중요성을 일깨우는 사진</p>
                             </a>
                         </li>
                         <li>
@@ -155,36 +149,220 @@
                         </li>
                         <li>
                             <a href="contents/part04.html">
-                                <div class="pic"><img src="images/main/part04.png" alt="해양교육관계자 워크숍 관련 사진" /></div>
-                                <h3>해양교육관계자 워크숍</h3>
-                                <p>한국해양재단은 해양직업의 세계와 진로탐구를 위해 전국 초·중·고 교장, 교감 및 장학관, 장학사 등을 대상으로 해양교육관계자 워크숍을 개최합니다.</p>
+                                <div class="pic"><img src="images/main/part04.png" alt="해양문화 대장정 관련 사진" /></div>
+                                <h3>해안누리길</h3>
+                                <p>'대한민국 해안누리길'은 걷기여행을 좋아하는 분들과 바다를 찾는 분들을 위해 2010년 해양수산부와 한국해양재단이 전국 해안을 U자로 연결하고자 선정한 '걷기 좋은 해안길'의 이름입니다.</p>
                             </a>
                         </li>
                         <li>
                             <a href="contents/part05.html">
-                                <div class="pic"><img src="images/main/part05.png" alt="해양교육 동아리 공모 관련 사진" /></div>
-                                <h3>해양교육 동아리 공모</h3>
-                                <p>한국해양재단에서는 해양교육 활성화와 해양문화 저변 확대를 위해 『2021년 해양교육 동아리 공모 계획』을 아래와 같이 공고합니다.</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contents/part06.html">
-                                <div class="pic"><img src="images/main/part06.png" alt="바다동요대회 공모 관련 사진" /></div>
-                                <h3>바다동요대회 공모</h3>
-                                <p>한국해양재단은 바다를 소재로 한 창작 동요의 공모·시상을 통해 미래 주역인 어린이들이 바다를 동경하고 바다에서 꿈을 키울 수 있는 문화기반 조성</p>
+                                <div class="pic"><img src="images/main/part05.png" alt="해양문화 대장정 관련 사진" /></div>
+                                <h3>바다동요대회</h3>
+                                <p>바다를 소재로 한 창작 동요의 공모·시상을 통해 미래 주역인 어린이들이 바다를 동경하고 바다에서 꿈을 키울 수 있는 문화기반 조성</p>
                             </a>
                         </li>
                     </ul>
                 </div> <!-- list 종료 -->
-                <a href="contents/part06.html" class="more">
+                <a href="contents/part05.html" class="more">
                     <span>더보기</span>
-                    <i class="fa-solid fa-chevron-right"></i>
+                    <i class="fa-solid fa-plus"></i>
                 </a>
             </div>
         </section>
-        <section class="notice"></section>
-        <section class="book"></section>
-        <section class="banner"></section>
+        <section class="notice">
+            <div class="wrapper">
+                <ul class="notice_wrap">
+                    <!-- 현재 보여질 탭의 li에 active 추가 
+                         기본적으로 하나의 탭이 보이는 상태
+                         jquery로는 다른 탭을 active할 수 있도록
+                         변경하는 기능을 주는것
+                        그래서 처음에 보일 탭에 active클래스를 줘야함 -->
+                    <li class="active">
+                        <h2><button>공지사항</button></h2>
+                        <div class="detail">
+                            
+                                <ul>
+                                    <li>
+                                        <a href="contents/notice.html">
+                                            <span class="date">2022-09-23</span>
+                                            <h3>2022년도 독도탐방 행사 사진(1~6차)</h3>
+                                            <p>2022년 독도탐방 행사가 종료되었습니다. 아울러 본 행사에서 참가자들 단체사진을 첨부하오니, 필요하신분은 첨부파일을 확인하시기 바랍니다.</p>
+                                            <span class="btn"><span>view more</span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contents/notice.html">
+                                            <span class="date">2022-09-19</span>
+                                            <h3>2022년 차세대 해양정책리더 양성 아카데미(서울지역) 참가자 선정</h3>
+                                            <p>한국해양재단에서는 해양정책의 중요성에 대한 이해를 높이고 해양 전반에 관한 관심을 확산하기 위해 '2022년 차세대 해양정책리더 양성 아카데미(서울지역)'의 참가자 접수를 완료하였습니다. 많은 관심 감사드립니다.</p>
+                                            <span class="btn"><span>view more</span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contents/notice.html">
+                                            <span class="date">2022-08-23</span>
+                                            <h3>2022 우수 해양관광상품 대국민 체험단 추가 선발 공고</h3>
+                                            <p>2022년 우수 해양관광상품 대국민 체험단에 관심과 애정을 가지고 참여해 주신 모든 분들에게 감사의 말씀을 드리오며, 아래와 같이 선발자 명단을 공고합니다. * 선정되신 분의 명단은 해당 여행사로 전달 예정이며, 추후 여행사에서 예약에 필요한 자세한 안내를 드릴 예정입니다. </p>
+                                            <span class="btn"><span>view more</span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contents/notice.html">
+                                            <span class="date">2022-08-10</span>
+                                            <h3>제17회 대한민국 해양사진대전 수상 후보작 공고 및 공개검증 안내(~8. 28.)</h3>
+                                            <p>한국해양재단과 해양환경공단은 사진을 통해 우리 바다의 아름다움과 의미를 알리고, 해양 에 대한 국민적인 관심을 유도하기 위한『제17회 대한민국  해양사진대전』을 개최하였으며, 큰 호응 속에 다양한 작품이 응모되었습니다 . 응모작은 전문 심사위원의 예심과 대국민 공개검증 후 본심을 진행한 결과, 수상 후보작 50점과 예비 후보작 5점을 선정하였습니다.</p>
+                                            <span class="btn"><span>view more</span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contents/notice.html">
+                                            <span class="date">2022-08-10</span>
+                                            <h3>2022년 우수 해양관광상품 체험단 모집 홍보 이벤트 당첨자 공고</h3>
+                                            <p>2022년 우수 해양관광상품 대국민 체험단 모집에 관심과 애정을 가지고 참여해 주신 모든 분들에게 감사의 말씀을 드리오며, 첨부와 같이 이벤트 당첨자 명단을 공고합니다. 2022년 8월 10일한국해양재단 이사장</p>
+                                            <span class="btn"><span>view more</span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>
+                        <a href="contents/notice.html" class="more">
+                            <span>더보기</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <h2><button>보도자료</button></h2>
+                        <div class="detail">
+                            
+                                <ul>
+                                    <li>
+                                        <a href="contents/press.html">
+                                            <span class="date">2022-07-18</span>
+                                            <h3>한국해양재단-한국수산회, '해양수산 정보교류 및 해양수산 교육·문화 활성화' 업무협약 체결</h3>
+                                            <p>(재)한국해양재단(이사장 문해남)은 우리나라 수산업의 발전과 권익향상을 통해 수산업의 푸른 미래를 열어가는 한국수산회(회장 정영훈)와 해양수산 정보교류 및 해양수산 교육·문화 활성화를 위한 업무협약을 2022년 7월 12일 체결하였다.</p>
+                                            <span class="btn"><span>view more</span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contents/press.html">
+                                            <span class="date">2022-06-24</span>
+                                            <h3>모여라! 바다 꿈나무들 “2022년도 청소년 해양인재학교” 참가자 모집</h3>
+                                            <p>해양수산부(장관 조승환)와 한국해양재단(이사장 문해남)은 6월 24일(금)부터 7월 11일(월)까지 청소년(만13~16세)들을 대상으로 “2022년도 청소년 해양인재학교”(이하 인재학교)의 참가자를 모집한다고 밝혔다. 인재학교는 청소년들을 바다에 대한 이해와 지식을 겸비한 인재로 육성하기 위한 프로그램으로, 강연·견학·실습체험 등 청소년들이 바다에 대해 배울 수 있는 다채로운 경험을 제공한다.</p>
+                                            <span class="btn"><span>view more</span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contents/press.html">
+                                            <span class="date">2022-06-22</span>
+                                            <h3>바다에서 미래세대의 꿈을 키우다. “2022년도 해양문화 대장정” 참가자 모집</h3>
+                                            <p>해양수산부(장관 조승환)와 한국해양재단(이사장 문해남)은 대학생들을 대상으로 “2022년도 해양문화 대장정”(이하 대장정)의 참가자를 6월 16일(목)부터 7월 18일(월)까지 모집한다고 밝혔다.</p>
+                                            <span class="btn"><span>view more</span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contents/press.html">
+                                            <span class="date">2022-06-17</span>
+                                            <h3>한국해양재단, 어린이 대상 해양환경 보전 전문교육 체험관 '키즈마린파크' 운영</h3>
+                                            <p>서울 도심에 평소 접할 기회가 없어 알기 어려웠던 해양환경 보전에 대해 직접 체험하며 배울 수 있는 수도권 최초 어린이 해양환경체험관이 개관한다.한국해양재단은 15일 오전 10시 문해남 한국해양재단 이사장, 양진모 현대자동차그룹 부사장, 한기준 해양환경공단 이사장, 김경희 사회복지공동모금회 본부장 등 관계자들이 참석한 가운데 ‘키즈마린파크(어린이 해양환경체험관)’ 개관식을 개최하고, 정식 운영을 시작한다고 밝혔다.</p>
+                                            <span class="btn"><span>view more</span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contents/press.html">
+                                            <span class="date">2022-06-16</span>
+                                            <h3>한국해양재단-국립해양생물자원관, '해양 정보교류 및 해양교육 활성화' 업무협약 체결</h3>
+                                            <p>(재)한국해양재단(이사장 문해남)은 국내 유일의 해양생물 자원 전문 연구 ·전시·교육 중심기관인 국립해양생물자원관(관장 최완현)과 해양 정보교류 및 해양교육 활성화를 위한 업무협약을 2022년 6월 16일 체결하였다.</p>
+                                            <span class="btn"><span>view more</span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>
+                        <a href="contents/press.html" class="more">
+                            <span>더보기</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="book">
+            <div class="wrapper cnt_wrap">
+                <h2>최신 간행물</h2>
+                <div class="list">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="contents/search.html">
+                                <div class="pic"><img src="images/main/book01.png" alt="제11회 대한민국 해양영토 대장정 후기집 (바다를 걷다) 표지" /></div>
+                                <div class="cnt">
+                                    <h3>제11회 대한민국 해양영토 대장정 후기집 (바다를 걷다)</h3>
+                                    <p>허성은 외 9명 지음<br />(주)예지컴</p>
+                                </div> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contents/search.html">
+                                <div class="pic"><img src="images/main/book02.png" alt="2019년 해양유적지 및 상해임시정부 답사 수업지도안 표지" /></div>
+                                <div class="cnt">
+                                    <h3>2019년 해양유적지 및 상해임시정부 답사 수업지도안</h3>
+                                    <p>허성은 외 9명 지음<br />(주)예지컴</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contents/search.html">
+                                <div class="pic"><img src="images/main/book03.png" alt="제10회 대한민국 해양영토 대장정 후기집 (우리는 한 배를 탔다) 표지" /></div>
+                                <div class="cnt">
+                                    <h3>제10회 대한민국 해양영토 대장정 후기집 (우리는 한 배를 탔다)</h3>
+                                    <p>허성은 외 9명 지음<br />(주)예지컴</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contents/search.html">
+                                <div class="pic"><img src="images/main/book04.png" alt="2018 장보고 중국 유적지 답사 수업적용 사례집 표지" /></div>
+                                <div class="cnt">
+                                    <h3>2018 장보고 중국 유적지 답사 수업적용 사례집</h3>
+                                    <p>허성은 외 9명 지음<br />(주)예지컴</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contents/search.html">
+                                <div class="pic"><img src="images/main/book05.png" alt="2018년도 독도탐방, 아름다운 우리의 해양 영토 표지" /></div>
+                                <div class="cnt">
+                                    <h3>2018년도 독도탐방, 아름다운 우리의 해양 영토</h3>
+                                    <p>허성은 외 9명 지음<br />(주)예지컴</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="contents/search.html" class="more">
+                    <span>더보기</span>
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+            </div>
+        </section>
+        <section class="banner">
+            <div class="wrapper">
+                <ul class="clearfix">
+                    <li class="edu">
+                        <a href="https://ilovesea.or.kr" target="_blank" title="새창 열림">
+                            <i class="fa-solid fa-desktop"></i>
+                            <h2><span>해양</span>교육포털</h2>
+                            <p>해양강국 실현을 위한 해양교육의 장을 소개합니다.</p>
+                        </a>
+                    </li>
+                    <li class="people">
+                        <a href="https://www.ilovesea.or.kr/peopledic/main" target="_blank" title="새창 열림">
+                            <i class="fa-solid fa-book-open"></i>
+                            <h2><span>해양역사</span>인물사전</h2>
+                            <p>해양인물들에 대한 정보를 제공합니다.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <aside class="top"><button><span>TOP</span><i class="fa-solid fa-up-long"></i></button></aside>
         <footer class="footer"></footer>
     </div>
 </body>

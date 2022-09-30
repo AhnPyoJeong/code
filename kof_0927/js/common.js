@@ -37,7 +37,8 @@ $(document).ready(function(){
     scrollChk() // 함수 실행
 
     $(window).scroll(function(){
-        scrollChk() // 함수 실행
+        scrollChk() // header를 고정하는 함수
+        topShow() // top 버튼을 보이게 하는 함수
     })
 
     function scrollChk(){ // 함수 선언
@@ -63,4 +64,24 @@ $(document).ready(function(){
             $(this).parents('li').toggleClass('sub_open')
         }
     })
+
+
+    /* top 버튼을 누르면 상단으로 스크롤 */
+    $('aside.top').on('click', function(){
+        $('html, body').animate({
+            scrollTop : 0
+        }, 500)
+    })
+
+    /* 스크롤을 어느정도 내렸을 때 aside가 나타나고, 스크롤을 다시 올리면 aside가 사라짐 */
+    topShow()
+    function topShow(){ // 함수 선언
+        scrolling = $(window).scrollTop()
+        console.log(scrolling)
+        if(scrolling > 400){
+            $('aside.top').fadeIn()
+        }else{
+            $('aside.top').fadeOut()
+        }
+    }
 }) // document.reday 종료
