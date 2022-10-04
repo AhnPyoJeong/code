@@ -1,0 +1,36 @@
+@import url('default.css');
+@import url('common.css');
+@import url('contents.css');
+
+/* 서브 레이아웃 스타일 */
+
+.sub_visual {
+    height: 300px;
+    background-image: url(../images/sub/sub_visual01.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+}
+.sub_visual.sub_bg1 {
+    background-image: url(../images/sub/sub_visual01.png);
+}
+.sub_visual.sub_bg2 {
+    background-image: url(../images/sub/sub_visual02.png);
+}
+.sub_visual.sub_bg3 {
+    background-image: url(../images/sub/sub_visual03.png);
+}
+.sub_visual.sub_bg4 {
+    background-image: url(../images/sub/sub_visual04.png);
+}
+.sub_visual.sub_bg5 {
+    background-image: url(../images/sub/sub_visual05.png);
+}
+.sub_visual strong {
+    display: block;
+    padding: 186px 0 0 0;
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
+}
