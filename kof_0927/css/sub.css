@@ -205,6 +205,7 @@
 .contents .table_wrap table {
     width: 100%;
     border-collapse: collapse; /* th, td에 준 선을 겹쳐서 나오게 하는 태그 */
+    border-top: 3px solid #ccc;
 }
 .contents .table_wrap table th,
 .contents .table_wrap table td {
@@ -237,4 +238,48 @@
 .contents .table_wrap table tbody td ul {
     padding: 19px 10px 19px 58px ;
     text-align: left;
+}
+.contents .table_wrap table tbody td ul li {
+    position: relative;
+}
+.contents .table_wrap table tbody td ul li::before {
+    position: absolute;
+    left: -10px;
+    top: 9px;
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #ccc;
+    content: "";
+}
+@media screen and (max-width:640px) {
+    /*
+    모바일에서 테이블을 좌우로 스크롤해서 볼 수 있게
+    감싸는 div에 overflow-x: scroll을 주고 table에는 최소 넓이값을 줌
+    */
+    .contents .table_wrap {
+        overflow-x: scroll;
+        padding-bottom: 10px; /* 스크롤바를 아래로 내리기 위함 */
+    }
+    .contents .table_wrap table {
+        min-width: 500px;
+    }
+    .contents .table_wrap table thead th,
+    .contents .table_wrap table thead td {
+        padding: 10px 5px;
+        font-size: 15px;
+    }
+    .contents .table_wrap table tbody th,
+    .contents .table_wrap table tbody td {
+        padding: 5px 3px;
+    }
+    .contents .table_wrap table tbody td ul {
+        padding: 10px;
+    }
+    .contents .table_wrap table tbody td ul li::before {
+        left: -7px;
+        top: 8px;
+        width: 3px;
+        height: 3px;
+    }
 }

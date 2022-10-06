@@ -1,0 +1,179 @@
+.cnt_introduce {
+    margin: 200px 0 0 0;
+}
+.cnt_introduce .tit {
+    float: left;
+    margin: 106px 0 0 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.cnt_introduce .tit strong {
+    color: #00AE4D;
+}
+.cnt_introduce .bg {
+    position: relative;
+    width: calc(50% + 100px);
+    left: calc(50% - 100px);
+    margin: 0 0 150px 0;
+    height: 500px;
+    background: url(../images/contents/greeting_img1.png) no-repeat center center / cover;
+}
+
+
+.cnt_introduce .txt_wrap {
+    font-size: 15px;
+    line-height: 1.8em;
+}
+
+
+.cnt_introduce .colgroup {
+    margin: 150px 0 100px 0;
+}
+.cnt_introduce .colgroup1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 700px;
+}
+.cnt_introduce .colgroup1 p {
+    font-size: 50px;
+    font-weight: 700;
+    color: #3d3d3d;
+}
+.cnt_introduce .colgroup1 p strong {
+    font-size: 200px;
+    font-weight: 700;
+    color: #00AE4D;
+}
+.cnt_introduce .colgroup1 .colgroup1_right {
+    margin: 88px 0 0 41px;
+}
+.cnt_introduce .colgroup1 .colgroup1_right span {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.8em;
+}
+.cnt_introduce .colgroup2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    width: 700px;
+}
+.cnt_introduce .colgroup2 p {
+    font-size: 50px;
+    font-weight: 700;
+    color: #3d3d3d;
+}
+.cnt_introduce .colgroup2 p strong {
+    font-size: 200px;
+    font-weight: 700;
+    color: #00AE4D;
+}
+.cnt_introduce .colgroup2 .colgroup2_right {
+    margin: 88px 0 0 41px;
+}
+.cnt_introduce .colgroup2 .colgroup2_right span {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.8em;
+}
+
+
+.cnt_introduce .txt_wrap2 {
+    margin: 0 0 150px 0;
+    font-size: 15px;
+    line-height: 1.8em;
+}
+
+
+.cnt_introduce .edu {
+    display: flex;
+    justify-content: space-between;
+}
+.cnt_introduce .edu .tit2 {
+    float: right;
+    margin: 70px 0 0 0;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: right;
+}
+.cnt_introduce .edu .tit2 strong {
+    color: #00AE4D;
+}
+.cnt_introduce .edu .bg2 {
+    position: relative;
+    width: 50%;
+    margin: 0 0 100px 0;
+    height: 500px;
+    background: url(../images/contents/greeting_img2.png) no-repeat center center / cover;
+}
+
+
+.cnt_introduce .txt_wrap3 {
+    margin: 0 0 150px 0;
+    font-size: 15px;
+    line-height: 1.8em;
+}
+
+
+.cnt_introduce .txtgroup {
+    margin: 0 0 150px 0;
+}
+.cnt_introduce .txtgroup1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    width: 700px;
+}
+.cnt_introduce .txtgroup1 strong {
+    font-size: 50px;
+    color: #00AE4D;
+    text-align: center;
+}
+.cnt_introduce .txtgroup1 .txtgroup1_bottom {
+    margin: 50px 0 0 0;
+    width: 470px;
+    font-size: 15px;
+    line-height: 1.8em;
+    text-align: center;
+}
+.cnt_introduce .txtgroup2 {
+    position: relative;
+    margin: 93px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    width: 700px;
+}
+.cnt_introduce .txtgroup2::before {
+    position: absolute;
+    left: 0;
+    top: -63px;
+    width: 1px;
+    height: 400px;
+    background-color: #ededed;
+    content: "";
+}
+.cnt_introduce .txtgroup2 strong {
+    font-size: 50px;
+    color: #00AE4D;
+    text-align: center;
+}
+.cnt_introduce .txtgroup2 .txtgroup2_bottom {
+    margin: 50px 0 0 0;
+    width: 470px;
+    font-size: 15px;
+    line-height: 1.8em;
+    text-align: center;
+}
+
+
+.cnt_introduce .txt_wrap4 {
+    margin: 0 0 150px 0;
+    font-size: 15px;
+    line-height: 1.8em;
+}
