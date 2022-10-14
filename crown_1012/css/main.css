@@ -3,18 +3,23 @@
 
 
 
+
+.event {
+    margin: 4.400rem 0 2.333rem 0;
+}
+
 .event h2 {
     color: #1d1d1d;
-    font-size: 50px;
+    margin: 0 0 7.667rem 0;
+    font-size: 3.333rem;
     font-weight: 700;
     line-height: 1;
-    margin: 2em 0 2em;
 }
 .event ul li {
     float: left;
     /* 여백을 비율로 주는 경우 - % */
     width: 47%;
-    margin: 0 6% 0 0;
+    margin: 0 6% 7rem 0;
     /* 
         넓이 660px >> 1400px 중 660px은 몇 % ?
         660/1400 * 100 = 47%
@@ -40,14 +45,108 @@
 .event ul li:last-child {
     margin-right: 0;
 }
+.event ul li:nth-child(2),
+.event ul li:nth-child(4) {
+    margin-top: -13.333rem;
+}
+.event ul li a {
+    display: block;
+}
+.event ul li a strong {
+    display: block;
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.event ul li a strong span {
+    display: block;
+    margin: 0 0 0.333rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
 .event ul li a img {
     width: 100%;
+    border-radius: 2rem;
+}
+.event .more {
+    position: absolute;
+    left: 14.5rem;
+    top: 4.1rem;
 }
 
 /* ---------- event 모바일 시작 ---------- */
-@media screen and (max-width:640px){
+@media screen and (max-width:1200px){
     .event h2 {
-        font-size: 30px;
+        font-size: 3rem;
+        overflow: hidden;
+    }
+    .event ul li a strong {
+        font-size: 1.5rem;
+        overflow: hidden;
+        line-height: 1.5;
+        height: 3em;
+        text-overflow: ellipsis;
+    }
+    .event .more {
+        left: 12.5rem;
+        top: 3.7rem;
+    }
+    .event .more img {
+        width: 80%;
+    }
+}
+@media screen and (max-width:800px){
+    .event h2 {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+    .event ul li {
+        margin-bottom: 4rem;
+    }
+    .event ul li:nth-child(2), 
+    .event ul li:nth-child(4) {
+        margin-top: -7rem;
+    }
+    .event ul li a strong {
+        font-size: 1.2rem;
+    }
+    .event ul li a img {
+        border-radius: 1rem;
+    } 
+    .event .more {
+        left: 9rem;
+        top: 2.4rem;
+    }
+    .event .more img {
+        width: 50%;
+    }
+}
+@media screen and (max-width:500px){
+    .event h2 {
+        font-size: 2.308em;
+    }
+    .event ul li {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+    .event ul li:nth-child(2), 
+    .event ul li:nth-child(4) {
+        margin-top: 0;
+    }
+    .event ul li a strong {
+        font-size: 1.538rem;
+    }
+    .event ul li a img {
+        border-radius: 0.769rem;
+    }    
+    .event .more {
+        left: 10rem;
+        top: 2.9rem;
+    }
+    .event .more img {
+        width: 50%;
     }
 }
 
@@ -102,6 +201,17 @@
 }
 .product ul li.pro4 {
     background-image: url(../images/main/product4.png);
+}
+.product ul li:nth-child(2),
+.product ul li:nth-child(4) {
+    margin-top: 4.333rem;
+}
+.product ul li {
+    transition: 0.3s;
+}
+.product ul li:hover {
+    transform: translate(-0.667rem, -0.667rem);
+    box-shadow: 0.667rem 0.667rem 0.667rem rgba(0,0,0,0.1);
 }
 .product ul li a {
     display: block;
@@ -163,11 +273,15 @@
     .product ul li:nth-child(3) {
         margin-right: 0;
     }
+    .product ul li:nth-child(2),
+    .product ul li:nth-child(4) {
+        margin-top: 2rem;
+    }
     .product ul li a h3 {
         font-size: 2rem;
     }
     .product ul li a p {
-        margin: 0 0 3rem 0;
+        margin: 0 0 2rem 0;
     }
     .product ul li a img {
         transform: scale(0.8,0.8); /* 원래 이미지 크기에 비례해서 80% 크기로 변환 */
@@ -204,5 +318,9 @@
     }
     .product ul li:nth-child(2) {
         display: none;
+    }
+    .product ul li:nth-child(2),
+    .product ul li:nth-child(4) {
+        margin-top: 0;
     }
 }
