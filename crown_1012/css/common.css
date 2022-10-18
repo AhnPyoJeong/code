@@ -4,51 +4,40 @@ html, body {
     color: #3D3D3D;
     line-height: 1.5;
     font-family: 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
-    /* 폰트 적용 우선순위
-       을유 웹폰트 우선적용, - 만약에 웹폰트가 지원되지 않으면 그 다음에 선언된 폰트가 적용됨
-       apple sd gothic - 아이폰에서 지원하는 폰트 */
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
     /* letter-spacing: -0.05em; */
-    word-break: keep-all;
+    word-break: keep-all; /* 단어별 줄바꿈 */
 }
-
 #wrap { /* id="wrap" */
     overflow: hidden;
     position: relative;
     min-width: 320px;
 }
-
-/* ---------- 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 ---------- */
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
 .wrapper {
     width: 100%;
     max-width: 1440px;
     padding: 0 20px;
     margin: 0 auto;
-    /*
-        1400px 이하부터 320px까지 모든 사이즈 반응형
-        1400px일 때도 좌우에 여백은 유지되어야 함
-        (1400px 이상에서 1400px 이하로 변경되는 점 - 반응형으로 전환되는 점)
-        부드럽게 여백을 유지하면서 전환
-        원래 좌우에 여백이 20px씩 들어가있는 걸로 스타일을 줌
-        1400px이 컨텐츠 영역인데 왼쪽 20px + 오른쪽 20px = 1440px
-        padding으로 좌우에 여백을 20px씩 줌
-    */
+    /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
+       1400px 일때에도 좌우에 여백은 유지해야함 
+       (1400이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는점)
+       부드럽게 여백을 유지하면서 전환
+       원래 좌우에 여백이 20px씩 들어가 있는 걸로 스타일을 줌
+       1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
+       padding으로 좌우에 여백을 20px씩 줌  */
 }
 @media screen and (max-width:1000px){
     html, body {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 @media screen and (max-width:640px){
-    /* 640px 이하의 디바이스에서만 아래 css가 적용
-      pc에서는 1280px이라는 콘텐츠 고정 넓이가 존재했지만
-      모바일에서는 디바이스 넓이에 맞춰서 꽉차게 구현
-      구현방식이 달라서 고정값을 모두 삭제 */
     html, body {
         font-size: 13px;
     }
-} /* media 종료 */
+}/* media 종료 */
 .clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
 .clearfix{display:block;}
 
@@ -58,7 +47,6 @@ html, body {
     position: relative;
 }
 
-/* ---------- 스킵 네비게이션 ---------- */
 .skip_nav {
     position: absolute;
     left: 0;
@@ -73,12 +61,179 @@ html, body {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    background-color: #0074BD;
-    color: #fff;
+    background-color: #0059A8;
+    color: #FFF;
     text-align: center;
 }
 .skip_nav a:focus {
     top: 0;
 }
 
+.header {
+    height: 100px;
+}
+.header .logo {
+    float: left;
+    margin: 33px 0 0 0;
+    font-size: 0;
+    line-height: 0;
+}
+.header .logo img {
+    width: 135px;
+}
+.header .gnb {
+    float: right;
+}
+.header .gnb .gnb_open {
+    display: none;
+}
+.header .gnb ul li {
+    float: left;
+}
+.header .gnb ul li a {
+    display: block;
+    padding: 0 48px;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 100px;
+}
+@media screen and (max-width:1200px){
+    .header .logo {
+        margin: 35px 0 0 0;
+    }
+    .header .logo img {
+        width: 100px;
+    }
+    .header .gnb ul li a {
+        padding: 0 20px;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:640px){
+    .header {
+        height: 60px;
+    }
+    .header .logo {
+        margin: 18px 0 0 0;
+    }
+    .header .logo img {
+        width: 95px;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        padding: 18px 0 0 0;
+    }
+    .header .gnb .gnb_open img {
+        width: 28px;
+    }
+    .header .gnb ul {
+        display: none;
+    }
+}/* header 반응형 종료 */
 
+.footer {
+    position: relative;
+}
+.footer .family {
+    position: absolute;
+    right: calc(50% - 700px);
+    /* wrapper없이 컨텐츠 영역의 오른쪽 끝에 family를 배치
+       right: 50%에서 콘텐츠의 넓이 절반 (700px)을 빼줌 */
+    top: 98px;
+}
+.footer .family button {
+    width: 147px;
+    height: 30px;
+    border: 1px solid #cccccc;
+    color: #666666;
+}
+.footer .ftop {
+    height: 70px;
+    border-bottom: 1px solid #ededed;
+}
+.footer .ftop .fnav li {
+    position: relative;
+    float: left;
+    margin-right: 40px;
+}
+.footer .ftop .fnav li::after {
+    position: absolute;
+    right: -21px;
+    top: 30px;
+    width: 1px;
+    height: 12px;
+    background-color: #ededed;
+    content: "";
+}
+.footer .ftop .fnav li:last-child::after {
+    display: none;
+}
+.footer .ftop .fnav li.privacy a {
+    font-weight: 700;
+}
+.footer .ftop .fnav li a {
+    display: block;
+    color: #666666;
+    line-height: 70px; /* ftop 높이에 위아래 가운에 글자를 배치하는 가장 쉬운 방법 */
+}
+.footer .fsub .flogo {
+    float: left;
+}
+.footer .fsub .flogo img {
+    width: 112px;
+    filter: grayscale(100%);
+}
+.footer .fsub .inner {
+    margin: 33px 0 80px 175px;
+}
+.footer .fsub .finfo span {
+    display: inline-block;
+    margin: 0 20px 5px 0;
+    color: #666666;
+}
+.footer .fsub .copyright {
+    margin: 10px 0 0 0;
+    color: #999999;
+}
+@media screen and (max-width:1440px){
+    .footer .family {
+        right: 20px;
+    }
+}
+@media screen and (max-width:1000px){
+    .footer .family {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 35px 0 20px 20px;
+    }
+    .footer .family button {
+        width: 130px;
+        height: 24px;
+    }
+    .footer .ftop {
+        height: auto;
+        border-bottom: 0;
+    }
+    .footer .ftop .fnav li {
+        margin-right: 30px;
+        margin-bottom: 5px;
+    }
+    .footer .ftop .fnav li::after {
+        right: -15px;
+        top: 5px;
+        height: 10px;
+    }
+    .footer .ftop .fnav li a {
+        line-height: 1.5; 
+    }
+    .footer .fsub .flogo {
+        display: none;
+    }
+    .footer .fsub .inner {
+        margin: 20px 0 40px 0;
+    }
+    .footer .fsub .finfo span {
+        margin: 0 15px 5px 0;
+    }
+}
