@@ -77,4 +77,121 @@ html, body {
 
 ::selection{background:#ED1B2D;color:#fff;}
 ::-moz-selection{background:#ED1B2D;color:#fff;}
-::-webkit-selection{background:#ED1B2D;color:#fff;} 
+::-webkit-selection{background:#ED1B2D;color:#fff;}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.header .logo {
+    float: left;
+    margin: 27px 0 0 26px;
+}
+.header .logo a {
+    display: block;
+    width: 229px;
+    height: 47px;
+    background-image: url(../images/common/logo_w.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+    line-height: 0;
+}
+.header .gnb {
+    float: right;
+    margin: 0 50px 0 0;
+}
+.header .gnb .gnb_open {
+    display: none;
+}
+.header .gnb ul li {
+    float: left;
+}
+.header .gnb ul li a {
+    display: block;
+    padding: 0 50px;
+    font-size: 20px;
+    line-height: 100px;
+    /*
+        header의 높이값, 글자를 위아래 가운데 배치하기위해 높이와 동일한 line-height 값을 줌
+    */
+}
+/* header가 고정일 때 */
+.header.black {
+    border-bottom: 1px solid #ccc;
+    /* background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1); */
+    color: #3D3D3D;
+}
+.header.black .logo a {
+    background-image: url(../images/common/logo.svg);
+}
+
+/*
+    반응형 사이즈 단계별 조절
+    1440px
+    1280px
+    1024px
+    800px
+    640px
+*/
+@media screen and (max-width:1280px){
+    .header .gnb ul li a {
+        padding: 0 40px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1024px){
+    .header .gnb ul li a {
+        padding: 0 30px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:800px){
+    .header .gnb ul li a {
+        padding: 0 20px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:640px){
+    .header {
+        height: 60px;
+    }
+    .header .logo {
+        margin: 18px 0 0 20px;
+    }
+    .header .logo a {
+        width: 122px;
+        height: 25px;
+    }
+    .header .gnb {
+        margin: 0;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        padding: 24px 20px 21px 20px;
+    }
+    .header .gnb .gnb_open span {
+        display: block;
+        width: 15px;
+        height: 2px;
+        margin-bottom: 3px;
+        border-radius: 1px; /* 높이의 절반 */
+        background-color: #fff;
+        font-size: 0;
+        line-height: 0;
+    }
+    .header .gnb ul {
+        display: none;
+    }
+    .header.black .gnb .gnb_open span {
+        background-color: #3d3d3d;
+    }
+} /* header 반응형 종료 */
