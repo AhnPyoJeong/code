@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>fullpage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<script src="../crown/js/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"></script>
+<link rel="stylesheet" href="../crown/css/default.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.css">
+<style>
+	.section { font-size:100px; font-weight:700; text-align:center; }
+	.section video { position:absolute; right:0; bottom:0; top:0; width:100%; height:100%; object-fit:cover; z-index:3; }
+	.section .cnt { height:300px; }
+	.section iframe { border:0; margin:0; padding:0; width:100%; height:100%; }
+	.fp-watermark { display:none; }
+	#menu { position:fixed; right:20px; top:20px; z-index:10000; }
+	#menu a { display:inline-block; margin:0 10px; }
+	#menu a.active { font-weight:700; text-decoration:underline; }
+	.layer_pop { display:none; position:fixed; left:5%; top:5%; z-index:10000000; width:90%; height:90%; }
+	.layer_pop .inner { overflow:auto; position:absolute; left:0; top:0; width:100%; height:100%; background:#FFF;  content:"" }
+	.layer_pop::before { position:fixed; left:0; top:0; right:0; bottom:0; z-index:-1; background:rgba(0,0,0,0.8); content:"" }
+	.layer_pop .close { position:fixed; right:10px; top:10px; width:50px; height:50px; cursor:pointer; }
+	.layer_pop .close::before { position:absolute; left:0; top:25px; width:100%; height:5px; background:#FFF; transform:rotate(45deg); content:"" }
+	.layer_pop .close::after { position:absolute; left:0; top:25px; width:100%; height:5px; background:#FFF; transform:rotate(-45deg); content:"" }
+</style>
+</head>
+
+<body>
+	<div id="fullpage">
+		<section class="section">
+            <video loop muted data-autoplay playsinline>
+				<source data-src="video.mp4" type="video/mp4" />
+			</video>
+        </section>
+		<section class="section">Some 2 section</section>
+		<section class="section">Some 3 section</section>
+		<section class="section fp-auto-height"><div class="cnt">FOOTER</div></section>
+	</div>
+
+	<script>
+		const myFullpage = new fullpage('#fullpage', {
+			sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+			
+			//menu: '#menu', /* 상단 고정 메뉴의 선택자 */
+			//lockAnchors: false, /* true면 메뉴를 클릭해서 이동 못함 */
+			//anchors:['slide1', 'slide2', 'slide3', 'slide4'], /* anchor의 이름 */
+
+			navigation: true, /* 오른쪽에 각 페이지의 paging */
+			navigationPosition: 'right', /* 위치 */
+			navigationTooltips: ['첫번째', '두번째', '세번째'], /* 툴팁 */
+			showActiveTooltip: true, /* 현재 활성화된 페이지의 툴팁에 특정 클래스 주기 */
+
+			autoScrolling:true, /* 한페이지씩 스크롤 */
+			scrollHorizontally: true,
+
+			//scrollBar: true, /* 스크롤바 표시하기  - 잘 안됨 */
+
+			verticalCentered: true, /* 컨텐츠 요소 위아래 가운데 */
+
+			responsiveWidth: 640 /* fullpage를 때려칠 모바일 사이즈 */
+		});
+	</script>
+
+<div class="layer_pop">
+	<div class="inner">
+		<div class="contents">
+			<h2>fullpage</h2>
+			<a href="https://alvarotrigo.com" target="_blank" class="bg_red padding_btn">fullpage 홈페이지</a> 
+			<a href="https://cdnjs.com/libraries/fullPage.js" target="_blank" class="bg_red padding_btn">fullpage cdn 주소 확인</a>
+			<h2>fullpage CDN 파일 링크</h2>
+			<div class="code">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.cs"&gt;
+			</div>
+			<h2>기본 html 구조</h2>
+			<div class="code">
+&lt;div id="fullpage"&gt; <em class="txt_green">------------- fullpage 전체를 감싸는 요소</em>
+	&lt;section class="section"&gt; <em class="txt_green">------------------------ 한페이지</em>
+	&lt;/section&gt;
+	&lt;section class="section fp-auto-height"&gt; <em class="txt_green">-------------- footer 처럼 높이를 낮게 설정할 요소는 class fp-auto-height 추가</em>
+	&lt;/section&gt;
+&lt;/div&gt;
+			</div>
+
+			<h2>기본 css 코드</h2>
+			<div class="code">
+.swiper { height:600px } <em class="txt_green">/* 팝업의 높이가 됨 */</em>
+.swiper-slide img { display:block; width:100%; height:100%; object-fit:cover; } <em class="txt_green">/* 팝업 안에 이미지를 넣었다면 이미지를 꽉차게 나타나게 하기 위해서 해당 스타일을 넣어줌 */</em>
+			</div>
+
+			<h2>fullpage js 셋팅하기</h2>
+			<div class="code">
+	const myFullpage = new fullpage('#fullpage', {  <em class="txt_green">/* html에서 페이지 전체를 감싸는 요소 */</em>
+		autoScrolling:true,
+		scrollHorizontally: true
+	});
+			</div>
+		</div>
+	</div>
+	<a class="close"></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,423 @@
+@import url(default.css);
+@import url(common.css);
+
+.tour {
+    height: 482px;
+    background-color: #13885E;
+    color: #FFF;
+}
+.tour h2 {
+    padding: 64px 0 53px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.tour ul li {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 130px;
+    margin: 0 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    text-align: center;
+}
+.tour ul li a {
+    display: block;
+    height: 150px;
+}
+.tour ul li a i {
+    padding: 37px 0 10px 0;
+    font-size: 42px;
+}
+.tour ul li a strong {
+    display: block;
+}
+.tour ul li a .btn_wrap {
+    display: block;
+}
+.tour ul li a .out,
+.tour ul li a .over {
+    display: block;
+    height: 150px; /* a높이와 동일한값 */
+}
+.tour ul li a .over {
+    background-color: #FFF;
+    color: #13885E;
+}
+.tour ul li a .up_wrap {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;  /* bottom 정렬인데 높이가 늘어나면 밑에서부터 위로 늘어남 */
+    width: 100%;
+    height: 0;
+}
+.tour ul li a .up_wrap .up {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px; /* a의 높이값 */
+    background-color: #FFF;
+    color: #13885E;
+}
+/* 오버효과 - transition */
+.tour ul li.ico1 a i {
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+.tour ul li.ico1 a:hover i {
+    transform: rotateY(360deg);
+}
+.tour ul li.ico2 a {
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.tour ul li.ico2 a:hover {
+    background-color: #FFF;
+    color: #13885E;
+}
+.tour ul li.ico3 a .btn_wrap {
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.tour ul li.ico3 a:hover .btn_wrap {
+    transform: translate(0, -150px); /* a의 높이값만큼 이동 */
+}
+.tour ul li.ico4 a .up_wrap {
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.tour ul li.ico4 a:hover .up_wrap {
+    height: 100%;
+}
+
+.tour ul li.ico5 a:hover i {
+    animation-name: ico_rotate;
+    animation-duration: 1s; /* 애니메이션 0 ~ 100%까지를 1초동안 실행 */
+    animation-iteration-count: infinite; /* 애니메이션 무한 반복 */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes ico_rotate {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.tour .circle_txt {
+    position: absolute;
+    right: -105px;
+    top: 40px;
+    width: 285px;
+    height: 285px;
+    background: url(../images/circle_txt.svg) no-repeat right bottom;
+
+    animation-name: circle_rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    .tour .circle {
+        animation-name: circle_rotate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+@keyframes circle_rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.tour .fire {
+    position: absolute;
+    background: url(../images/fire.svg) no-repeat center center / contain;
+
+    animation-name: fire_ani;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.tour .fire.po1 {
+    left: -50px;
+    top: 270px;
+    width: 120px;
+    height: 120px;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.tour .fire.po2 {
+    left: -50px;
+    top: 270px;
+    width: 180px;
+    height: 180px;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.tour .fire.po3 {
+    left: 200px;
+    top: -20px;
+    width: 180px;
+    height: 180px;
+    animation-duration: 5s;
+    animation-delay: 0.5s; /* delay가 기간동안 애니메이션 적용 X */
+    opacity: 0;
+}
+@keyframes fire_ani {
+    0% { opacity: 0; transform: scale3d(0,0,1); }
+    30% { opacity: 1; transform: scale3d(1,1,1); }
+    70% { opacity: 1; transform: scale3d(1,1,1); }
+    100% { opacity: 0; transform: scale3d(1.5,1.5,1); }
+}
+
+.media h2 {
+    margin: 100px 0 20px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.media ul li {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 440px;
+    margin: 0 40px 0 0;
+}
+.media ul li:last-child {
+    margin-right: 0;
+}
+.media ul li a {
+    display: block;
+}
+.media ul li.list1 a {
+    height: 371px;
+    padding: 15px 15px 0 15px;
+    border: 1px solid #ccc;
+}
+.media ul li.list1 a .pic {
+    overflow: hidden;
+    height: 212px;
+}
+.media ul li.list1 a .pic img {
+    /*
+        감싸는 영역에서 overflow:hidden으로 이미지를 제한할 때
+        이미지를 block, width/height: 100%, object-fit: cover를 주면
+        영역에 꽉 차게 위치는 좌우, 위아래 가운데에 이미지가 배치
+    */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.media ul li.list1 a h3 {
+    margin: 20px 0 0 0;
+    font-size: 25px;
+}
+.media ul li.list1 a .over {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px 0 20px;
+    background-color: #115598;
+    color: #fff;
+}
+.media ul li.list1 a .over strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 25px;
+}
+.media ul li.list1 a .over .txt {
+    display: block;
+    color: rgba(255,255,255,0.8);
+    /* 5줄 제한 */
+    overflow: hidden;
+    line-height: 1.5;
+    height: 7.5em;
+}
+.media ul li.list1 a .over .date {
+    display: block;
+    color: rgba(255,255,255,0.8);;
+    margin: 10px 0 0 0;
+}
+/* 애니메이션 */
+.media ul li.list1 a .over {
+    transition: 0.5s;
+}
+.media ul li.list1 a:hover .over {
+    top: 0;
+}
+
+.media ul li.list2 a .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.media ul li.list2 a h3 {
+    position: absolute;
+    left: 20px;
+    top: 257px;
+    width: calc(100% - 40px);
+    color: #fff;
+    font-size: 25px;
+}
+.media ul li.list2 a p {
+    opacity: 0;
+    position: absolute;
+    left: 20px;
+    top: 350px;
+    width: calc(100% - 40px);
+    color: rgba(255,255,255,0.8);
+}
+/* 마우스 오버 효과 */
+.media ul li.list2 a .pic::after {
+    transition: 0.5s;
+    opacity: 0;
+    position: absolute; /* li의 position: relative를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0,0,0,0.4); */
+    background-image: linear-gradient(0,0,0,0.8);, rgba()
+    content:"";
+}
+.media ul li.list2 a:hover .pic::after {
+    opacity: 1
+    
+    ;
+}
+.media ul li.list2 a h3 {
+    transition: 0.5s;
+}
+.media ul li.list2 a p {
+    transition: 0.5s;
+}
+.media ul li.list2 a:hover h3 {
+    top: 170px;
+}
+.media ul li.list2 a:hover p {
+    opacity: 1;
+    top: 257px;
+}
+.media ul li.list3 a .pic {
+    overflow: hidden;
+    height: 215px;
+}
+.media ul li.list3 a .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.media ul li.list3 a h3 {
+    position: relative;
+    margin: 15px 0 15px 0;
+    font-size: 25px;
+}
+.media ul li.list3 a h3::after {
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background-color: #3d3d3d;
+    content: "";
+}
+.media ul li.list3 a p {
+    overflow: hidden;
+    line-height: 1.5;
+    height: 3em;
+}
+/* 애니메이션 */
+.media ul li.list3 a h3::after {
+    transition: 0.5s;
+}
+.media ul li.list3 a:hover h3::after {
+    width: 100%;
+}
+
+.menu {
+    margin: 100px;
+}
+.menu .gnb_open {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #3d3d3d;
+}
+.menu .gnb_open span {
+    position: absolute;
+    left: 40px;
+    width: 120px;
+    height: 10px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+.menu .gnb_open span.line1 {
+    top: 50px;
+}
+.menu .gnb_open span.line2 {
+    top: 90px;
+}
+.menu .gnb_open span.line3 {
+    top: 130px;
+}
+.menu .gnb_open:hover span.line1 {
+    transform: translate(0, 40px) rotate(45deg);
+}
+.menu .gnb_open:hover span.line2 {
+    transform: translate(-170px, 0);
+    opacity: 0;
+}
+.menu .gnb_open:hover span.line3 {
+    transform: translate(0, -40px) rotate(-45deg);
+}    
+
+.slide {
+    margin: 100px 0;
+}
+.slide .slide_wrap {
+    overflow: hidden;
+    width: 0; 
+    /* 넓이가 0 ~ 100%로 변경되는 애니메이션을 줄 예정  
+       첫 설정에서 50%로 넓이를 제한하고 그 내부요소가 slide_cnt가 slide와 영역이 동일해야함 
+       slide_cnt의 영역이 짤리면 안됨   */
+}
+.slide .slide_wrap .slide_cnt {
+    position: relative;
+    width: 1400px;
+    height: 389px;
+}
+.slide .slide_wrap .slide_cnt h2 {
+    position: absolute;
+    right: 240px;
+    top: 137px;
+    font-size: 40px;
+    color: #FFF;
+    text-align: right;
+}
+/* 애니메이션 -transition : 마우스아웃효과가 무조건 들어감 */
+/*.slide .slide_wrap {
+    transition: 1s;
+}
+.slide:hover .slide_wrap {
+    width: 100%;
+}*/
+
+/* 
+    애니메이션 animation - 마우스가 오버하고 아웃해도 효과가 사라지지 않았으면 
+    slide에 hover이 아니라 jquery에서 slide에 오버를 하면 over라는 클래스를 추가함
+    해당 클래스가 추가됐을때 animate가 작동됨
+*/
+.slide.over .slide_wrap {
+    animation-name: size100;
+    animation-duration: 1s; /* 애니메이션 실행시간 */
+    animation-fill-mode: forwards; /* 애니메이션 종료 후 100% 상태 유지 */
+}
+@keyframes size100 {
+    0% {width: 0;}
+    100% {width: 100%;}
+}
