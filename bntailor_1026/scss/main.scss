@@ -19,7 +19,7 @@
         left: calc(50% - 700px);
         top: 50%;
         z-index: 10;
-        color: #fff;
+        color: $w_tit_color;
         strong {
             @include font_serif;
             display: block;
@@ -38,12 +38,27 @@
     }
     .popup { /* .visual .popup */
         height: 100vh;
+        ul li img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .btn_wrap {
+            display: flex;
+            align-items: center;
             position: absolute;
             left: calc(50% - 700px);
             top: calc(50% + 220px);
             z-index: 10;
             .btn_paging {
+                display: flex;
+                /*
+                    span이 여러 개 발생해도 한 줄로 나타남
+                    단, 내가 준 넓이보다 작게 구현될 수도 있음
+                */
+                font-size: 0;
+                line-height: 0;
                 span {
                     opacity: 0.2;
                     width: 60px;
@@ -63,6 +78,129 @@
                     }
                 }
             }
+            .btn_stop {
+                width: 12px;
+                height: 5px;
+                margin-left: 10px;
+                background-image: url(/code/bntailor_1026/images/main/visual_btn_stop.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                font-size: 0;
+                line-height: 0;
+                &.play { /* .btn_stop.play */
+                    background-image: url(/code/bntailor_1026/images/main/visual_btn_play.svg);
+                }
+            }
         }
     }
+}
+@media screen and (max-width:1440px){
+    .visual {
+        .tit {
+            left: 20px;
+        }
+        .popup {
+            .btn_wrap {
+                left: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width:1050px){
+    .visual {
+        .tit {
+            h2 {
+                font-size: 50px;
+            }
+        }
+        .popup {
+            .btn_wrap {
+                top: calc(50% + 180px);
+            }
+        }
+    }
+}
+@media screen and (max-width:640px){
+    .visual {
+        .tit {
+            left: 50%;
+            width: calc(100% - 40px);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            h2 {
+                font-size: 30px;
+            }
+        }
+        .popup {
+            .btn_wrap {
+                left: 50%;
+                top: calc(50% + 90px);
+                transform: translate(-50%, 0);
+                .btn_paging {
+                    span {
+                        width: 40px;
+                    }
+                }
+                .btn_stop {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.fabric {
+    position: relative;
+    padding: 0 0 290px 0;
+    background-color: #33302D;
+    color: $w_basic_color;
+    .inner {
+        padding: 200px 0 0 0;
+        transition: 0.2s;
+    }
+    h2 {
+        @include zindex_top;
+        padding: 200px 0 30px 0;
+        color: $w_tit_color;
+        font-size: 25px;
+    }
+    .tit {
+        @include zindex_top;
+        @include font_serif;
+        color: $w_tit_color;
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+    .cnt {
+        @include zindex_top;
+        margin: 60px 0 0 0;
+    }
+    .bg {
+        position: absolute;
+        overflow: hidden;
+        /*
+            bg 영역 안에는 bg보다 더 큰 이미지가 포함됨
+            이미지는 스크롤에 따라 bg 영역 안에서 이동할 예정
+            그래서 overflow: hidden; 으로 영역 밖에 나간 이미지는 안보이게 함
+        */
+        left: calc(50% - 100px);
+        top: 0;
+        z-index: 1;
+        width: 800px;
+        height: 1000px;
+        img {
+            display: block;
+            width: 120%;
+            height: 120%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+    }
+}
+
+
+.product {
+    background-color: #33302D;
+    height: 1000px;
 }
