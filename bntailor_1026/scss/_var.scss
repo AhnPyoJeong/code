@@ -16,6 +16,16 @@ $point_color: #9D856D;
     position: relative;
     z-index: 10;
 }
+@mixin clearfix {
+    display: block;
+    &::after {
+        display: block;
+        clear: both;
+        content: ".";
+        visibility: hidden;
+        height: 0;
+    }
+}
 
 /*
     scss에서 mixin은 특정 스타일의 속성명과 속성값을 모두 선언하는 방식 (여러 개)

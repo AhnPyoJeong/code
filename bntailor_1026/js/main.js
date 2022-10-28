@@ -31,27 +31,66 @@ $(document).ready(function(){
         }
     })
 
-    /* fabric 이미지 스크롤 효과 */
-    let scrolling
-    let moveTop
-    let objName = $('.fabric .inner')
-    fabScroll() // 로딩됐을 때 한번
-    $(window).scroll(function(){ // 스크롤할 때마다 실행
-        fabScroll()
-    })
+    /*
+        이미지가 스크롤될 때 오브젝트가 움직이는 효과
+        움직이는 시작점을 오브젝트가 화면에 나타나기 시작했을 때로 설정해주어야 함
 
-    function fabScroll(){ // 스크롤 값을 계산해서 fabric의 이미지를 움직일 함수
-        /*
-            스크롤값을 요소의 위치값으로 변경해서 스타일을 적용
-            효과를 줄 요소가 화면의 하단에 등장하기 시작했을 때부터
-            스크롤한 값을 새로 계산해서 해당 요소에 주어야
-            해당 요소가 화면에 자연스럽게 나타남
-        */
-        scrolling = $(window).scrollTop()
-        console.log(scrolling, 'scroll')
-        console.log(objName.offset().top, 'top')
-        moveTop = scrolling * 0.2
-        // objName.css('transform', 'translate(0, -'+moveTop+'px)')
+        1. 브라우저가 스크롤되는 값 - $(window).scrollTop()
+        2. 오브젝트가 화면 하단에서 나타나기 시작하는 값
+            - offset().top >> 상단 맨 위에서부터 오브젝트까지의 거리
+            offset().top과 $(window).scrollTop 값이 같아지는 시기는
+            오브젝트가 화면 상단에 딱 붙었을 때인데
+            지금 필요한 건 오브젝트가 화면 하단에서부터 보이기 시작하는 값이므로
+            두 값의 차이가 브라우저의 높이값
+
+            오브젝트가 화면 하단에서 나타나기 시작하는 값은
+            오브젝트의 offset().top - 윈도우의 높이값만큼 스크롤 됐을 때
+
+
+        3. 오브젝트를 움직일 방법 (좌우, 상하 등)
+        animate - transform X
+        css로 transform: translate() 움직일 예정
+
+
+            
+    */
+
+    let winH
+    let moveVal // 오브젝트가 움직일 값
+    let offTop
+    let scrolling
+    
+    objParallax($('.fabric .bg img'), $('.fabric .bg'), 'top', 0.1)
+    // objParallax($('.sns p'), $('.sns p'), 'left', 0.5)
+    
+    /*
+        objMove : 실제로 움직일 오브젝트
+        objParent : 움직일 오브젝트의 기준이 되는 요소 (offset.top()을 계산할 오브젝트)
+        moveDir : 스크롤 방향 (left - 좌우, top - 위아래)
+        moveRate : 움직일 속도와 비율
+    */
+    function objParallax(objMove, objParent, moveDir, moveRate){ // 오브젝트를 움직이는 애니메이션 (단 한번만 세팅)
+        objMove.css('transition', '1s')
+        moveAni(objMove, objParent, moveDir, moveRate)
+        $(window).scroll(function(){
+            moveAni(objMove, objParent, moveDir, moveRate)
+        })
+        $(window).resize(function(){
+            moveAni(objMove, objParent, moveDir, moveRate)
+        })
     }
+    function moveAni(objMove, objParent, moveDir, moveRate){ // 오브젝트를 실제 움직이는 함수 (반복 실행)
+        winH = $(window).height()
+        offTop = objParent.offset().top
+        scrolling = $(window).scrollTop()
+        moveVal = (scrolling - offTop + winH) * moveRate
+        console.log(moveVal, 'moveVal')
+        if(moveDir == 'left'){
+            objMove.css('transform', 'translateX(-'+moveVal+'px)')
+        }else{ // top
+            objMove.css('transform', 'translateY(-'+moveVal+'px)')
+        }
+    }
+
 
 }) // document.ready 종료
