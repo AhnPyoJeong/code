@@ -276,12 +276,41 @@
         @include clearfix;
         position: relative;
         .tit {
+            /*
+                position: sticky 는 감싸는 요소에 overflow: hidden이 없어야함
+                하지만 홈페이지 전체에 id="wrap"이 스타일에 overflow: hidden이 들어감
+                overflow를 주지 않고 코딩은 어려움
+                그래서 sticky는 사용 불가
+
+                그래서 고정될 요소에 position: fixed를 줘야함
+                fixed는 body와만 정렬
+
+                <div class="list">              -- relative
+                    <div class="tit"></div>     -- absolute
+                </div>
+
+                tit이 absolute일 땐 relative를 준 list를 기준으로 정렬함
+                하지만 fixed로 변경되면 무조건 body랑 정렬
+                정렬의 기준값이 변경됨 (left가 fixed일 때랑 absolute일 때랑 바뀜)
+                실제 화면상에서도 left의 위치는 변경 X
+                absolute일 때와 fixed일 때 위치를 동일하게 left 값을 줘야함
+            */
             @include font_serif;
             position: absolute;
-            left: 0;
+            left: calc(50% - 700px);
             top: 0;
             font-size: 60px;
             font-weight: 700;
+
+            &.fixed {
+                position: fixed;
+                top: 130px;
+            }
+            &.end {
+                position: absolute;
+                top: auto;
+                bottom: 103px;
+            }
         }
         ul {
             float: right;
@@ -315,6 +344,14 @@
             &.item1 {
                 margin: 300px 0 0 120px;
             }
+        }
+    }
+}
+@media screen and (max-width:1440px){
+    .product .list .tit {
+        left: 0;
+        &.fixed {
+            left: 20px;
         }
     }
 }
@@ -376,6 +413,81 @@
         h2 {
             padding-top: 100px; 
             font-size: 35px;
+        }
+
+    }
+}
+
+
+.insta {
+    position: relative;
+    padding: 0 0 156px 0;
+    background-color: #897D70;
+    color: $w_tit_color;
+    h2 {
+        @include font_serif;
+        position: relative;
+        z-index: 10;
+        padding: 111px 0 110px 0;
+        font-size: 80px;
+        font-weight: 700;
+    }
+    .list {
+        ul {
+            li {
+                font-size: 0;
+                line-height: 0;
+                a {
+                    display: block;
+                    overflow: hidden;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    .bg_txt {
+        @include font_serif;
+        position: absolute;
+        left: 0;
+        top: 110px;
+        color: rgba(255,255,255,0.1);
+        font-size: 120px;
+        white-space: nowrap;
+
+        animation-name: bg_txt_ani;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        /* 기본 ease 가속도 - 동일한 속도로 애니메이션을 주려면 linear */
+    }
+}
+@keyframes bg_txt_ani {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50.3%); }
+    /*
+        html에서 무조건 동일한 글자를 두번 입력
+        css 애니메이션으로 절반을 이동
+        그럼 두번째 단락의 글자가 다시 나타남
+    */
+}
+@media screen and (min-width:1441px){
+    .insta {
+        .list {
+            width: calc(100% + 680px); // 320 + 320 + 40 = 680
+            margin-left: -360px !important;
+        }
+    }
+}
+@media screen and (max-width:800px){
+    .insta {
+        padding: 0 0 80px 0;
+        h2 {
+            padding: 50px 0 40px 0;
+            font-size: 35px;
+        }
+        .bg_txt {
+            top: 20px;
+            font-size: 60px;
         }
     }
 }

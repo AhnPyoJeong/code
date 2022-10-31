@@ -111,6 +111,13 @@ html, body {
             }
         }
     }
+    /* header가 고정일 때 (header.fixed header에 fixed 클래스가 추가됐을 때) */
+    &.fixed {
+        position: fixed;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /* 브라우저 호환성 때문에 써줌 */
+        background-color: rgba(0,0,0,0.4);
+    }
 }
 @media screen and (max-width:1550px){
     .header .logo a img {
