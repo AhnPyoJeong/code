@@ -85,6 +85,7 @@ html, body {
     z-index: 300;
     width: 100%;
     height: 100px;
+    transition: 0.5s;
     border-bottom: 1px solid #666666;
     .logo {
         float: left;
@@ -96,17 +97,19 @@ html, body {
         .gnb_open {
             display: none;
         }
-        ul {
-            li {
-                float: left;
-                a {
-                    display: block;
-                    padding: 0 40px;
-                    @include font_serif;
-                    color: $w_tit_color;
-                    font-size: 18px;
-                    font-weight: 400;
-                    line-height: 100px;
+        .gnb_wrap {
+            ul {
+                li {
+                    float: left;
+                    a {
+                        display: block;
+                        padding: 0 40px;
+                        @include font_serif;
+                        color: $w_tit_color;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 100px;
+                    }
                 }
             }
         }
@@ -116,6 +119,7 @@ html, body {
         position: fixed;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px); /* 브라우저 호환성 때문에 써줌 */
+        border-bottom: none;
         background-color: rgba(0,0,0,0.4);
     }
 }
@@ -123,7 +127,7 @@ html, body {
     .header .logo a img {
         width: 140px;
     }
-    .header .gnb ul li a {
+    .header .gnb .gnb_wrap ul li a {
         font-size: 15px;
         padding: 0 30px;
     }
@@ -132,7 +136,7 @@ html, body {
     .header .logo a img {
         width: 120px;
     }
-    .header .gnb ul li a {
+    .header .gnb .gnb_wrap ul li a {
         font-size: 14px;
         padding: 0 20px;
     }
@@ -151,6 +155,7 @@ html, body {
             .gnb_open {
                 display: block;
                 position: relative;
+                z-index: 2;
                 width: 60px;
                 height: 60px;
                 strong {
@@ -159,9 +164,10 @@ html, body {
                 span {
                     position: absolute;
                     right: 20px;
-                    width: 21px;
+                    width: 25px;
                     height: 2px;
                     background-color: #FFF;
+                    transition: 0.3s;
                     &.line1 {
                         top: 22px;
                     }
@@ -174,8 +180,174 @@ html, body {
                     }
                 }
             }
-            ul {
-                display: none;
+            .gnb_wrap {
+                display: block;
+                position: absolute;
+                right: -100%;
+                top: 0;
+                z-index: 1;
+                width: 100%;
+                max-width: 500px;
+                height: 100vh;
+                background-color: #FFF;
+                color: #3d3d3d;
+                transition: right 0.5s;
+                ul {
+                    margin: 60px 0 0 0;
+                    li {
+                        float: none;
+                        border-bottom: 1px solid #ededed;
+                        a {
+                            @include font_serif;
+                            padding: 0;
+                            color: $basic_color;
+                            font-size: 20px;
+                            font-weight: 700;
+                            line-height: 80px;
+                            text-align: center;
+                        }
+                        &:first-child {
+                            border-top: 1px solid #ededed
+                        }
+                    }
+                }
+            }
+            &::after {
+                /*
+                    메뉴 뒷배경을 검은색으로 채울 땐
+                    position: fixed;
+                    left, right, top, bottom를 모두 0으로 주면
+                    left: 0;, top: 0;, width: 100%;, height: 100%;와 동일하게 들어감
+
+                    <div class="gnb">
+                    <button class="gnb_open"></button>
+                    <div class="gnb_wrap"></div>
+                    ::after -- gnb::after
+                    </div>
+                    ㄴ 위와 같은 구조에서
+                        gnb_open과 gnb_wrap, gnb::after의 순서를 조정할 수 있음
+                        z-index는 이렇게 나란히 들어간 요소들 사이에서 높은 숫자가 위로 올라감
+
+                    <button class="gnb_open"></button>
+                    <div class="gnb_wrap">
+                        ::after -- gnb_wrap::after
+                    </div>
+                    ㄴ 이런 구조라면 gnb_wrap::after는 gnb_wrap 안에 존재하기 때문에
+                        그 밖에 있는 gnb_open, gnb_wrap의 순서를 절대 조정할 수 없음
+                */
+                opacity: 0;
+                transition: opacity 0.5s;
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                height: 100vh;
+                background-color: rgba(0,0,0,0.7);
+                content: "";
+            }
+            /* 모바일 메뉴가 열렸을 때 */
+            &.mobile_open {
+                .gnb_open {
+                    span {
+                        width: 26px;
+                        background-color: #3d3d3d;
+                        &.line1 {
+                            top: 29px;
+                            transform: rotate(45deg);
+                        }
+                        &.line2 {
+                            right: -27px;
+                        }
+                        &.line3 {
+                            top: 29px;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+                .gnb_wrap {
+                    right: 0;
+                }
+                &::after {
+                    opacity: 1;
+                }
+            }
+        } // gnb 종료
+    }
+}
+
+.footer {
+    @include clearfix;
+    padding: 65px 0;
+    background-color: #33302D;
+    color: $w_basic_color;
+    .sns {
+        float: right;
+        ul {
+            li {
+                float: left;
+                a {
+                    display: block;
+                    position: relative;
+                    width: 49px;
+                    height: 49px;
+                    border-width: 1px 1px 1px 0;
+                    border-style: solid;
+                    border-color: rgba(255,255,255,0.1);
+                    font-size: 0;
+                    line-height: 0;
+                    &::before {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        /* 배경이미지가 한개를 보이는 영역을 제한해서 써야하기 때문에
+                           before, after에서 표시.
+                           이때 before, after의 사이즈는 내가 사용할 아이콘의 넓이
+                           - 저장할때 활용된 아이콘의 넓이 */
+                        width: 30px;
+                        height: 30px;
+                        background-image: url(/code/bntailor_1026/images/common/footer_ico.svg);
+                        background-repeat: no-repeat;
+                        content: "";
+                    }
+                }
+                &:first-child {
+                    a {
+                        border-left-width: 1px;
+                    }
+                }
+                &.facebook a::before {
+                    background-position: left top;
+                }
+                &.instagram a::before {
+                    background-position: left -30px top;
+                }
+                &.naver a::before {
+                    background-position: left -60px top;
+                }
+            }//li종료
+        }
+    }
+    .inner {
+        float: left;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .footer {
+        padding: 58px 0 95px 0;
+        .sns {
+            @include clearfix;
+            float: none;
+            margin: 0 0 20px 0;
+        }
+        .inner {
+            float: none;
+            .finfo {
+                span {
+                    margin: 0 15px 5px 0;
+                }
             }
         }
     }
