@@ -5,10 +5,158 @@
 
 /* 서브 공통 레이아웃 */
 
-.container {
-    svg {
-        path {
-            fill: #9D856D;
+.sub_visual {
+    position: relative;
+    height: 711px;
+    margin: 0 0 20px 0;
+    .sub_visual_bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 720px; /* clip-path로 위치가 정확하지 않아 배경을 별도의 요소에 줌 */
+        background-image: url(/code/bntailor_1026/images/sub/sub_visual1.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        clip-path: url(#sub_visual_path);
+        /*
+            html에서 입력한 svg clipPath에 지정된 id값을 url로 연결하면
+            해당 요소의 path 값이 배경을 표시할 영역으로 적용됨
+            path로 직접 경로를 사용했는데 안되는 경우, svg path의 크기를 변경해야하는 경우
+            이런 방식을 사용함
+        */
+        
+    }
+    &.sub_bg1 .sub_visual_bg {
+        background-image: url(/code/bntailor_1026/images/sub/sub_visual1.png);
+    }
+    &.sub_bg2 .sub_visual_bg {
+        background-image: url(/code/bntailor_1026/images/sub/sub_visual2.png);
+    }
+    &.sub_bg3 .sub_visual_bg {
+        background-image: url(/code/bntailor_1026/images/sub/sub_visual3.png);
+    }
+    &.sub_bg4 .sub_visual_bg {
+        background-image: url(/code/bntailor_1026/images/sub/sub_visual4.png);
+    }
+    &.sub_bg5 .sub_visual_bg {
+        background-image: url(/code/bntailor_1026/images/sub/sub_visual5.png);
+    }
+    &.sub_bg6 .sub_visual_bg {
+        background-image: url(/code/bntailor_1026/images/sub/sub_visual6.png);
+    }
+    &.sub_bg7 .sub_visual_bg {
+        background-image: url(/code/bntailor_1026/images/sub/sub_visual7.png);
+    }
+    .sub_visual_path {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        svg {
+            width: 1px;
+            height: 1px;
+        }
+    }
+    .location {
+        display: flex;
+        padding: 385px 0 0 5px;
+        color: $w_tit_color;
+        span {
+            position: relative;
+            margin-right: 25px;
+            &::after {
+                position: absolute;
+                right: -18px;
+                top: 8px;
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+                clip-path: polygon(50% 0%, 75% 0%, 50% 50%, 75% 100%, 50% 100%, 25% 50%);
+                /*
+                    이미지로 하는 것이 아니라 svg를 이용해서 아이콘을 그리는데
+                    여러번 반복해서 들어가는 경우 css에서 원하는 도형의 크기와 넓이를 주고
+                    배경색으로 아이콘의 색상을 주고 clip-path: 로 path 값을 준다
+
+                    장점 1. 여러 요소를 선택해서 도형을 그릴 수 있음
+
+                    단점 1. 사이즈를 수정할 수 없음 (단, %로 path를 그릴 것은 가능)
+                         2. 작은 것은 적용이 안됨
+                         3. 브라우저 호환성이 떨어짐 (안되는 브라우저가 있음)
+                         4. path를 그리는 방법이 많은데 적용이 안됨 (html에서는 실행돼도 css에서 안됨)
+                */
+                content: "";
+            }
+            &:last-child::after {
+                display: none;
+            }
+        }
+    }
+    .tit {
+        @include font_serif;
+        color: $w_tit_color;
+        font-size: 60px;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width:800px){
+    .sub_visual {
+        height: 250px;
+        .sub_visual_bg {
+            height: 100%;
+            clip-path: none;
+        }
+        .location {
+            padding: 152px 0 0 0;
+            span {
+                margin-right: 15px;
+                &::after {
+                    right: -13px;
+                    top: 5px;
+                }
+            }
+        }
+        .tit {
+            font-size: 30px;
+        }
+    }
+}
+
+.lnb {
+    height: 100px;
+    .lnb_wrap {
+        ul {
+            li {
+                float: left;
+                a {
+                    display: block;
+                    padding: 0 30px;
+                    color: #999;
+                    font-size: 25px;
+                    font-weight: 700;
+                }
+                &:first-child {
+                    a {
+                        padding-left: 0;
+                    }
+                }
+                &.active {
+                    a {
+                        position: relative;
+                        color: #3d3d3d;
+                        &::before {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 19px;
+                            height: 2px;
+                            background-color: #9D856D;
+                            content: "";
+                        }
+                    }
+                }
+            }
         }
     }
 }

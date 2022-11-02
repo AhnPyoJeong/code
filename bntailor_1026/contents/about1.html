@@ -59,8 +59,25 @@
                 </div>
                 <div class="tit">About Us</div>
             </div>
-            <nav class="lnb"> <!-- local navigation ber 서브 메뉴 -->
-                <div class="wrapper">
+            <div class="sub_visual_bg"></div>
+            <div class="sub_visual_path">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="sub_visual_path" clipPathUnits="objectBoundingBox" transform="scale(0.00078125,0.0013888888888889)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 580.826L338.625 711.825L1920 582.284V0.653442H0V580.826Z" fill="#815858"/>
+                    </clipPath>
+                </svg>
+            </div>
+            <!--
+                svg에 clipPath를 추가하면 svg는 화면에 출력되지않음
+                css에서 clip-path로 사용하기 위해서 변환한 것
+                svg가 눈에 안보일 뿐 공간은 그대로 차지함
+                display: none; 으로 숨기면 clip-path 효과가 사라짐 (적용이 안됨)
+                absolute로 한쪽으로 보내고 svg를 선택해서 1px로 작게 수정
+            -->
+        </div>
+        <nav class="lnb"> <!-- local navigation ber 서브 메뉴 -->
+            <div class="wrapper">
+                <div class="lnb_wrap">
                     <ul>
                         <!-- 현재 메뉴에 active 클래스 추가 -->
                         <li class="active">
@@ -72,14 +89,24 @@
                         <li>
                             <a href="#n">Our Business</a>
                         </li>
+                        <li>
+                            <a href="#n">Our Business</a>
+                        </li>
+                        <li>
+                            <a href="#n">Our Business</a>
+                        </li>
+                        <li>
+                            <a href="#n">Our Business</a>
+                        </li>
+                        <li>
+                            <a href="#n">Our Business</a>
+                        </li>
                     </ul>
                 </div>
-            </nav>
-            <div class="container">
-                <svg width="1920" height="712" viewBox="0 0 1920 712" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 580.826L338.625 711.825L1920 582.284V0.653442H0V580.826Z" fill="#815858"/>
-                </svg>
             </div>
+        </nav>
+        <div class="container">
+            
         </div>
         <footer class="footer">
             <div class="wrapper">

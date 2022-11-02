@@ -191,6 +191,12 @@ html, body {
   float: left;
   margin: 25px 0 0 50px;
 }
+.header .logo svg {
+  width: 160px;
+}
+.header .logo svg path {
+  fill: #fff;
+}
 .header .gnb {
   float: right;
   margin: 0 40px 0 0;
@@ -219,7 +225,7 @@ html, body {
 }
 
 @media screen and (max-width: 1550px) {
-  .header .logo a img {
+  .header .logo a svg {
     width: 140px;
   }
   .header .gnb .gnb_wrap ul li a {
@@ -228,7 +234,7 @@ html, body {
   }
 }
 @media screen and (max-width: 1250px) {
-  .header .logo a img {
+  .header .logo a svg {
     width: 120px;
   }
   .header .gnb .gnb_wrap ul li a {
@@ -243,7 +249,7 @@ html, body {
   .header .logo {
     margin: 8px 0 0 20px;
   }
-  .header .logo a img {
+  .header .logo a svg {
     width: 108px;
   }
   .header .gnb {
