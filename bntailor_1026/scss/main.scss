@@ -11,6 +11,14 @@
 */
 
 
+.header.fixed {  /* header가 고정일 때 (header.fixed header에 fixed 클래스가 추가됐을 때) */
+    position: fixed;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* 브라우저 호환성 때문에 써줌 */
+    border-bottom: none;
+    background-color: rgba(0,0,0,0.4);
+}
+
 
 .visual {
     position: relative;

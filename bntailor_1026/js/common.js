@@ -20,9 +20,9 @@ $(document).ready(function(){
         // console.log(scrolling, '스크롤 될 때마다')
 
         if(scrolling > 0){ // 스크롤 중
-            $('header').addClass('fixed')
+            $('.header').addClass('fixed')
         }else{ // 맨 위로 이동
-            $('header').removeClass('fixed')
+            $('.header').removeClass('fixed')
         }
     }
 

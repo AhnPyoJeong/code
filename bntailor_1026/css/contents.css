@@ -1,2 +1,107 @@
 @charset "UTF-8";
+/* 기본 글자 색상 */
+/* 제목에 들어가는 글자 색상 */
+/* 기본 회색 */
+/* 밝은 회색 */
+/* 어두운 배경에 사용할 기본 하얀 색상 */
+/* 어두운 배경 위 제목에 사용할 하얀 색상 */
+/*
+    scss에서 mixin은 특정 스타일의 속성명과 속성값을 모두 선언하는 방식 (여러 개)
+    변수는 특정 속성값 단 한 개를 저장하는 방식 (변수 하나 당 하나의 속성값)
+    -> 변수의 값은 어느 속성에 사용해도 상관없음
+*/
 /* 각각의 콘텐츠 페이지 스타일 */
+/* Chairman > About us > B&TAILOR */
+.cts_about1 {
+  margin: 82px 0 100px 0;
+}
+.cts_about1 .about_top {
+  overflow: hidden;
+  position: relative;
+  padding: 99px 0 0 0;
+}
+.cts_about1 .about_top p {
+  font-family: "Noto Serif KR", serif;
+  position: absolute;
+  top: 240px;
+  left: calc(50% - 700px);
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.cts_about1 .about_top img {
+  position: absolute;
+  top: 0;
+  left: calc(50% + 66px);
+}
+.cts_about1 .about_top .bg {
+  height: 550px;
+  background: url(/code/bntailor_1026/images/contents/about_top_bg.png) no-repeat center center/cover;
+}
+.cts_about1 .about_sub {
+  position: relative;
+  z-index: 10;
+  padding: 77px 0 0 120px;
+  margin-top: -141px;
+  margin-left: calc(50% - 220px);
+  background-color: #fff;
+}
+.cts_about1 .about_sub .inner {
+  width: 800px;
+}
+.cts_about1 .about_sub .tit {
+  font-family: "Noto Serif KR", serif;
+  font-size: 40px;
+}
+.cts_about1 .about_sub .cnt {
+  margin: 50px 0 50px 0;
+}
+.cts_about1 .about_sub .sign {
+  font-family: "Noto Serif KR", serif;
+  font-size: 25px;
+  text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+  .cts_about1 {
+    margin: 40px 0 50px 0;
+  }
+  .cts_about1 .about_top {
+    padding: 43px 0 0 0;
+  }
+  .cts_about1 .about_top p {
+    top: calc(50% + 20px);
+    transform: translateY(-50%);
+    left: 20px;
+    margin-right: 180px;
+    font-size: 15px;
+  }
+  .cts_about1 .about_top img {
+    left: calc(50% + 30px);
+    right: -30px;
+    width: 50%;
+  }
+  .cts_about1 .about_top .bg {
+    height: 142px;
+  }
+  .cts_about1 .about_sub {
+    margin: 20px 0 0 0;
+    padding: 0;
+    background-color: #fff;
+  }
+  .cts_about1 .about_sub .inner {
+    margin: 0 20px 0 20px;
+    width: calc(100% - 20px);
+  }
+  .cts_about1 .about_sub .tit {
+    font-size: 25px;
+  }
+  .cts_about1 .about_sub .cnt {
+    margin: 30px 0 20px 0;
+  }
+  .cts_about1 .about_sub .sign {
+    margin-right: 20px;
+    font-size: 15px;
+  }
+}

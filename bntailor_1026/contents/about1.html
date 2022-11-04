@@ -15,7 +15,13 @@
 <body>
     <div id="wrap">
         <header class="header">
-            <h1 class="logo"><a href="/code/bntailor_1026/index.html"><img src="/code/bntailor_1026/images/common/logo_w.svg" alt="B&TAILOR"></a></h1>
+            <h1 class="logo">
+                <a href="/code/bntailor_1026/index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 44">
+                        <text id="logo" transform="translate(0 35)" font-size="30" font-family="NotoSerifKR-Bold, Noto Serif KR" font-weight="700"><tspan x="0" y="0">B&amp;TAILOR</tspan></text>
+                    </svg>
+                </a>
+            </h1>
             <!--
                 모바일에서 메뉴를 열면 gnb에 mobile_open
                 gnb_open 버튼은 모양이 바뀌는 애니메이션
@@ -75,38 +81,54 @@
                 absolute로 한쪽으로 보내고 svg를 선택해서 1px로 작게 수정
             -->
         </div>
+        <!--
+            lnb를 고정할 땐, lnb 전체를 fixed로 변경하면 안됨
+            lnb가 공간을 차지하지 않게되어 하단의 콘텐츠가 위로 올라오기 때문
+            (lnb가 고정되는 순간 밑에 콘텐츠가 올라오는 현상이 나타남)
+            lnb는 그대로 있고 안에 일부 콘텐츠만 fixed로 고정되어야 함
+
+            lnb에 fixed 클래스가 추가되면 lnb_fix가 position: fixed; 로 고정
+        -->
         <nav class="lnb"> <!-- local navigation ber 서브 메뉴 -->
-            <div class="wrapper">
-                <div class="lnb_wrap">
-                    <ul>
-                        <!-- 현재 메뉴에 active 클래스 추가 -->
-                        <li class="active">
-                            <a href="#n">Chairman</a>
-                        </li>
-                        <li>
-                            <a href="#n">Family</a>
-                        </li>
-                        <li>
-                            <a href="#n">Our Business</a>
-                        </li>
-                        <li>
-                            <a href="#n">Our Business</a>
-                        </li>
-                        <li>
-                            <a href="#n">Our Business</a>
-                        </li>
-                        <li>
-                            <a href="#n">Our Business</a>
-                        </li>
-                        <li>
-                            <a href="#n">Our Business</a>
-                        </li>
-                    </ul>
+            <div class="lnb_fix"> <!-- 상단에 fixed될 콘텐츠 영역 -->
+                <div class="wrapper">
+                    <div class="lnb_wrap">
+                        <ul>
+                            <!-- 현재 메뉴에 active 클래스 추가 -->
+                            <li class="active">
+                                <a href="#n">Chairman</a>
+                            </li>
+                            <li>
+                                <a href="#n">Family</a>
+                            </li>
+                            <li>
+                                <a href="#n">Our Business</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
         <div class="container">
-            
+            <div class="contents">
+                <!-- 개별 콘텐츠 영역 :: Start (반드시 cts_파일명으로 class를 잡아주고 시작해야함) -->
+                <div class="cts_about1">
+                    <div class="about_top">
+                        <p>PARK JUNG YUL<br>
+                            of B&TAILOR</p>
+                        <img src="/code/bntailor_1026/images/contents/about_top_ceo.png" alt="CEO 사진">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="about_sub">
+                        <div class="inner">
+                            <p class="tit">SINCE 1967</p>
+                            <p class="cnt">비앤테일러 마스터 테일러이자 설립자인 박정열 대표는 1967년부터 업에 종사하기 시작하였으며 1980년 비앤테일러의 전신인 보령양복점에서 두 아들의 합류를 기점으로 현재의 B&TAILOR를 설립하였습니다. 대한민국 비스포크 하우스의 세계화를 이룬다는 오랜 인고의 결실을 맺어 현재 비앤테일러는 해외사업을 비롯 국내고객 못지않은 비중의 해외고객을 보유하고 있으며 파트너쉽을 바탕으로 해외 트렁크쇼를 개최하고 있습니다. 비앤테일러의 수트 한벌은 박정열 대표의 일평생을 바친 모든것을 투영하는 하나의 객체이자 예술작품입니다.</p>
+                            <p class="sign">마스터테일러 박정열</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 개별 콘텐츠 영역 :: End -->
+            </div>
         </div>
         <footer class="footer">
             <div class="wrapper">
