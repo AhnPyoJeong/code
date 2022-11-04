@@ -1,0 +1,263 @@
+@import url(default.css);
+@import url(common.css);
+
+
+
+
+/* visual pc 시작 */
+.visual {
+    position: relative;
+}
+.visual h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 12;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    transform: translate(-50%, 0);
+}
+.visual h2 .block {
+    display: block;
+    overflow: hidden;
+}
+.visual h2 .block span {
+    display: block;
+    transition: 1.5s;
+    transform: translate(0, 50px);
+}
+.visual.fp-completely h2 .block span {
+    transform: translate(0, 0);
+}
+.visual video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* visual pc 종료 */
+
+
+
+/* gift pc 시작 */
+.gift {
+    position: relative;
+    background-image: url(../images/main/gift.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.gift h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 12;
+    font-size: 75px;
+    font-weight: 200;
+    color: #fff;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.gift h2 .block {
+    display: block;
+    overflow: hidden;
+}
+.gift h2 .block span {
+    display: block;
+    transition: 2s;
+    transform: translate(0, 200px);
+}
+.gift.fp-completely h2 .block span {
+    transform: translate(0, 0);
+}
+.gift h2 .block:nth-child(2) span {
+    transition-delay: 0.3s;
+}
+.gift h2 .block:nth-child(3) span {
+    transition-delay: 0.6s;
+}
+/* gift pc 종료 */
+
+
+
+/* ingredients pc 시작 */
+.ingredients {
+    position: relative;
+}
+.ingredients h2 {
+    margin: 0 0 60px 0;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+.ingredients .list ul {
+    margin: 0 0 41px 0;
+}
+.ingredients .list ul li a {
+    display: block;
+}
+.ingredients .list ul li a span {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.ingredients .list ul li a span img {
+    width: 100%;
+    transition: 0.5s;
+}
+.ingredients .list ul li a:hover span img {
+    transform: scale3d(1.1,1.1,1);
+}
+.ingredients .list ul li a strong {
+    display: block;
+    margin: 20px 0 0 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.ingredients .list ul li a p {
+    display: block;
+    font-size: 16px;
+    color: #999;
+}
+.ingredients .button_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.ingredients .button_area a {
+    font-size: 14px;
+    border: 1px solid #666;
+    color: #666;
+    display: inline-block;
+    margin-top: 41px;
+    padding: 10px 28px 10px 28px;
+}
+/* ingredients pc 종료 */
+
+
+
+
+/* product pc 시작 */
+.product {
+    position: relative
+}
+.product .bg {
+    position: absolute;
+    right: calc(50% - 700px);
+    bottom: 180px;
+    z-index: -1;
+    width: 1660px;
+    height: 500px;
+    background-color: #f4f4f4;
+}
+.product h2 {
+    font-family: 'Noto Serif KR', serif;
+    display: inline-block;
+    margin: 20px 0 20px 0;
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 700;
+}
+.product .colgroup {
+    position: relative;
+    height: 500px;
+}
+.product .cnt_box {
+    position: absolute;
+    left: 0;
+    top: 65px;
+    width: 560px;
+}
+.product .cnt_box h3 {
+    font-family: 'Noto Serif KR', serif;
+    margin: 0 0 30px 0;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.product .cnt_box span {
+    font-size: 24px;
+    color: #666;
+}
+.product .cnt_box p {
+    margin: 20px 0 0 0;
+    font-size: 16px;
+    color: #999;
+}
+.product .cnt_box a {
+    display: block;
+    margin: 40px 0 0 0;
+    padding: 5px 0;
+    font-size: 14px;
+    text-align: center;
+    width: 130px;
+    border: 1px solid #666;
+    color: #666;
+}
+.product .pic_box {
+    position: absolute;
+    right: 180px;
+    top: -79px;
+}
+
+
+
+
+
+
+
+/* fullpage 공통 */
+
+
+/*
+    오른쪽 네비게이션 디자인 변경 
+   선택자가 #fp-nav ul li 인 것과 body #fp-nav ul li 인 것이 동시에 존재한다면
+   body 부터 선언한 요소가 먼저 적용됩니다. (단, 나머지 선택자는 동일)
+*/
+body #fp-nav ul li {
+    width: 8px;
+    height: 8px;
+    margin: 30px;
+}
+body #fp-nav ul li:last-child { /* footer 삭제 */
+    display: none;
+}
+body #fp-nav ul li a span,
+body #fp-nav ul li:hover a span {
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+body #fp-nav ul li a.active span, 
+body #fp-nav ul li:hover a.active span {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: #1D1D1D;
+}
+/* 어두운 툴팁 */
+body #fp-nav.green ul li a span,
+body #fp-nav.green ul li:hover a span {
+    background: #CCCCCC;
+}
+body #fp-nav.green ul li a.active span, 
+body #fp-nav.green ul li:hover a.active span {
+    background: #1d1d1d;
+}
+
+/* fullpage copyright 삭제 */
+.fp-watermark {
+    display: none;
+}

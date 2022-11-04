@@ -1,0 +1,172 @@
+/* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700&display=swap');
+html, body {
+    color: #3D3D3D;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', 'Noto Serif KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    word-break: keep-all; /* 단어별 줄바꿈 */
+}
+#wrap { /* id="wrap" */
+    overflow: hidden;
+    position: relative;
+    min-width: 320px;
+}
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+    /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
+       1400px 일때에도 좌우에 여백은 유지해야함 
+       (1400이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는점)
+       부드럽게 여백을 유지하면서 전환
+       원래 좌우에 여백이 20px씩 들어가 있는 걸로 스타일을 줌
+       1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
+       padding으로 좌우에 여백을 20px씩 줌  */
+}
+
+/* media 종료 */
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+
+/* wrapper와 동일한 사이즈를 갖은 position:relative를 요소는
+   cnt_wrap 클래스 줌 */
+.cnt_wrap {
+    position: relative;
+}
+
+.skip_nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000000000;
+    width: 100%;
+}
+.skip_nav a {
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #0059A8;
+    color: #FFF;
+    text-align: center;
+}
+.skip_nav a:focus {
+    top: 0;
+}
+
+/* 브라우저에서 글자를 드래그했을 때 드래그한 영역의 색과 글자색
+  -moz- -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성  */
+::selection{background:#61A60E;color:#fff;}
+::-moz-selection{background:#61A60E;color:#fff;}
+::-webkit-selection{background:#61A60E;color:#fff;} 
+
+
+
+
+/* header pc 시작 */
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #FFF;
+}
+.header .gnb .logo {
+    position: absolute;
+    left: 50%;
+    top: 36px;
+    transform: translate(-50%, 0);
+}
+.header .gnb .logo a {
+    display: block;
+    width: 360px;
+    height: 29px;
+    background-image: url(../images/common/logo.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+    line-height: 0;
+}
+.header .gnb {
+    display: flex;
+    margin: 0 50px;
+    justify-content: space-between;
+    font-weight: 300;
+}
+.header .gnb .gnb_open {
+    display: none;
+}
+.header .gnb ul li {
+    float: left;
+}
+.header .gnb ul li a {
+    display: block;
+    padding: 0 36px;
+    font-size: 16px;
+    line-height: 100px;
+}
+.header .gnb .gnb_left {
+    float: left;
+}
+.header .gnb .gnb_right {
+    float: right;
+}
+
+/* header 고정*/
+.header.green {
+    background-color: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    color: #1d1d1d;
+}
+.header.green .logo a {
+    background-image: url(../images/common/logo_g.svg);
+}
+/* header pc 종료 */
+
+
+
+/* footer pc 시작 */
+.footer {
+    border-top: 1px solid #CCC;
+}
+.footer .flogo {
+    display: inline-block;
+    margin: 80px 0 0 0;
+    width: 320px;
+    height: 25px;
+    background-image: url(../images/common/logo_g.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+}
+.footer .fnav {
+    float: right;
+    margin: 80px 0 0 0;
+    font-size: 18px;
+    line-height: 2;
+    color: #999;
+    text-align: right;
+}
+.footer .fnav a span {
+    font-size: 18px;
+    font-weight: 700;
+}
+.footer .inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 174px 0 50px 0;
+    font-size: 14px;
+    color: #999;
+}
+/* footer pc 종료 */
