@@ -28,7 +28,7 @@ $(document).ready(function(){
 		spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
 		breakpoints: {
 			640: {    /* 640px 이상일때 적용 */
-				slidesPerView: 1,
+				slidesPerView: 2,
 				spaceBetween: 40,
 			},
 			1200: {    /* 1200px 이상일때 적용 */

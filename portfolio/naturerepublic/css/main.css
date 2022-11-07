@@ -18,18 +18,6 @@
     text-align: center;
     transform: translate(-50%, 0);
 }
-.visual h2 .block {
-    display: block;
-    overflow: hidden;
-}
-.visual h2 .block span {
-    display: block;
-    transition: 1.5s;
-    transform: translate(0, 50px);
-}
-.visual.fp-completely h2 .block span {
-    transform: translate(0, 0);
-}
 .visual video {
     position: absolute;
     left: 0;
@@ -41,6 +29,19 @@
     object-fit: cover;
 }
 /* visual pc 종료 */
+
+/* visual mobile 시작 */
+@media screen and (max-width:1200px){
+    .visual h2 {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:640px){
+    .visual .inner {
+        height: 700px;
+    }
+}
+/* visual mobile 종료 */
 
 
 
@@ -67,21 +68,33 @@
     display: block;
     overflow: hidden;
 }
-.gift h2 .block span {
-    display: block;
-    transition: 2s;
-    transform: translate(0, 200px);
-}
-.gift.fp-completely h2 .block span {
-    transform: translate(0, 0);
-}
-.gift h2 .block:nth-child(2) span {
-    transition-delay: 0.3s;
-}
-.gift h2 .block:nth-child(3) span {
-    transition-delay: 0.6s;
-}
 /* gift pc 종료 */
+
+/* gift mobile 시작 */
+@media screen and (max-width:1500px){
+    .gift h2 {
+        font-size: 60px;
+    }
+}
+@media screen and (max-width:1200px){
+    .gift h2 {
+        font-size: 50px;
+    }
+}
+@media screen and (max-width:1000px){
+    .gift h2 {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:640px){
+    .gift .inner {
+        height: 700px;
+    }
+    .gift h2 {
+        font-size: 28px;
+    }
+}
+/* gift mobile 종료 */
 
 
 
@@ -130,7 +143,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    
 }
 .ingredients .button_area a {
     font-size: 14px;
@@ -141,7 +153,67 @@
     padding: 10px 28px 10px 28px;
 }
 /* ingredients pc 종료 */
-
+/* ingredients mobile 시작 */
+@media screen and (max-width:1200px){
+    .ingredients h2 {
+        margin: 20px 0 40px 0;
+        font-size: 35px;
+    }
+    .ingredients .list ul {
+        margin: 0 0 30px 0;
+    }
+    .ingredients .button_area a {
+        font-size: 14px;
+        border: 1px solid #666;
+        color: #666;
+        display: inline-block;
+        margin-top: 41px;
+        padding: 10px 28px 10px 28px;
+    }
+    .ingredients .list .btn_paging {
+        margin: 30px 0 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    .ingredients .list .btn_paging span {
+        display: block;
+        width: 11px;
+        height: 11px;
+        margin: 0 5px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        background-color: #cdcdcd;
+        opacity: 1;
+    }
+    .ingredients .list .btn_paging span.swiper-pagination-bullet-active {
+        border: 1px solid #61A60E;
+        background-color: #61A60E;
+    }
+}
+@media screen and (max-width:640px){
+    .ingredients .cnt_wrap {
+        height: 700px;
+    }
+    .ingredients h2 {
+        margin: 50px 0 20px 0;
+        font-size: 20px;
+    }
+    .ingredients .list ul {
+        margin: 0 0 30px 0;
+    }
+    .ingredients .list ul li a strong {
+        font-size: 18px;
+    }
+    .ingredients .list ul li a p {
+        font-size: 14px;
+    }
+    .ingredients .button_area a {
+        font-size: 10px;
+        margin-top: 47px;
+        padding: 5px 21px 5px 21px;
+    }
+}
+/* ingredients mobile 종료 */
 
 
 
@@ -208,8 +280,73 @@
     right: 180px;
     top: -79px;
 }
+/* product pc 종료 */
 
 
+
+/* 640px 이상에서만 애니메이션 작동 */
+@media screen and (min-width:640px) {
+    .visual h2 .block {
+        display: block;
+        overflow: hidden;
+    }
+    .visual h2 .block span {
+        display: block;
+        transition: 1.5s;
+        transform: translate(0, 50px);
+    }
+    .visual.fp-completely h2 .block span {
+        transform: translate(0, 0);
+    }
+    .gift h2 .block span {
+        display: block;
+        transition: 2s;
+        transform: translate(0, 200px);
+    }
+    .gift.fp-completely h2 .block span {
+        transform: translate(0, 0);
+    }
+    .gift h2 .block:nth-child(2) span {
+        transition-delay: 0.3s;
+    }
+    .gift h2 .block:nth-child(3) span {
+        transition-delay: 0.6s;
+    }
+    .ingredients .list li a span {
+        transition: 1s;
+        opacity: 0;
+        transform: translate(0, -300px);
+    }
+    .ingredients .list li a .ing2 {
+        transition-delay: 0.2s;
+    }
+    .ingredients .list li a .ing3 {
+        transition-delay: 0.4s;
+    }
+    .ingredients.fp-completely .list li a span {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    .product .cnt_box {
+        transition: 1s;
+        opacity: 0;
+        transform: translate(-100px, 0);
+    }
+    .product.fp-completely .cnt_box {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    .product .pic_box {
+        transition: 1s;
+        transition-delay: 0.5s;
+        opacity: 0;
+        transform: translate(0, -100px);
+    }
+    .product.fp-completely .pic_box {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
 
 
 
@@ -261,3 +398,43 @@ body #fp-nav.green ul li:hover a.active span {
 .fp-watermark {
     display: none;
 }
+
+
+
+
+/* 모바일에서는 fullpage 적용 안하는데 발생하는 오류 수정 */
+body .section .fp-overflow {
+    overflow: visible;
+    padding: 100px 0;
+    /*
+        fullpage에서 콘텐츠 영역을 fp-overflow로 잡는데
+        그 영역 밖으로 이동된 콘텐츠가 있으면 그 영역을 스크롤한다고 판단해서
+        다음 섹션으로 스크롤을 안넘김
+        
+        그래서 콘텐츠를 감싸는 fp-overflow한테(fullpage.js가 맘대로 만든 div)
+        상하단에 임의의 여백 100px을 줌 (더 많이 줘도 됨)
+        만약에 영역 밖으로 나가는 콘텐츠가 있으면 fp-overflow 영역을 꼭 확인해야함
+    */
+}
+body .section.fp-auto-height .fp-overflow,
+body.fp-responsive .section .fp-overflow {
+    padding: 0;
+    /*
+        footer처럼 높이를 자유롭게 설정하는 section은 임의의 상하단 여백 안줌
+        모바일에서 fullpage를 해제한 경우에도 여백을 주지 않기
+    */
+}
+.fp-responsive .fp-is-overflow.fp-section {
+    min-height: auto !important;
+}
+    /*
+        fullpage.js에서 fullpage를 안할 때 body에 주는 클래스명 .fp-responsive
+        fullpage.js에서 640이하일때는 fullpage 적용하지 않도록 함.
+        근데 이때 min-height가 해제가 않되서 이전 fullpage 높이가 잡힘
+        그래서 min-height:auto;를 줘야하는 상황
+        visual에 min-height: auto; 적용되지 않음 (css 적용 우선순위에 밀려서)
+        이때 절대 내가 적용하는 값을 먼저 적용하게 하는게 
+        min-height: auto !important; 
+
+        이렇게 플러그인을 써서 내가 주지않을 스타일을 고쳐서 쓸때 !important;
+    */
