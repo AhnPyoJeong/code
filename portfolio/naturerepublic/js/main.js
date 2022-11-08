@@ -17,7 +17,7 @@ $(document).ready(function(){
 				$('#fp-nav').removeClass('green');
 			}
 		},
-		// responsiveWidth: 640 /* fullpage를 적용시키지 않을 모바일 사이즈 */
+		responsiveWidth: 640 /* fullpage를 적용시키지 않을 모바일 사이즈 */
 	});//fullpage
 
 

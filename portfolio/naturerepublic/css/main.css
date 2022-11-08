@@ -345,6 +345,9 @@
     }
 }
 @media screen and (max-width:640px) {
+    .product .cnt_wrap {
+        height: 700px;
+    }
     .product h2 {
         font-size: 20px;
         text-align: center;
@@ -352,7 +355,7 @@
     .product .pic_box {
         left: 0;
         margin: 23px 0 0 0;
-        height: 200px;
+        height: 400px;
     }
     .product .cnt_box .txt h3 {
         font-size: 35px;

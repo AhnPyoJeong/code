@@ -132,6 +132,7 @@ html, body {
 }
 @media screen and (max-width:1200px){
     .header .logo a {
+        margin-top: 7px;
         width: 200px;
         height: 16px;
     }
@@ -150,6 +151,7 @@ html, body {
         transform: none;
     }
     .header .logo a {
+        margin-top: 0;
         width: 150px;
         height: 12px;
     }
@@ -179,20 +181,6 @@ html, body {
         font-size: 0;
         line-height: 0;
     }
-    .header.green {
-        background-color: #fff;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        color: #1d1d1d;
-    }
-    .header.green .logo a {
-        background-image: url(../images/common/logo_g.svg);
-    }
-    .header.fixed .gnb .gnb_open span {
-        background-color: #fff;
-    }
-    .header.fixed.green .gnb .gnb_open span {
-        background-color: #1d1d1d;
-    }
 }
 /* header 반응형 종료 */
 
@@ -206,6 +194,9 @@ html, body {
 }
 .header.green .logo a {
     background-image: url(../images/common/logo_g.svg);
+}
+.header.fixed.green .gnb ul li {
+    color: #1d1d1d;
 }
 .header.fixed .gnb .gnb_open span {
     background-color: #fff;
@@ -295,7 +286,7 @@ html, body {
         float: none;
         display: flex;
         justify-content: space-evenly;
-        font-size: 16px;
+        font-size: 14px;
         margin: 60px 0 0 0;
     }
     .footer .fnav li {
@@ -303,7 +294,7 @@ html, body {
         padding: 0 10px;
     }
     .footer .fnav a span {
-        font-size: 16px;
+        font-size: 14px;
     }
     .footer .inner {
         margin: 80px 0 50px 0;
