@@ -211,6 +211,7 @@ html, body {
 /* footer pc 시작 */
 .footer {
     border-top: 1px solid #ededed;
+    background-color: #fff;
 }
 .footer .flogo {
     display: inline-block;
