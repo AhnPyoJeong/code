@@ -123,7 +123,7 @@ html, body {
     float: right;
 }
 /* header pc 종료 */
-/* header mobile 시작 */
+/* header 반응형 시작 */
 @media screen and (max-width:1500px){
     .header .gnb ul li a {
         padding: 0 20px;
@@ -194,7 +194,7 @@ html, body {
         background-color: #1d1d1d;
     }
 }
-/* header mobile 종료 */
+/* header 반응형 종료 */
 
 
 
@@ -219,7 +219,7 @@ html, body {
 
 /* footer pc 시작 */
 .footer {
-    border-top: 1px solid #CCC;
+    border-top: 1px solid #ededed;
 }
 .footer .flogo {
     display: inline-block;
@@ -233,7 +233,6 @@ html, body {
 }
 .footer .fnav {
     float: right;
-    margin: 80px 0 0 0;
     font-size: 18px;
     line-height: 2;
     color: #999;
@@ -251,3 +250,64 @@ html, body {
     color: #999;
 }
 /* footer pc 종료 */
+/* footer 반응형 시작 */
+@media screen and (max-width:1000px){
+    .footer .flogo_wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .footer .flogo {
+        display: block;
+        margin: 50px 0 0 0;
+    }
+    .footer .fnav {
+        float: none;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 60px 0 0 0;
+    }
+    .footer .fnav li {
+        float: left;
+        padding: 0 10px;
+    }
+    .footer .inner {
+        display: block;
+        margin: 80px 0 50px 0;
+        text-align: center;
+    }
+}
+@media screen and (max-width:640px){
+    .footer .flogo_wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .footer .flogo {
+        display: block;
+        margin: 50px 0 0 0;
+        width: 200px;
+        height: 15px;
+    }
+    .footer .fnav {
+        float: none;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 16px;
+        margin: 60px 0 0 0;
+    }
+    .footer .fnav li {
+        float: left;
+        padding: 0 10px;
+    }
+    .footer .fnav a span {
+        font-size: 16px;
+    }
+    .footer .inner {
+        margin: 80px 0 50px 0;
+        font-size: 10px;
+    }
+}
+/* footer 반응형 종료 */

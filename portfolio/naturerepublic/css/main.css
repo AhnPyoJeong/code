@@ -30,7 +30,7 @@
 }
 /* visual pc 종료 */
 
-/* visual mobile 시작 */
+/* visual 반응형 시작 */
 @media screen and (max-width:1200px){
     .visual h2 {
         font-size: 20px;
@@ -41,7 +41,7 @@
         height: 700px;
     }
 }
-/* visual mobile 종료 */
+/* visual 반응형 종료 */
 
 
 
@@ -70,7 +70,7 @@
 }
 /* gift pc 종료 */
 
-/* gift mobile 시작 */
+/* gift 반응형 시작 */
 @media screen and (max-width:1500px){
     .gift h2 {
         font-size: 60px;
@@ -94,7 +94,7 @@
         font-size: 28px;
     }
 }
-/* gift mobile 종료 */
+/* gift 반응형 종료 */
 
 
 
@@ -153,7 +153,7 @@
     padding: 10px 28px 10px 28px;
 }
 /* ingredients pc 종료 */
-/* ingredients mobile 시작 */
+/* ingredients 반응형 시작 */
 @media screen and (max-width:1200px){
     .ingredients h2 {
         margin: 20px 0 40px 0;
@@ -213,74 +213,161 @@
         padding: 5px 21px 5px 21px;
     }
 }
-/* ingredients mobile 종료 */
+/* ingredients 반응형 종료 */
 
 
 
 /* product pc 시작 */
 .product {
-    position: relative
-}
-.product .bg {
-    position: absolute;
-    right: calc(50% - 700px);
-    bottom: 180px;
-    z-index: -1;
-    width: 1660px;
-    height: 500px;
-    background-color: #f4f4f4;
+    position: relative;
 }
 .product h2 {
-    font-family: 'Noto Serif KR', serif;
-    display: inline-block;
-    margin: 20px 0 20px 0;
-    color: #1d1d1d;
     font-size: 40px;
     font-weight: 700;
-}
-.product .colgroup {
-    position: relative;
-    height: 500px;
-}
-.product .cnt_box {
-    position: absolute;
-    left: 0;
-    top: 65px;
-    width: 560px;
-}
-.product .cnt_box h3 {
-    font-family: 'Noto Serif KR', serif;
-    margin: 0 0 30px 0;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #1d1d1d;
-}
-.product .cnt_box span {
-    font-size: 24px;
-    color: #666;
-}
-.product .cnt_box p {
-    margin: 20px 0 0 0;
-    font-size: 16px;
-    color: #999;
-}
-.product .cnt_box a {
-    display: block;
-    margin: 40px 0 0 0;
-    padding: 5px 0;
-    font-size: 14px;
-    text-align: center;
-    width: 130px;
-    border: 1px solid #666;
-    color: #666;
 }
 .product .pic_box {
     position: absolute;
     right: 180px;
-    top: -79px;
+    top: 0;
+    width: 520px;
+    height: 520px;
+    content: "";
+}
+.product .pic_box img {
+    width: 100%;
+}
+.product .cnt_box {
+    width: 39%;
+    margin: 46px 0 0 0;
+}
+.product .cnt_box .txt h3 {
+    margin: 0 0 30px 0;
+    font-family: 'Noto Serif Kr';
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.product .cnt_box .txt span {
+    font-size: 24px;
+    color: #666;
+}
+.product .cnt_box .txt p {
+    margin: 70px 0 0 0;
+    line-height: 1.7;
+    color: #999;
+}
+.product .cnt_box .button_area a {
+    font-size: 14px;
+    border: 1px solid #666;
+    color: #666;
+    display: inline-block;
+    margin-top: 41px;
+    padding: 10px 28px 10px 28px;
+}
+.product .bg {
+    position: absolute;
+    right: calc(50% - 700px);
+    top: 300px;
+    z-index: -1;
+    width: 100%;
+    height: 500px;
+    content: "";
+    background-color: #f4f4f4;
 }
 /* product pc 종료 */
+/* product 반응형 시작 */
+@media screen and (max-width:1440px) {
+    .product .bg {
+        right: 20px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .product h2 {
+        font-size: 35px;
+    }
+    .product .pic_box {
+        right: 100px;
+        top: 50px;
+        width: 420px;
+        height: 420px;
+    }
+    .product .cnt_box .txt h3 {
+        font-size: 40px;
+    }
+    .product .cnt_box .txt span {
+        font-size: 18px;
+    }
+    .product .cnt_box .txt p {
+        margin: 40px 0 0 0;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:1000px) {
+    .product h2 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .product .pic_box {
+        position: relative;
+        left: 100px;
+        top: 0;
+        margin: 40px 0 0 0;
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+    }
+    .product .pic_box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .product .cnt_box {
+        margin: 10px 0 0 0;
+        width: 100%;
+    }
+    .product .cnt_box .txt h3 {
+        margin: 0 0 38px 0;
+        font-size: 45px;
+        line-height: 1;
+    }
+    .product .cnt_box .txt span {
+        display: block;
+        font-size: 14px;
+    }
+    .product .cnt_box .txt p {
+        display: none;
+    }
+    .product .cnt_box .button_area {
+        text-align: center;
+    }
+    .product .bg {
+        display: none;
+    }
+}
+@media screen and (max-width:640px) {
+    .product h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .product .pic_box {
+        left: 0;
+        margin: 23px 0 0 0;
+        height: 200px;
+    }
+    .product .cnt_box .txt h3 {
+        font-size: 35px;
+    }
+    .product .cnt_box .txt span {
+        font-size: 12px;
+        text-align: right;
+    }
+    .product .cnt_box .button_area a {
+        font-size: 10px;
+        margin-top: 47px;
+        padding: 5px 21px 5px 21px;
+    }
+}
+/* product 반응형 종료 */
 
 
 
@@ -333,6 +420,15 @@
         transform: translate(-100px, 0);
     }
     .product.fp-completely .cnt_box {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    .product .button_area {
+        transition: 1s;
+        opacity: 0;
+        transform: translate(-100px, 0);
+    }
+    .product.fp-completely .button_area {
         opacity: 1;
         transform: translate(0, 0);
     }
@@ -406,6 +502,7 @@ body #fp-nav.green ul li:hover a.active span {
 body .section .fp-overflow {
     overflow: visible;
     padding: 100px 0;
+}
     /*
         fullpage에서 콘텐츠 영역을 fp-overflow로 잡는데
         그 영역 밖으로 이동된 콘텐츠가 있으면 그 영역을 스크롤한다고 판단해서
@@ -415,7 +512,7 @@ body .section .fp-overflow {
         상하단에 임의의 여백 100px을 줌 (더 많이 줘도 됨)
         만약에 영역 밖으로 나가는 콘텐츠가 있으면 fp-overflow 영역을 꼭 확인해야함
     */
-}
+
 body .section.fp-auto-height .fp-overflow,
 body.fp-responsive .section .fp-overflow {
     padding: 0;
