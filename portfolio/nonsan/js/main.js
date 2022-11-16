@@ -86,12 +86,14 @@ $(document).ready(function(){
         tit이 고정된 이후 영역 (다른 콘텐츠와 같이 스크롤되어 사라짐) -> end 클래스 추가
     */
 
-        let fixObj = $('.container .side .wrapper .first'); // 고정요소
-        let fixArea = $('.container .side .wrapper'); // 고정요소를 감싸는 영역
+        let fixObj = $('.container .side .side_wrap'); // 고정요소
+        let fixArea = $('.container .side'); // 고정요소를 감싸는 영역
+        let scrolling
         let fixTop = 130; // css에서 fixed에 준 top 값
-        let fixBtm = 103; // css에서 end에 준 bottom 값
+        let fixBtm = 100; // css에서 end에 준 bottom 값
         let fixStart; // fixed 시작점
         let fixEnd; // fixed 종료점
+        let fixOffset;
         // console.log(fixStart, 'fixStart');
         // console.log(fixEnd, 'fixEnd')
     
@@ -107,18 +109,22 @@ $(document).ready(function(){
     
         function objFixed(){
             // console.log(scrolling)
+            scrolling = $(window).scrollTop()
             fixStart = fixArea.offset().top - fixTop;
             fixEnd = fixArea.offset().top + fixArea.height() - fixObj.height() - fixBtm - fixTop;
     
             if(scrolling < fixStart){ // 위에서부터 tit이 고정되기 전
-                fixObj.removeClass('fixed')
-                fixObj.removeClass('end')
+                // fixObj.removeClass('fixed')
+                // fixObj.removeClass('end')
             }else if((scrolling >= fixStart)&&(scrolling < fixEnd)){ // tit이 고정될 때
-                fixObj.addClass('fixed')
-                fixObj.removeClass('end')
+                fixOffset = scrolling - fixStart
+                console.log(fixOffset)
+                fixObj.css('margin-top', fixOffset + 'px')
+                // fixObj.addClass('fixed')
+                // fixObj.removeClass('end')
             }else{ // tit이 고정된 이후
-                fixObj.removeClass('fixed')
-                fixObj.addClass('end')
+                // fixObj.removeClass('fixed')
+                // fixObj.addClass('end')
             }
         }
 }) // document.ready 종료

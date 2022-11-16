@@ -9,7 +9,6 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <title>논산시청</title>
 </head>
@@ -96,7 +95,7 @@
         <div class="container">
             <!-- 사이드 팝업 (왼쪽) -->
             <aside class="side">
-                <div class="wrapper">
+                <div class="side_wrap">
                     <div class="first">
                         <div class="popup swiper">
                             <ul class="swiper-wrapper">
@@ -145,20 +144,263 @@
             </aside>
             <!-- 콘텐츠 (오른쪽) -->
             <div class="main">
-                <div class="find">
+                <div class="main_wrapper">
+                    <div class="find">
+                        <div class="search_wrap">
+                            <div class="search_box">
+                                <div class="search" data-aos="fade-up" data-aos-delay="200">
+                                    <form>
+                                        <fieldset>
+                                            <legend>검색</legend>
+                                            <label for="keyword">검색어</label>
+                                            <input type="text" id="keyword" placeholder="무엇을 찾으시나요?" autocomplete="off" />
+                                            <input type="submit" value="검색" class="btn" />
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mayor_wrap">
+                            <div class="often">
+                                <div class="often_tit">
+                                    <h2>자주 찾는 <strong>서비스</strong></h2>
+                                    <span>자주 찾는 서비스들을 안내해드립니다</span>
+                                </div>
+                                <ul class="often_service">
+                                    <div class="up">
+                                        <li>
+                                            <a href="#n">
+                                                <div class="often_ico">
+                                                    <img src="images/main/often_law_ico.svg" alt="자치법규 바로가기">
+                                                    <p>자치법규</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <div class="often_ico">
+                                                    <img src="images/main/often_statistics_ico.svg" alt="통계 바로가기">
+                                                    <p>통계</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <div class="often_ico">
+                                                    <img src="images/main/often_traffic_ico.svg" alt="교통 바로가기">
+                                                    <p>교통</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <div class="often_ico">
+                                                    <img src="images/main/often_health_ico.svg" alt="보건소 바로가기">
+                                                    <p>보건소</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </div>
+                                    <div class="down">
+                                        <li>
+                                            <a href="#n">
+                                                <div class="often_ico">
+                                                    <img src="images/main/often_employment_ico.svg" alt="취업정보 바로가기">
+                                                    <p>취업정보</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <div class="often_ico">
+                                                    <img src="images/main/often_library_ico.svg" alt="도서관 바로가기">
+                                                    <p>도서관</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <div class="often_ico">
+                                                    <img src="images/main/often_show_ico.svg" alt="공연예약 바로가기">
+                                                    <p>공연예약</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <div class="often_ico">
+                                                    <img src="images/main/often_rainfall_ico.svg" alt="강우량 바로가기">
+                                                    <p>강우량</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="mayor">
+                                <div class="txt">
+                                    <h2>논산시장<br>
+                                    <span>홍길동 입니다.</span></h2>
+                                    <p>논산을 새롭게 시민을 행복하게,<br>
+                                        시민 행복시대를 열겠습니다.</p>
+                                    <div class="mayor_button">
+                                        <ul>
+                                            <li class="open">
+                                                <a href="#n">열린시장실</a>
+                                            </li>
+                                            <li class="promise">
+                                                <a href="#n">공약과 실천</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="photobox">
+                                    <img src="images/main/mayor.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <div class="main_wrapper">
+                            <div class="tit">
+                                <h2>논산시 <strong>소식</strong></h2>
+                                <span>논산시의 새롭고 다양한 소식들을 전해드립니다</span>
+                            </div>
+                            <div class="noticebox">
+                                <div class="tap">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="#n" class="more">
+                                                <h3>공지사항</h3>
+                                                <img src="images/main/plus_white_ico.svg">
+                                            </a>
+                                            <div class="detail">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#n">
+                                                            <h4>2022 제20회 양촌곶감축제 개최 안내</h4>
+                                                            <p>감빛 불든 그리움 정이 물처럼 흐르는 햇빛촌 2022 제20회 양촌곶감축제 □ 기 간 : 2022. 12. 9.(금) ~ 12. 11.(일) □ 장 소 : 양촌면 양촌리 체육공원 □ 주 관 : 양촌곶감축제 추진위원회 □ 행사내용 : 곶감판매 등 상설행사, 각종 체험행사, 축하공연 등 ☞ 세부 일정은 [첨부]축제 프로그램 일정을 확인해주세요! 감빛 불든 그리움 정이 물처럼 흐르는 햇빛촌 2022 제20회 양촌곶감축제 □ 기 간 : 2022. 12. 9.(금) ~ 12. 11.(일) □ 장 소 : 양촌면 양</p>
+                                                            <div class="dep_date">
+                                                                <span class="department">양촌면</span>
+                                                                <span class="date">2022.11.07</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#n">
+                                                            <h4>코로나19 동절기 예방접종 접종대상 확대 안내</h4>
+                                                            <p>겨울철 코로나19 재유행에 대비하여 동절기 추가접종 대상자가 확대되었기에 다음과 같이 안내해 드립니다. □ 접종대상 : 18세 이상 기초접종(1, 2차) 완료자 □ 백신종류 : BA.1기반 2가 백신 □ 접종간격 : 마지막 접종일 또는 확진일 기준 4개월 이후 접종 □ 접종일정 : 사전예약 및 당일접종(10. 27.~), 접종시작(11. 7.~) □ 예약방법 [사전예약] → 10월 27일(목)부터 - 사전예약 누리집 ▶ 대리예약 가능 - 전화예약(1339 또는 논산시 콜센터*평일 9시~18시</p>
+                                                            <div class="dep_date">
+                                                                <span class="department">감염병관리과</span>
+                                                                <span class="date">2022.11.03</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#n">
+                                                            <h4>논산시립합창단 제13회 정기연주회 안내</h4>
+                                                            <p> 2022년 연말을 더욱 다채롭고 풍성하게 만들어줄 논산시립합창단 제13회 정기연주회를 아래와 같이 개최합니다. ○ 공 연 명: 논산시립합창단 제13회 정기연주회 '희망의 송년음악회' ○ 일 시: 2022. 12. 6.(화) 19:30 ~ 20:50 ○ 장 소: 논산아트센터 대공연장 ○ 출 연: 논산시립합창단, 대전아트오케스트라, 퓨전국악밴드 그라나다, 포스댄스컴퍼니 논산시청이 창작한 논산시립합창단의 정기연주회를 더욱</p>
+                                                            <div class="dep_date">
+                                                                <span class="department">문화예술과</span>
+                                                                <span class="date">2022.11.01</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#n">
+                                                            <h4>제1회 논산문학제 개최 안내</h4>
+                                                            <p>제1회 논산문학제 개최 안내 11월 11일부터 12일까지 이틀간 논산문화원에서 제1회 논산문학제를 개최합니다. ▪ 11.11.(금) - (14:00 ~ 15:30) : 논산문학제 기념식 - (16:00 ~ 17:30) : 이근배 시인 토크 콘서트 ▪ 11.12.(토) - (11:00 ~ 16:00) : 체험행사 및 기타 프로그램 - (13:00 ~ 14:00) : 문학가족 낭독대회 - (14:00 ~ 14:30) : 마술 공연 - (15:30 ~ 17:00) : 시와 음악 어울림 콘서트 ☞ 자세한 일정은 붙임<포스터>를 참고해주시기 바랍니다.</p>
+                                                            <div class="dep_date">
+                                                                <span class="department">문화예술과</span>
+                                                                <span class="date">2022.10.31</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#n" class="more">
+                                                <h3>공고/고시</h3>
+                                                <img src="images/main/plus_white_ico.svg">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n" class="more">
+                                                <h3>지역소식</h3>
+                                                <img src="images/main/plus_white_ico.svg">
+                                            </a>
+                                            <div class="detail">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#n">
+                                                            <h4>충남형 공공배달앱 할인쿠폰 이벤트</h4>
+                                                            <p>충남형 배달앱(소문난샵)의 이벤트가 진행되고 있습니다.◎ 기 간 : 2022. 11. 9.(수) ~ 12. 27.(화)(7주) * 예산 소진 시 조기종료◎ 내 용 : 기간 내 주문 시15,000원 이상 주문 시 4,000원 할인 쿠폰 지급- 1인당 최대 2회 지급(월별 각 1회, 자동차감)◎ 이용방법- 모바일 앱 다운( 소문난샵) → 회원가입 후 이용 가능- 지역상품권 착 (chak) 앱 - 제휴몰 - 소문난샵에서 이용 가능</p>
+                                                            <div class="dep_date">
+                                                                <span class="department">지역경제과</span>
+                                                                <span class="date">2022.11.08</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#n">
+                                                            <h4>대전 [힐스테이트 선화 더와이즈] 장애인 기관추천 특별공급 일정변경 알림</h4>
+                                                            <p>장애인기관추천 특별공급 분양일정 변경이 있어 붙임과 같이 알려드립니다.1. 신청대상 : 장애인(만19세이상,장애등록일 기준이후)으로서 입주자모집 공고일 현재 충청남도에 거주하는 무주택세대구성원(동일한 주민등록등본 상의 세대주 및 세대원 전원이 무주택이고, 청약신청자의 배우자 및 직계존비속 전원이 무주택인 경우)2. 추천방법 : 배점 기준표에 따라 주택알선 우선순위부 작성하여 추천3. 신청기한 : 2022. 11. 25.(금) 15:00 까지 (신청서류 원본 모두제출)4. 신청장소 : (주민</p>
+                                                            <div class="dep_date">
+                                                                <span class="department">복지정책과</span>
+                                                                <span class="date">2022.11.07</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#n">
+                                                            <h4>아산 [아산 힐스테이트] 장애인 기관추천 특별공급 일정변경 알림</h4>
+                                                            <p>장애인기관추천 특별공급 분양일정 변경이 있어 붙임과 같이 알려드립니다.1. 신청대상 : 장애인(만19세이상,장애등록일 기준이후)으로서 입주자모집 공고일 현재 충청남도에 거주하는 무주택세대구성원(동일한 주민등록등본 상의 세대주 및 세대원 전원이 무주택이고, 청약신청자의 배우자 및 직계존비속 전원이 무주택인 경우)2. 추천방법 : 배점 기준표에 따라 주택알선 우선순위부 작성하여 추천3. 신청기한 : 2022. 12. 2.(금) 15:00 까지 (신청서류 원본 모두제출)4. 신청장소 : (주민등</p>
+                                                            <div class="dep_date">
+                                                                <span class="department">복지정책과</span>
+                                                                <span class="date">2022.11.07</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#n">
+                                                            <h4>한국복지사이버대학 신입생 모집</h4>
+                                                            <p>한국복지사이버대학 식물치유복지학과 신입생 모집안내전액 장학금지원 가능, 교수추천 장학금 50%, 국가장학금 50% 가 가능!치유농업과 스마트팜 및 조경과정을 배우며 사회복지분야에도 전문가로 활동할 수 있는한국복지사이버대학 식물치유복지학과 신입생을 모집합니다.- 문의 및 상담전화 : 한국복지사이버대학 식물치유복지학과 학과장 이창래 교수(02-2039-7261)</p>
+                                                            <div class="dep_date">
+                                                                <span class="department">한국복지사이버대학교</span>
+                                                                <span class="date">2022.11.05</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#n" class="more">
+                                                <h3>입찰공고</h3>
+                                                <img src="images/main/plus_white_ico.svg">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n" class="more last">
+                                                <h3>보도자료</h3>
+                                                <img src="images/main/plus_white_ico.svg">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service">
 
-                </div>
-                <div class="news">
+                    </div>
+                    <div class="introduce">
 
-                </div>
-                <div class="service">
+                    </div>
+                    <div class="travel">
 
-                </div>
-                <div class="introduce">
-
-                </div>
-                <div class="travel">
-
+                    </div>
                 </div>
             </div>
         </div>

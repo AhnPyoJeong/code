@@ -104,7 +104,7 @@ $(document).ready(function(){
         tit이 고정된 이후 영역 (다른 콘텐츠와 같이 스크롤되어 사라짐) -> end 클래스 추가
     */
 
-    let fixObj = $('.container .side .wrapper .first'); // 고정요소
+    let fixObj = $('.product .list .tit'); // 고정요소
     let fixArea = $('.product .list'); // 고정요소를 감싸는 영역
     let fixTop = 130; // css에서 fixed에 준 top 값
     let fixBtm = 103; // css에서 end에 준 bottom 값
