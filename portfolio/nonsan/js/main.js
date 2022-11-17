@@ -127,4 +127,25 @@ $(document).ready(function(){
                 // fixObj.addClass('end')
             }
         }
+
+
+
+
+
+        $('.container .main .news .noticebox .tap ul li').on('click', function(){
+            $('.container .main .news .noticebox .tap ul li').removeClass('active')
+            $(this).addClass('active')
+        })
+
+
+        $('.container .main .service .noticebox .tap ul li').on('click', function(){
+            $('.container .main .service .noticebox .tap ul li').removeClass('active')
+            $(this).addClass('active')
+        })
+
+        $('.container .main .service .bottom .userbox .tap ul li').on('click', function(){
+            $('.container .main .service .bottom .userbox .tap ul li').removeClass('active')
+            $(this).addClass('active')
+        })
+
 }) // document.ready 종료
