@@ -63,7 +63,12 @@
                         <a href="index.html">논산시청</a>
                     </h1>
                     <nav class="gnb">
-                        <button class="gnb_open"><span>메뉴 열기</span><span></span><span></span></button>
+                        <button class="gnb_open">
+                            <strong>메뉴 열기</strong>
+                            <span class="line1"></span>
+                            <span class="line2"></span>
+                            <span class="line3"></span>
+                        </button>
                         <ul>
                             <li>
                                 <a href="#n">정보공개</a>
@@ -471,7 +476,7 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li class="last">
                                         <a href="#n" class="more last">
                                             <h3>보도자료</h3>
                                             <img src="images/main/plus_white_ico.svg">
@@ -1613,15 +1618,17 @@
                             <h2>논산과 <strong>#소통해요</strong></h2>
                             <span>논산에는 다 있다! 즐거움이 가득한 논산의 이야기들을 만나보세요</span>
                         </div>
-                        <div class="photo">
+                        <div class="photo clearfix">
                             <div class="left">
                                 <div class="line">
                                     <h3>계백의 혼이 살아있는<br>
                                     <span>충절</span>과 <span>예학</span>의 고장</h3>
-                                    <a href="#n">
-                                        소개 바로가기
-                                        <img src="images/main/introduce_left_ico.svg">
-                                    </a>
+                                    <div class="more">
+                                        <a href="#n">
+                                            <p>소개 바로가기</p>
+                                            <img src="images/main/introduce_left_ico.svg">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="right">
@@ -1666,16 +1673,107 @@
                             </div>
                         </div>
                     </div>
+                    <!-- introduce 종료 -->
+                    <!-- travel 시작 -->
                     <div class="travel">
-
+                        <div class="txt">
+                            <h2><strong>상상 그 이상,</strong> 논산</h2>
+                            <span>아름다운 자연경관과 훌륭한 세계문화유산이 있는 논산의 관광명소를 한눈에 둘러보세요</span>
+                        </div>
+                        <div class="group">
+                            <div class="popup swiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a>
+                                            <img src="images/main/travel_bg01.png" alt="논산 11경 관촉사 사진">
+                                        </a>
+                                        <div class="about">
+                                            <div class="txt_group">
+                                                <div class="top">
+                                                    <h3>논산 11경</h3>
+                                                </div>
+                                                <div class="middle">
+                                                    <span>1경</span>
+                                                    <strong>관촉사 은진미륵</strong>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p>우리나라 최대의 석불로 유명하고 관촉사가 품은 가장 빼어난 보물 은진미륵. 관촉사는 시내에서 10분이면 닿을 수 있는 가까운 곳에 있다. 주변으로 벚꽃나무가 빽빽이 들어서 매년 4월경 꽃이 만개한다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a>
+                                            <img src="images/main/travel_bg02.png" alt="논산 11경 탑정호와 출렁다리 사진">
+                                        </a>
+                                        <div class="about">
+                                            <div class="txt_group">
+                                                <div class="top">
+                                                    <h3>논산 11경</h3>
+                                                </div>
+                                                <div class="middle">
+                                                    <span>2경</span>
+                                                    <strong>탑정호와 출렁다리</strong>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p>논산시 부적면, 가야곡면, 양촌면 일원에 위치한 탑정호는 물이 맑고 깨끗하여 잉어, 쏘가리, 메기 등 담수어족이 풍부하고 수려한 경관을 자랑한다. 아름다운 저녁노을을 감상할 수 있다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="controlbox">
+                                <div class="controlbox_wrap">
+                                    <div class="swiper-pagination count"></div>
+                                    <div class="click">
+                                        <button class="button_prev">뒤로가기</button>
+                                        <button class="button_pause">일시정지</button>
+                                        <button class="button_next">앞으로가기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- travel 종료 -->
                 </div>
             </div>
         </div>
-        <!-- footer -->
-        <footer>
-
-        </footer>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="left">
+                <div class="flogo"><img src="images/common/logo_g.svg"></div>
+                <ul class="fnav">
+                    <li>
+                        <a href="#n"><span>개인정보처리방침</span></a>
+                    </li>
+                    <li class="m_no">
+                        <a href="#n">이메일무단수집거부</a>
+                    </li>
+                    <li class="m_no">
+                        <a href="#n">저작권정책</a>
+                    </li>
+                    <li>
+                        <a href="#n">오시는길</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="inner">
+                <div class="address">
+                    우) 32987 충청남도 논산시 시민로210번길 9 (내동) TEL.041-746-5114(민원콜센터 ☎14-2217, 무료) / 5700~1 | FAX. 041-746-5699
+                </div>
+                <div class="copyright">
+                    COPYRIGHT ⓒ 2018 NONSAN CITY. ALL RIGHTS RESERVED
+                </div>
+                <div class="notice">
+                    본 웹사이트는 이메일 주소가 무단 수집되는 것을 거부하며, 위반 시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.
+                </div>
+            </div>
+            <aside class="to_top"><button><img src="images/common/footer_top_ico.svg"><span>맨위로</span></button></aside>
+        </div>
+    </footer>
     </div>
 </body>
 </html>

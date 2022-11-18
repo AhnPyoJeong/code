@@ -138,4 +138,167 @@ html, body {
     padding-right: 0;
 }
 
+/* header PC 종료 */
+
+
+
+/* header 반응형 시작 */
+
 /* header 반응형 종료 */
+
+
+
+/* header 모바일 시작 */
+@media screen and (max-width:360px){
+    .header {
+        width: 100%;
+        height: 60px;
+    }
+    .header .header_top {
+        display: none;
+    }
+    .header .header_bottom {
+        height: 60px;
+    }
+    .header .header_bottom .logo {
+        margin: 17px 0 0 0;
+    }
+    .header .header_bottom .logo a {
+        width: 60px;
+        height: 27px;
+    }
+    .header .header_bottom .gnb {
+        float: right;
+    }
+    .header .header_bottom .gnb .gnb_open {
+        display: block;
+        position: relative;
+    }
+    .header .header_bottom .gnb .gnb_open strong {
+        display: none;
+    }
+    .header .header_bottom .gnb .gnb_open span {
+        position: absolute;
+        right: 0;
+        width: 20px;
+        height: 2px;
+        background-color: #3d3d3d;
+    }
+    .header .header_bottom .gnb .gnb_open span.line1 {
+        top: 22px;
+    }
+    .header .header_bottom .gnb .gnb_open span.line2 {
+        top: 29px;
+        width: 13px;
+    }
+    .header .header_bottom .gnb .gnb_open span.line3 {
+        top: 36px;
+    }
+    .header .header_bottom .gnb ul li {
+        display: none;
+    }
+}
+/* header 모바일 종료 */
+
+
+
+
+
+
+
+
+
+
+/* footer PC 시작 */
+.footer {
+    position: relative;
+    padding: 60px 0 0 0;
+    height: 410px;
+    border-top: 1px solid #ededed;
+}
+.footer .left {
+    float: left;
+    display: flex;
+}
+.footer .left ul {
+    display: flex;
+    margin: 0 0 0 40px;
+}
+.footer .left ul li a {
+    padding: 0 24px 0 24px;
+}
+.footer .left .fnav li a span {
+    font-weight: 700;
+    color: #003994;
+}
+.footer .to_top {
+    position: absolute;
+    right: 80px;
+    top: 60px;
+}
+.footer .to_top button {
+    width: 60px;
+    height: 60px;
+    background-color: #003994;
+    border-radius: 30px;
+    color: #fff;
+}
+.footer .to_top button img {
+    display: block;
+    margin: 0 0 3px 23px;
+}
+.footer .to_top button span {
+    font-family: SBAggro;
+    font-size: 12px;
+}
+.footer .inner {
+    padding: 80px 0 0 170px;
+    font-weight: 300;
+    color: #999;
+}
+.footer .inner .copyright {
+    margin: 10px 0 40px 0;
+}
+/* footer PC 종료 */
+
+
+
+/* footer 반응형 시작 */
+
+/* footer 반응형 종료 */
+
+
+
+/* footer 모바일 시작 */
+@media screen and (max-width:360px){
+    .footer {
+        padding: 30px 0 0 0;
+        height: 340px;
+    }
+    .footer .left .flogo {
+        display: none;
+    }
+    .footer .left ul li.m_no {
+        display: none;
+    }
+    .footer .left ul li a {
+        padding: 0 22px 0 22px;
+    }
+    .footer .to_top {
+        right: calc(50% - 30px);
+        top: 236px;
+    }
+    .footer .inner {
+        padding: 50px 0 0 0;
+        font-size: 14px;
+        font-weight: 300;
+        color: #999;
+    }
+    .footer .inner .copyright {
+        margin: 10px 0 40px 0;
+    }
+    .footer .inner .notice {
+        display: none;
+    }
+}
+/* footer 모바일 종료 */
