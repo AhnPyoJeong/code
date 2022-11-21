@@ -190,4 +190,28 @@ $(document).ready(function(){
             $(this).addClass('active')
         })
 
+
+        $('.container .main .service .noticebox .m_menu button').on('click', function(){
+            $('.container .main .service .noticebox .m_menu').toggleClass('open')
+        })
+
+
+        $('.container .main .service .top .noticebox .m_menu ul li').on('click', function(){
+            $('.container .main .service .top .noticebox .m_menu').removeClass('open')
+
+            let service_name = $(this).attr('class')
+
+            console.log(service_name)
+
+            $('.container .main .service .noticebox .tap ul li').removeClass('active')
+            $('.container .main .service .noticebox .tap ul li[data-name = "'+service_name+'"]').addClass('active')
+
+            let service_text = $(this).find('a').text()
+            $('.container .main .service .top .noticebox .m_menu button').text(service_text)
+        })
+
+
+
+        
+
 }) // document.ready 종료

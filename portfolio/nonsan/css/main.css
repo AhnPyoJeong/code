@@ -130,7 +130,59 @@
 
 
 /* side 반응형 시작 */
-
+@media screen and (max-width:1220px) {
+    .container {
+        display: block;
+        margin-top: 140px;
+    }
+    .container .side {
+        padding: 40px 0 0 0;
+        width: 100%;
+        border-right: none;
+    }
+    .container .side .side_wrap {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        width: auto;
+        max-width: none;
+    }
+    .container .side .first {
+        position: relative;
+        margin: 0;
+        width: 330px;
+    }
+    .container .side .second {
+        margin: 0;
+        width: 330px;
+    }
+}
+@media screen and (max-width:700px) {
+    .container {
+        margin-top: 90px;
+    }
+    .container .side {
+        padding: 40px 0 0 0;
+        width: 100%;
+        border-right: none;
+    }
+    .container .side .side_wrap {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: auto;
+        max-width: none;
+    }
+    .container .side .first {
+        position: relative;
+        margin: 0;
+        width: 330px;
+    }
+    .container .side .second {
+        margin: 30px 0 0 0;
+        width: 330px;
+    }
+}
 /* side 반응형 종료 */
 
 
@@ -212,16 +264,26 @@
 
 
 /* search 반응형 시작 */
-
+@media screen and (max-width:520px) {
+    .container .main .find .search input[type="text"] {
+        width: 65%;
+    }
+}
 /* search 반응형 시작 */
 
 
 
 /* search 모바일 시작 */
-@media screen and (max-width:360px) {
+@media screen and (max-width:1220px) {
     .container .main {
         width: 100%;
+    }
+}
+@media screen and (max-width:360px) {
+    .container .main {
+        width: 360px;
         overflow: auto;
+        overflow-x: hidden;
     }
     .container .main .find .search {
         height: 40px;
@@ -230,7 +292,6 @@
     }
     .container .main .find .search input[type="text"] {
         float: left;
-        width: 240px;
         height: 35px;
         margin: 0 0 0 20px;
         font-size: 14px;
@@ -359,7 +420,110 @@
 
 
 /* often 반응형 시작 */
-
+@media screen and (max-width:1700px) {
+    .container .main .find .often .often_tit h2::after {
+        display: none;
+    }
+    .container .main .find .mayor .txt {
+        font-size: 14px;
+    }
+    .container .main .find .mayor .txt span {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:1220px) {
+    .container .main .find .mayor_wrap {
+        justify-content: space-between;
+    }
+    .container .main .find .often {
+        width: 500px;
+    }
+    .container .main .find .often .often_tit h2::after {
+        display: none;
+    }
+    .container .main .find .mayor {
+        margin: 0 0 0 20px;
+    }
+    .container .main .find .mayor .txt {
+        font-size: 14px;
+    }
+    .container .main .find .mayor .txt span {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:1100px) {
+    .container .main .find .often {
+        width: 100%;
+    }
+    .container .main .find .often .often_service li:last-child {
+        display: block;
+    }
+    .container .main .find .mayor {
+        width: 100%;
+    }
+    .container .main .find .mayor .photobox {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 252px;
+    }
+}
+@media screen and (max-width:750px) {
+    .container .main .find .mayor {
+        margin-left: 0;
+    }
+    .container .main .find .mayor_wrap {
+        flex-direction: column;
+    }
+    .container .main .find .often .often_tit span {
+        display: none;
+    }
+    .container .main .find .mayor .txt {
+        margin: 60px 0 0 30px;
+        font-family: SBAggro;
+        font-size: 20px;
+        font-weight: 700;
+        color: #1d1d1d;
+    }
+    .container .main .find .mayor .txt span {
+        font-size: 40px;
+        color: #003994;
+        font-weight: 900;
+    }
+    .container .main .find .mayor .photobox {
+        position: absolute;
+        right: 0;
+        top: 31px;
+        width: auto;
+    }
+    .container .main .find .mayor .photobox img {
+        height: 280px;
+    }
+}
+@media screen and (max-width:650px) {
+    .container .main .find .often .often_tit span {
+        display: none;
+    }
+}
+@media screen and (max-width:500px) {
+    .container .main .find .mayor .txt {
+        margin-left: 0;
+        font-size: 16px;
+    }
+    .container .main .find .mayor .txt span {
+        font-size: 32px;
+    }
+    .container .main .find .mayor .txt p {
+        display: none;
+    }
+    .container .main .find .mayor .photobox {
+        top: 25px;
+    }
+    .container .main .find .mayor .photobox img {
+        height: 220px;
+    }
+}
 /* often 반응형 종료 */
 
 
@@ -458,10 +622,11 @@
     position: absolute;
     left: -50%;
     top: 0;
+    z-index: -1;
     width: 200%;
     height: 460px;
     background-image: linear-gradient(to right, #7DC243, #003994);
-    opacity: 0.05;
+    opacity: 0.1;
     content: "";
 }
 .container .main .news .tit {
@@ -497,9 +662,6 @@
 }
 .container .main .news .noticebox .tap {
     display: inline-block;
-}
-.container .main .news .noticebox .tap ul li {
-    position: relative;
 }
 .container .main .news .noticebox .tap ul li.active .more {
     display: flex;
@@ -542,26 +704,11 @@
 .container .main .news .noticebox .tap ul li .detail {
     display: none;
     position: absolute;
-    left: 0;
-    top: 0;
-}
-.container .main .news .noticebox .tap ul li.active .detail.bulletin {
-    top: -60px;
-}
-.container .main .news .noticebox .tap ul li.active .detail.area {
-    top: -120px;
-}
-.container .main .news .noticebox .tap ul li.active .detail.bidding {
-    top: -180px;
-}
-.container .main .news .noticebox .tap ul li.active .detail.report {
-    top: -240px;
+    left: 220px;
+    top: 101px;
 }
 .container .main .news .noticebox .tap ul li.active .detail {
     display: block;
-    position: absolute;
-    left: 220px;
-    top: 0;
 }
 .container .main .news .noticebox .tap ul li .detail ul {
     display: flex;
@@ -571,14 +718,17 @@
     margin: 0 30px 0 0;
     background-color: #fff;
     border-radius: 0 10px 10px 10px;
+    width: calc(25% - 22.5px);
     word-break: break-all;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+}
+.container .main .news .noticebox .tap ul li .detail ul li:last-child {
+    margin-right: 0;
 }
 .container .main .news .noticebox .tap ul li .detail ul li a {
     position: relative;
     display: block;
     padding: 20px 20px 0 20px;
-    width: 220px;
     height: 300px;
 }
 .container .main .news .noticebox .tap ul li .detail ul li a h4 {
@@ -601,7 +751,7 @@
     position: absolute;
     left: 0;
     top: 70px;
-    width: 220px;
+    width: 100%;
     height: 1px;
     border-top: 1px dashed #ededed;
     content: "";
@@ -610,7 +760,7 @@
     position: absolute;
     left: 0;
     bottom: 45px;
-    width: 220px;
+    width: 100%;
     height: 1px;
     border-top: 1px dashed #ededed;
     content: "";
@@ -627,7 +777,85 @@
 
 
 /* news 반응형 시작 */
-
+@media screen and (max-width:1700px) {
+    .container .main .news .tit h2::after {
+        display: none;
+    }
+}
+@media screen and (max-width:1600px) {
+    .container .main .news .noticebox .tap ul li .detail ul li {
+        width: calc(33% - 10px);
+    }
+    .container .main .news .noticebox .tap ul li .detail ul li:nth-child(3) {
+        margin-right: 0;
+    }
+    .container .main .news .noticebox .tap ul li .detail ul li:last-child {
+        display: none;
+    }
+}
+@media screen and (max-width:900px) {
+    .container .main .news .noticebox .tap ul li .detail ul li {
+        width: calc(50% - 10px);
+    }
+    .container .main .news .noticebox .tap ul li .detail ul li:nth-child(2) {
+        margin-right: 0;
+    }
+    .container .main .news .noticebox .tap ul li .detail ul li:nth-child(3) {
+        display: none;
+    }
+}
+@media screen and (max-width:700px) {
+    .container .main .news .noticebox .tap {
+        width: 100%;
+    }
+    .container .main .news .noticebox .tap ul {
+        display: flex;
+    }
+    .container .main .news .noticebox .tap ul li {
+        display: block;
+        width: 20%;
+        text-align: center;
+    }
+    .container .main .news .noticebox .tap ul li .detail {
+        left: 0;
+        top: 160px;
+        width: 100%;
+    }
+    .container .main .news .noticebox .tap ul li .detail ul li {
+        text-align: left;
+    }
+    .container .main .news .noticebox .tap ul li.last {
+        background-image: none;
+    }
+    .container .main .news .noticebox .tap ul li.active .more {
+        display: block;
+        background-color: transparent;
+        width: auto;
+        height: 30px;
+        font-weight: 700;
+        color: #003994;
+        border-bottom: transparent;
+        box-shadow: none;
+    }
+    .container .main .news .noticebox .tap ul li .more h3 {
+        text-align: center;
+    }
+    .container .main .news .noticebox .tap ul li.active .more h3 {
+        font-weight: 700;
+    }
+    .container .main .news .noticebox .tap ul li .more {
+        display: inline-block;
+        width: auto;
+        height: 20px;
+        line-height: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        border-bottom: none;
+    }    
+    .container .main .news .noticebox .tap ul li .more img {
+        display: none;
+    }
+}
 /* news 반응형 종료 */
 
 
@@ -781,6 +1009,12 @@
         width: 280px;
         font-size: 14px;
     }
+    .container .main .news .noticebox .tap ul li .detail ul li:first-child,
+    .container .main .news .noticebox .tap ul li .detail ul li:nth-child(2),
+    .container .main .news .noticebox .tap ul li .detail ul li:nth-child(3),
+    .container .main .news .noticebox .tap ul li .detail ul li:last-child {
+        display: block;
+    }
 }
 /* news 모바일 종료 */
 
@@ -818,14 +1052,14 @@
 .container .main .service .top .noticebox {
     margin: 24px 0 0 0;
 }
-.container .main .service .top .noticebox .tap {
-    display: inline-block;
+.container .main .service .top .noticebox .m_menu {
+    display: none;
 }
 .container .main .service .top .noticebox .tap ul {
+    position: relative;
     display: flex;
 }
 .container .main .service .top .noticebox .tap ul li {
-    position: relative;
     width: 119px;
     height: 50px;
     text-align: center;
@@ -956,34 +1190,6 @@
 }
 
 
-.container .main .service .top .noticebox .tap ul li.active .detail.army {
-    left: -120px;
-}
-.container .main .service .top .noticebox .tap ul li.active .detail.welfare {
-    left: -239px;
-}
-.container .main .service .top .noticebox .tap ul li.active .detail.industry {
-    left: -358px;
-}
-.container .main .service .top .noticebox .tap ul li.active .detail.construction {
-    left: -477px;
-}
-.container .main .service .top .noticebox .tap ul li.active .detail.life {
-    left: -596px;
-}
-.container .main .service .top .noticebox .tap ul li.active .detail.safe {
-    left: -715px;
-}
-.container .main .service .top .noticebox .tap ul li.active .detail.traffic {
-    left: -834px;
-}
-.container .main .service .top .noticebox .tap ul li.active .detail.eco {
-    left: -953px;
-}
-.container .main .service .top .noticebox .tap ul li.active .detail.edu {
-    left: -1072px;
-}
-
 
 .container .main .service .bottom {
     margin: 350px 0 0 0;
@@ -1098,6 +1304,9 @@
 
 /* service 모바일 시작 */
 @media screen and (max-width:360px) {
+    .container .main .service {
+        height: 500px;
+    }
     .container .main .service .top .tit h2 {
         font-size: 18px;
     }
@@ -1112,278 +1321,165 @@
     .container .main .service .top .noticebox {
         margin: 30px 0 0 0;
     }
-    .container .main .service .top .noticebox .tap ul {
-        float: left;
-        display: inline-block
+    .container .main .service .top .noticebox .m_menu {
+        position: relative;
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        z-index: 200;
+    }
+    .container .main .service .top .noticebox .m_menu.open {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .container .main .service .top .noticebox .m_menu.open::after {
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        width: 15px;
+        height: 15px;
+        background-image: url(../images/main/service_m_menu_close_ico.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+    }
+    .container .main .service .top .noticebox .m_menu button {
+        position: relative;
+        border: 1px solid #ccc;
+        line-height: 38px;
+        width: 100%;
+        height: 38px;
+        text-align: left;
+        padding: 0 20px;
+    }
+    .container .main .service .top .noticebox .m_menu button::after {
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        width: 15px;
+        height: 15px;
+        background-image: url(../images/main/service_m_menu_open_ico.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+    }
+    .container .main .service .top .noticebox .m_menu.open button::after {
+        display: none;
+    }
+    .container .main .service .top .noticebox .m_menu.close {
+        display: none;
+    }
+    .container .main .service .top .noticebox .m_menu ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 39px;
+        width: 100%;
+    }
+    .container .main .service .top .noticebox .m_menu.open ul {
+        display: block;
+    }
+    .container .main .service .top .noticebox .m_menu ul li {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: 0;
+    }
+    .container .main .service .top .noticebox .m_menu ul li a {
+        display: block;
+        line-height: 38px;
+        padding: 0 20px;
     }
     .container .main .service .top .noticebox .tap ul li {
-        position: relative;
-        width: 119px;
-        height: 50px;
-        text-align: center;
+        width: auto;
+        height: auto;
     }
     .container .main .service .top .noticebox .tap ul li .more {
-        line-height: 50px;
-        font-size: 16px;
-        font-weight: 400;
+        display: none;
+    }
+    .container .main .service .top .noticebox .tap ul li .more_last {
+        padding-right: 0;
     }
     .container .main .service .top .noticebox .tap ul li.active .more {
-        display: flex;
-        justify-content: center;
-        background-color: #003994;
-        line-height: 50px;
-        color: #fff;
-        border-radius: 0 10px 10px 10px;
-        box-shadow: 10px 0 10px rgba(0,0,0,0.1);
+        background-color: transparent;
+        color: #003994;
+        border-radius: 0;
+        line-height: 40px;
+        box-shadow: none;
     }
     .container .main .service .top .noticebox .tap ul li.active .more h3 {
-        font-size: 16px;
-        font-weight: 700;
+        display: none;
     }
     .container .main .service .top .noticebox .tap ul li .more h3 {
         font-size: 16px;
         font-weight: 400;
     }
-    .container .main .service .top .noticebox .tap ul li .detail {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+    .container .main .service .top .noticebox .tap ul li.active .detail {
+        top: 20px;
+        width: 320px;
+        height: 280px;
     }
     .container .main .service .top .noticebox .tap ul li .detail ul li {
-        width: 200px;
-        text-align: center;
-    }
-    
-    .container .main .service .top .noticebox .tap ul li .detail.sunshine ul li.left {
-        color: #3d3d3d;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail ul li.left .left_ico {
-        display: block;
-        margin: 20px 0 0 0;
-        text-align: center;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail ul li .txt_group {
-        padding: 60px 0 0 100px;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail ul li .txt_group a {
-        padding: 20px 0 20px 0;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail ul li.right {
-        width: 988px;
-        height: 300px;
-    }
-    .container .main .service .top .noticebox .tap ul li.active .detail {
-        display: flex;
-        position: absolute;
-        left: 0;
-        top: 80px;
-        width: 1190px;
-        height: 300px;
-    }
-    
-    .container .main .service .top .noticebox .tap ul li.active .detail ul li.left {
-        font-family: SBAggro;
-    }
-    .container .main .service .top .noticebox .tap ul li.active .detail ul li.left strong {
-        display: block;
-        margin: 30px 0 10px 0;
-        font-size: 24px;
-    }
-    .container .main .service .top .noticebox .tap ul li.active .detail ul li.left span {
-        font-size: 14px;
-        line-height: 0;
-        font-weight: 200;
-    }
-    
-    .container .main .service .top .noticebox .tap ul li.active .detail.sunshine ul li.left {
-        font-family: SBAggro;
-        border-top: 1px solid #ededed;
-        border-left: 1px solid #ededed;
-        border-bottom: 1px solid #ededed;
-        background-image: url(../images/main/service_sunshine_illust_ico.png);
+        padding: 20px 0 15px 0;
+        width: 160px;
     }
     .container .main .service .top .noticebox .tap ul li .detail ul li.left {
-        height: 300px;
-    }
-    
-    
-    
-    .container .main .service .top .noticebox .tap ul li .detail.army ul li.left {
-        color: #fff;
-        background-color: #367570;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail.welfare ul li.left {
-        color: #fff;
-        background-color: #F08300;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail.industry ul li.left {
-        color: #fff;
-        background-color: #009FDE;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail.construction ul li.left {
-        color: #fff;
-        background-color: #B8589D;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail.life ul li.left {
-        color: #fff;
-        background-color: #001A4B;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail.safe ul li.left {
-        color: #fff;
-        background-color: #fbbd21;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail.traffic ul li.left {
-        color: #fff;
-        background-color: #4D0014;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail.eco ul li.left {
-        color: #fff;
-        background-color: #E11B47;
-    }
-    .container .main .service .top .noticebox .tap ul li .detail.edu ul li.left {
-        color: #fff;
-        background-color: #7A73D1;
-    }
-    
-    
-    .container .main .service .top .noticebox .tap ul li.active .detail.army {
-        left: -120px;
-    }
-    .container .main .service .top .noticebox .tap ul li.active .detail.welfare {
-        left: -239px;
-    }
-    .container .main .service .top .noticebox .tap ul li.active .detail.industry {
-        left: -358px;
-    }
-    .container .main .service .top .noticebox .tap ul li.active .detail.construction {
-        left: -477px;
-    }
-    .container .main .service .top .noticebox .tap ul li.active .detail.life {
-        left: -596px;
-    }
-    .container .main .service .top .noticebox .tap ul li.active .detail.safe {
-        left: -715px;
-    }
-    .container .main .service .top .noticebox .tap ul li.active .detail.traffic {
-        left: -834px;
-    }
-    .container .main .service .top .noticebox .tap ul li.active .detail.eco {
-        left: -953px;
-    }
-    .container .main .service .top .noticebox .tap ul li.active .detail.edu {
-        left: -1072px;
-    }
-    
-    
-    .container .main .service .bottom {
-        margin: 350px 0 0 0;
-        width: 1190px;
-        height: 300px;
-    }
-    .container .main .service .bottom .userbox .tap {
-        display: inline-block;
-    }
-    .container .main .service .bottom .userbox .tap ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 1190px;
-    }
-    .container .main .service .bottom .userbox .tap ul li {
-        position: relative;
-        width: 33.3%;
-        height: 50px;
-        text-align: center;
-    }
-    .container .main .service .bottom .userbox .tap ul li .who {
-        line-height: 50px;
-        font-size: 16px;
-        font-weight: 400;
-    }
-    .container .main .service .bottom .userbox .tap ul .citizen.active .who {
-        display: flex;
-        justify-content: center;
-        background-color: #7DC243;
-        line-height: 50px;
-        color: #fff;
-        border-radius: 0 10px 0 0;
-        box-shadow: 10px 0 10px rgba(0,0,0,0.1);
-    }
-    .container .main .service .bottom .userbox .tap ul .businessman.active .who {
-        display: flex;
-        justify-content: center;
-        background-color: #367570;
-        line-height: 50px;
-        color: #fff;
-        border-radius: 10px 10px 0 0;
-        box-shadow: 10px 0 10px rgba(0,0,0,0.1);
-    }
-    .container .main .service .bottom .userbox .tap ul li.active .who {
-        display: flex;
-        justify-content: center;
-        background-color: #003994;
-        line-height: 50px;
-        color: #fff;
-        border-radius: 10px 0 0 0;
-        box-shadow: 10px 0 10px rgba(0,0,0,0.1);
-    }
-    .container .main .service .bottom .userbox .tap ul li.active .who h3 {
-        font-size: 16px;
-        font-weight: 700;
-    }
-    .container .main .service .bottom .userbox .tap ul li .who h3 {
-        font-size: 16px;
-        font-weight: 400;
-    }
-    .container .main .service .bottom .userbox .tap ul li .detail {
         display: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
     }
-    .container .main .service .bottom .userbox .tap ul li .detail ul li {
-        width: 200px;
-        line-height: 50px;
+    .container .main .service .top .noticebox .tap ul li .detail ul li .txt_group {
+        padding: 0;
     }
-    .container .main .service .bottom .userbox .tap ul .citizen.active .detail {
-        display: flex;
-        justify-content: space-evenly;
-        position: absolute;
-        left: 0;
-        top: 50px;
-        width: 1190px;
-        height: 200px;
-        border: 1px solid #7DC243;
+    .container .main .service .top .noticebox .tap ul li .detail ul li .txt_group .group3,
+    .container .main .service .top .noticebox .tap ul li .detail ul li .txt_group .group4 {
+        display: none;
     }
-    .container .main .service .bottom .userbox .tap ul .businessman.active .detail {
-        display: flex;
-        justify-content: space-evenly;
-        position: absolute;
-        left: -395px;
-        top: 50px;
-        width: 1190px;
-        height: 200px;
-        border: 1px solid #367570;
+    .container .main .service .top .noticebox .tap ul li .detail ul li .txt_group a {
+        padding: 0;
     }
-    .container .main .service .bottom .userbox .tap ul .tourist.active .detail {
-        display: flex;
-        justify-content: space-evenly;
-        position: absolute;
-        left: -791px;
-        top: 50px;
-        width: 1190px;
-        height: 200px;
-        border: 1px solid #003994;
+    .container .main .service .top .noticebox .tap ul li .detail ul li.right {
+        width: 320px;
+    }
+    
+
+
+    .container .main .service .top .noticebox .tap ul li.active .detail.sunshine .right {
+        height: 280px;
+        background-image: url(../images/main/service_sunshine_mobile.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container .main .service .top .noticebox .tap ul li.active .detail.sunshine .right .m_no {
+        display: none;
+    }
+    .container .main .service .top .noticebox .tap ul li.active .detail.army .right {
+        height: 280px;
+        background-image: url(../images/main/service_army_mobile.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container .main .service .top .noticebox .tap ul li.active .detail.army .right .m_no {
+        display: none;
+    }
+    .container .main .service .top .noticebox .tap ul li.active .detail {
+        border: 1px solid #ccc;
+    }
+
+
+    .container .main .service .bottom {
+        display: none;
     }
 }
 /* service 모바일 종료 */
 
 
 
-/* introduce 반응형 시작 */
+/* introduce PC 시작 */
 .container .main .introduce {
     position: relative;
 }
@@ -1536,11 +1632,84 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* introduce PC 종료 */
+
+
+
+
+
+/* introduce 반응형 시작 */
+
 /* introduce 반응형 종료 */
 
 
 
-/* travel 반응형 시작 */
+/* introduce 모바일 시작 */
+@media screen and (max-width:360px) {
+    .container .main .introduce::before {
+        height: 1900px;
+    }
+    .container .main .introduce .txt {
+        padding: 50px 0 0 0;
+    }
+    .container .main .introduce .txt h2 {
+        font-size: 26px;
+    }
+    .container .main .introduce .txt span {
+        display: none;
+    }
+    .container .main .introduce .photo .left {
+        width: 320px;
+        height: 325px;
+    }
+    .container .main .introduce .photo .left .line {
+        left: 10px;
+        top: 10px;
+        width: 300px;
+        height: 305px;
+    }
+    .container .main .introduce .photo .left .line h3 {
+        margin: 30px 0 0 20px ;
+        font-size: 20px;
+    }
+    .container .main .introduce .photo .left .line .more {
+        margin: 10px 0 0 15px;
+    }
+    .container .main .introduce .photo .left .line .more a {
+        width: 100px;
+        height: 25px;
+        padding: 5px 10px 5px 10px;
+        color: #003994;
+    }
+    .container .main .introduce .photo .left .line .more a p {
+        margin: 2px 0 0 0;
+        font-size: 10px;
+        line-height: 25px;
+    }
+    .container .main .introduce .photo .left .line .more a img {
+        margin: 0 0 1px 0;
+        width: 10px;
+        height: 10px;
+    }
+    .container .main .introduce .photo .right {
+        float: left;
+        width: auto;
+        height: auto;
+    }
+    .container .main .introduce .photo .right ul li {
+        margin: 20px 0 0 0;
+        width: 320px;
+        height: 325px;
+    }
+    .container .main .introduce .photo .right ul li a h3 {
+        margin-top: 180px;
+    }
+}
+/* introduce 모바일 종료 */
+
+
+
+/* travel PC 시작 */
 .container .main .travel {
     margin: 150px 0 100px 0;
     font-family: SBAggro;
@@ -1684,4 +1853,98 @@
     font-size: 0;
     line-height: 0;
 }
+/* travel PC 종료 */
+
+
+
+
+/* travel 반응형 시작 */
+
 /* travel 반응형 종료 */
+
+
+
+/* travel 모바일 시작 */
+@media screen and (max-width:360px) {
+    .container .main .travel {
+        margin: 100px 0 100px 0;
+    }
+    .container .main .travel .txt {
+        padding: 80px 0 40px 0;
+        font-family: SBAggro;
+        text-align: center;
+    }
+    .container .main .travel .txt h2 {
+        font-size: 26px;
+    }
+    .container .main .travel .txt span {
+        display: none;
+    }
+    .container .main .travel .group .about {
+        left: 20px;
+        top: 20px;
+        width: 165px;
+        height: 165px;
+    }
+    .container .main .travel .group .about .txt_group .top {
+        padding: 20px 0 10px 0;
+    }
+    .container .main .travel .group .about .txt_group .top::after {
+        top: 52px;
+        width: 125px;
+    }
+    .container .main .travel .group .about .txt_group .top h3 {
+        font-size: 14px;
+    }
+    .container .main .travel .group .about .txt_group .middle {
+        padding: 15px 0 0 0;
+    }
+    .container .main .travel .group .about .txt_group .middle span {
+        font-size: 14px;
+    }
+    .container .main .travel .group .about .txt_group .middle strong {
+        font-size: 18px;
+    }
+    .container .main .travel .group .about .txt_group .bottom {
+        display: none;
+    }
+    
+    
+    
+    
+    
+    .container .main .travel .group .popup {
+        height: 400px;
+    }
+    .container .main .travel .group .popup ul li a img {
+        width: auto;
+        height: 400px;
+    }
+    .container .main .travel .group .controlbox {
+        left: 55px;
+        top: 168px;
+        width: 130px;
+    }
+    .container .main .travel .group .controlbox .controlbox_wrap .count {
+        font-size: 10px;
+        width: 30px;
+        top: 9px;
+    }
+    .container .main .travel .group .controlbox .controlbox_wrap .click {
+        margin-top: 2px;
+    }
+    .container .main .travel .group .controlbox .controlbox_wrap .click .button_prev {
+        width: 12px;
+        height: 12px;
+    }
+    .container .main .travel .group .controlbox .controlbox_wrap .click .button_pause {
+        width: 12px;
+        height: 12px;
+        margin: 0 10px;
+    }
+    .container .main .travel .group .controlbox .controlbox_wrap .click .button_next {
+        width: 12px;
+        height: 12px;
+    }
+}
+/* travel 모바일 시작 */

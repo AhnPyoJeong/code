@@ -143,36 +143,30 @@ html, body {
 
 
 /* header 반응형 시작 */
-
-/* header 반응형 종료 */
-
-
-
-/* header 모바일 시작 */
-@media screen and (max-width:360px){
+@media screen and (max-width:1220px){
+    .header .header_bottom .gnb ul li a {
+        padding: 28px 15px 28px 15px;
+        font-size: 20px;
+        line-height: 90px;
+    }
+}
+@media screen and (max-width:900px){
     .header {
-        width: 100%;
-        height: 60px;
+        height: 90px;
     }
     .header .header_top {
         display: none;
     }
-    .header .header_bottom {
-        height: 60px;
+    .header .header_bottom .gnb ul li a {
+        padding: 28px 15px 28px 15px;
+        font-size: 16px;
     }
-    .header .header_bottom .logo {
-        margin: 17px 0 0 0;
-    }
-    .header .header_bottom .logo a {
-        width: 60px;
-        height: 27px;
-    }
-    .header .header_bottom .gnb {
-        float: right;
-    }
+}
+@media screen and (max-width:750px){
     .header .header_bottom .gnb .gnb_open {
         display: block;
         position: relative;
+        margin: 15px 0 0 0;
     }
     .header .header_bottom .gnb .gnb_open strong {
         display: none;
@@ -196,6 +190,33 @@ html, body {
     }
     .header .header_bottom .gnb ul li {
         display: none;
+    }
+}
+/* header 반응형 종료 */
+
+
+
+/* header 모바일 시작 */
+@media screen and (max-width:360px){
+    .header {
+        width: 100%;
+        height: 60px;
+    }
+    .header .header_top {
+        display: none;
+    }
+    .header .header_bottom {
+        height: 60px;
+    }
+    .header .header_bottom .logo {
+        margin: 17px 0 0 0;
+    }
+    .header .header_bottom .logo a {
+        width: 60px;
+        height: 27px;
+    }
+    .header .header_bottom .gnb .gnb_open {
+        margin: 0;
     }
 }
 /* header 모바일 종료 */
