@@ -352,14 +352,6 @@
 .container .main .find .often .often_service .often_ico {
     text-align: center;
 }
-
-.container .main .find .often .often_service .often_ico i {
-    font-size: 60px;
-}
-.container .main .find .often .often_service .often_ico p {
-    font-weight: 700;
-}
-
 .container .main .find .often .often_service .up {
     display: flex;
     justify-content: space-around;
@@ -668,10 +660,10 @@
 .container .main .news .noticebox {
     margin: 24px 0 0 0;
 }
-.container .main .news .noticebox .tab {
+.container .main .news .noticebox .tap {
     display: inline-block;
 }
-.container .main .news .noticebox .tab ul li.active .more {
+.container .main .news .noticebox .tap ul li.active .more {
     display: flex;
     justify-content: space-around;
     width: 170px;
@@ -683,21 +675,13 @@
     border-bottom: transparent;
     box-shadow: 10px 0 10px rgba(0,0,0,0.1);
 }
-.container .main .news .noticebox .tab ul li.active .more h3 {
-    margin: 0;
-    font-size: 18px;
+.container .main .news .noticebox .tap ul li.active .more h3 {
+    font-size: 16px;
     font-weight: 700;
 }
-.container .main .news .noticebox .tab ul li.active .more i {
-    display: block;
-    margin: 17px 0 0 0;
-    font-size: 24px;
-}
-.container .main .news .noticebox .tab ul li .more i {
-    display: none;
-}
-.container .main .news .noticebox .tab ul li .more {
-    display: block;
+.container .main .news .noticebox .tap ul li .more {
+    display: flex;
+    justify-content: space-around;
     width: 170px;
     height: 60px;
     line-height: 60px;
@@ -705,27 +689,31 @@
     font-weight: 400;
     border-bottom: 1px solid #ededed;
 }
-.container .main .news .noticebox .tab ul li .more.last {
+.container .main .news .noticebox .tap ul li .more.last {
     border-bottom: transparent;
 }
-.container .main .news .noticebox .tab ul li .more h3 {
-    margin: 0 0 0 22px;
+.container .main .news .noticebox .tap ul li .more h3 {
     font-size: 16px;
     font-weight: 400;
 }
-.container .main .news .noticebox .tab ul li .detail {
+.container .main .news .noticebox .tap ul li .more img {
+    width: 24px;
+    height: 24px;
+    margin: 17px 0 0 0;
+}
+.container .main .news .noticebox .tap ul li .detail {
     display: none;
     position: absolute;
     left: 220px;
     top: 101px;
 }
-.container .main .news .noticebox .tab ul li.active .detail {
+.container .main .news .noticebox .tap ul li.active .detail {
     display: block;
 }
-.container .main .news .noticebox .tab ul li .detail ul {
+.container .main .news .noticebox .tap ul li .detail ul {
     display: flex;
 }
-.container .main .news .noticebox .tab ul li .detail ul li {
+.container .main .news .noticebox .tap ul li .detail ul li {
     position: relative;
     margin: 0 30px 0 0;
     background-color: #fff;
@@ -734,26 +722,23 @@
     word-break: break-all;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
 }
-.container .main .news .noticebox .tab ul li .detail ul li:last-child {
+.container .main .news .noticebox .tap ul li .detail ul li:last-child {
     margin-right: 0;
 }
-.container .main .news .noticebox .tab ul li .detail.sunshine ul li.right {
-    width: calc(100% - 200px);
-}
-.container .main .news .noticebox .tab ul li .detail ul li a {
+.container .main .news .noticebox .tap ul li .detail ul li a {
     position: relative;
     display: block;
     padding: 20px 20px 0 20px;
     height: 300px;
 }
-.container .main .news .noticebox .tab ul li .detail ul li a h4 {
+.container .main .news .noticebox .tap ul li .detail ul li a h4 {
     font-size: 14px;
     font-weight: 700;
     overflow: hidden;
     line-height: 1.5;
     height: 3em;
 }
-.container .main .news .noticebox .tab ul li .detail ul li a p {
+.container .main .news .noticebox .tap ul li .detail ul li a p {
     margin: 20px 0 20px 0;
     font-size: 12px;
     font-weight: 200;
@@ -762,7 +747,7 @@
     line-height: 1.5;
     height: 13.5em;
 }
-.container .main .news .noticebox .tab ul li .detail ul li a::before {
+.container .main .news .noticebox .tap ul li .detail ul li a::before {
     position: absolute;
     left: 0;
     top: 70px;
@@ -771,7 +756,7 @@
     border-top: 1px dashed #ededed;
     content: "";
 }
-.container .main .news .noticebox .tab ul li .detail ul li a::after {
+.container .main .news .noticebox .tap ul li .detail ul li a::after {
     position: absolute;
     left: 0;
     bottom: 45px;
@@ -780,7 +765,7 @@
     border-top: 1px dashed #ededed;
     content: "";
 }
-.container .main .news .noticebox .tab ul li .detail ul li a .dep_date {
+.container .main .news .noticebox .tap ul li .detail ul li a .dep_date {
     display: flex;
     justify-content: space-between;
     margin: 25px 0 0 0;
@@ -798,63 +783,51 @@
     }
 }
 @media screen and (max-width:1600px) {
-    .container .main .news .noticebox .tab ul li .detail ul li {
+    .container .main .news .noticebox .tap ul li .detail ul li {
         width: calc(33% - 10px);
     }
-    .container .main .news .noticebox .tab ul li .detail ul li:nth-child(3) {
+    .container .main .news .noticebox .tap ul li .detail ul li:nth-child(3) {
         margin-right: 0;
     }
-    .container .main .news .noticebox .tab ul li .detail ul li:last-child {
+    .container .main .news .noticebox .tap ul li .detail ul li:last-child {
         display: none;
     }
 }
 @media screen and (max-width:900px) {
-    .container .main .news .noticebox .tab ul li .detail ul li {
+    .container .main .news .noticebox .tap ul li .detail ul li {
         width: calc(50% - 10px);
     }
-    .container .main .news .noticebox .tab ul li .detail ul li:nth-child(2) {
+    .container .main .news .noticebox .tap ul li .detail ul li:nth-child(2) {
         margin-right: 0;
     }
-    .container .main .news .noticebox .tab ul li .detail ul li:nth-child(3) {
-        display: none;
-    }
-}
-@media screen and (max-width:750px) {
-    .container .main .news .tit span {
+    .container .main .news .noticebox .tap ul li .detail ul li:nth-child(3) {
         display: none;
     }
 }
 @media screen and (max-width:700px) {
-    .container .main .news {
-        height: 500px;
-    }
-    .container .main .news::before {
-        height: 550px;
-    }
-    .container .main .news .noticebox .tab {
+    .container .main .news .noticebox .tap {
         width: 100%;
     }
-    .container .main .news .noticebox .tab ul {
+    .container .main .news .noticebox .tap ul {
         display: flex;
-        align-items: center;
     }
-    .container .main .news .noticebox .tab ul li {
+    .container .main .news .noticebox .tap ul li {
         display: block;
         width: 20%;
         text-align: center;
     }
-    .container .main .news .noticebox .tab ul li .detail {
+    .container .main .news .noticebox .tap ul li .detail {
         left: 0;
         top: 160px;
         width: 100%;
     }
-    .container .main .news .noticebox .tab ul li .detail ul li {
+    .container .main .news .noticebox .tap ul li .detail ul li {
         text-align: left;
     }
-    .container .main .news .noticebox .tab ul li.last {
+    .container .main .news .noticebox .tap ul li.last {
         background-image: none;
     }
-    .container .main .news .noticebox .tab ul li.active .more {
+    .container .main .news .noticebox .tap ul li.active .more {
         display: block;
         background-color: transparent;
         width: auto;
@@ -864,11 +837,13 @@
         border-bottom: transparent;
         box-shadow: none;
     }
-    .container .main .news .noticebox .tab ul li.active .more h3 {
-        height: 30px;
-        line-height: 30px;
+    .container .main .news .noticebox .tap ul li .more h3 {
+        text-align: center;
     }
-    .container .main .news .noticebox .tab ul li .more {
+    .container .main .news .noticebox .tap ul li.active .more h3 {
+        font-weight: 700;
+    }
+    .container .main .news .noticebox .tap ul li .more {
         display: inline-block;
         width: auto;
         height: 20px;
@@ -877,16 +852,7 @@
         font-weight: 400;
         border-bottom: none;
     }    
-    .container .main .news .noticebox .tab ul li .more img {
-        display: none;
-    }
-}
-@media screen and (max-width:450px) {
-    .container .main .news .noticebox .tab ul li .detail ul li {
-        margin-right: 0;
-        width: 100%;
-    }
-    .container .main .news .noticebox .tab ul li .detail ul li:nth-child(2) {
+    .container .main .news .noticebox .tap ul li .more img {
         display: none;
     }
 }
@@ -916,26 +882,26 @@
     .container .main .news .tit span {
         display: none;
     }
-    .container .main .news .noticebox .tab {
+    .container .main .news .noticebox .tap {
         width: 320px;
     }
-    .container .main .news .noticebox .tab ul {
+    .container .main .news .noticebox .tap ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .container .main .news .noticebox .tab ul li {
+    .container .main .news .noticebox .tap ul li {
         position: relative;
         display: block;
         padding: 0;
     }
-    .container .main .news .noticebox .tab ul li.last {
+    .container .main .news .noticebox .tap ul li.last {
         background-image: url(../images/main/plus_black_ico.svg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: 18px;
     }
-    .container .main .news .noticebox .tab ul li.active .more {
+    .container .main .news .noticebox .tap ul li.active .more {
         display: inline-block;
         width: 56px;
         height: 21px;
@@ -947,11 +913,11 @@
         border-bottom: transparent;
         box-shadow: none;
     }
-    .container .main .news .noticebox .tab ul li.active .more h3 {
+    .container .main .news .noticebox .tap ul li.active .more h3 {
         font-size: 14px;
         font-weight: 700;
     }
-    .container .main .news .noticebox .tab ul li .more {
+    .container .main .news .noticebox .tap ul li .more {
         display: inline-block;
         width: 56px;
         height: 21px;
@@ -960,40 +926,40 @@
         font-weight: 400;
         border-bottom: none;
     }
-    .container .main .news .noticebox .tab ul li .more h3 {
+    .container .main .news .noticebox .tap ul li .more h3 {
         font-size: 14px;
         font-weight: 400;
         text-align: center;
     }
-    .container .main .news .noticebox .tab ul li:last-child h3 {
+    .container .main .news .noticebox .tap ul li:last-child h3 {
         display: none;
     }
     
-    .container .main .news .noticebox .tab ul li .more img {
+    .container .main .news .noticebox .tap ul li .more img {
         display: none;
     }
-    .container .main .news .noticebox .tab ul li .detail {
+    .container .main .news .noticebox .tap ul li .detail {
         display: none;
         position: absolute;
         left: 0;
         top: 0;
     }
-    .container .main .news .noticebox .tab ul li.active .detail.bulletin {
+    .container .main .news .noticebox .tap ul li.active .detail.bulletin {
         top: 50px;
         left: -66px;
     }
-    .container .main .news .noticebox .tab ul li.active .detail.area {
+    .container .main .news .noticebox .tap ul li.active .detail.area {
         top: 50px;
         left: -132px;
     }
-    .container .main .news .noticebox .tab ul li.active .detail.bidding {
+    .container .main .news .noticebox .tap ul li.active .detail.bidding {
         top: 50px;
         left: -198px;
     }
-    .container .main .news .noticebox .tab ul li.active .detail.report {
+    .container .main .news .noticebox .tap ul li.active .detail.report {
         top: 50px;
     }
-    .container .main .news .noticebox .tab ul li.active .detail {
+    .container .main .news .noticebox .tap ul li.active .detail {
         display: block;
         position: absolute;
         left: 0;
@@ -1001,11 +967,11 @@
         width: 320px;
         height: 100px;
     }
-    .container .main .news .noticebox .tab ul li .detail ul {
+    .container .main .news .noticebox .tap ul li .detail ul {
         display: flex;
         flex-direction: column;
     }
-    .container .main .news .noticebox .tab ul li .detail ul li {
+    .container .main .news .noticebox .tap ul li .detail ul li {
         position: relative;
         margin: 0 0 10px 0;
         background-color: #fff;
@@ -1013,40 +979,40 @@
         word-break: break-all;
         box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
     }
-    .container .main .news .noticebox .tab ul li .detail ul li a {
+    .container .main .news .noticebox .tap ul li .detail ul li a {
         position: relative;
         display: block;
         padding: 18px 0 0 20px;
         width: 320px;
         height: 100px;
     }
-    .container .main .news .noticebox .tab ul li .detail ul li a h4 {
+    .container .main .news .noticebox .tap ul li .detail ul li a h4 {
         width: 280px;
         font-size: 16px;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
     }
-    .container .main .news .noticebox .tab ul li .detail ul li a p {
+    .container .main .news .noticebox .tap ul li .detail ul li a p {
         display: none;
     }
-    .container .main .news .noticebox .tab ul li .detail ul li a::before {
+    .container .main .news .noticebox .tap ul li .detail ul li a::before {
         left: 0;
         top: 60px;
         width: 320px;
     }
-    .container .main .news .noticebox .tab ul li .detail ul li a::after {
+    .container .main .news .noticebox .tap ul li .detail ul li a::after {
         display: none;
     }
-    .container .main .news .noticebox .tab ul li .detail ul li a .dep_date {
+    .container .main .news .noticebox .tap ul li .detail ul li a .dep_date {
         margin: 5px 0 0 0;
         width: 280px;
         font-size: 14px;
     }
-    .container .main .news .noticebox .tab ul li .detail ul li:first-child,
-    .container .main .news .noticebox .tab ul li .detail ul li:nth-child(2),
-    .container .main .news .noticebox .tab ul li .detail ul li:nth-child(3),
-    .container .main .news .noticebox .tab ul li .detail ul li:last-child {
+    .container .main .news .noticebox .tap ul li .detail ul li:first-child,
+    .container .main .news .noticebox .tap ul li .detail ul li:nth-child(2),
+    .container .main .news .noticebox .tap ul li .detail ul li:nth-child(3),
+    .container .main .news .noticebox .tap ul li .detail ul li:last-child {
         display: block;
     }
 }
@@ -1086,30 +1052,24 @@
 .container .main .service .top .noticebox {
     margin: 24px 0 0 0;
 }
-.container .main .service .top .noticebox .tab_menu {
-    overflow-y: hidden;
-    overflow-x: auto;
-}
-.container .main .service .top .noticebox .tab_menu button {
+.container .main .service .top .noticebox .m_menu {
     display: none;
 }
-.container .main .service .top .noticebox .tab_menu ul {
-    white-space: nowrap;
-    font-size: 0;
-    line-height: 0;
+.container .main .service .top .noticebox .tap ul {
+    position: relative;
+    display: flex;
 }
-.container .main .service .top .noticebox .tab_menu ul li {
-    display: inline-block;
+.container .main .service .top .noticebox .tap ul li {
     width: 119px;
     height: 50px;
     text-align: center;
 }
-.container .main .service .top .noticebox .tab_menu ul li a {
+.container .main .service .top .noticebox .tap ul li .more {
     line-height: 50px;
     font-size: 16px;
     font-weight: 400;
 }
-.container .main .service .top .noticebox .tab_menu ul li.active a {
+.container .main .service .top .noticebox .tap ul li.active .more {
     display: flex;
     justify-content: center;
     background-color: #003994;
@@ -1118,97 +1078,145 @@
     border-radius: 0 10px 10px 10px;
     box-shadow: 10px 0 10px rgba(0,0,0,0.1);
 }
-
-.container .main .service .top .noticebox .tab_contents {
-    position: relative;
+.container .main .service .top .noticebox .tap ul li.active .more h3 {
+    font-size: 16px;
+    font-weight: 700;
 }
-.container .main .service .top .noticebox .tab_contents ul li {
+.container .main .service .top .noticebox .tap ul li .more h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+.container .main .service .top .noticebox .tap ul li .detail {
     display: none;
     position: absolute;
     left: 0;
     top: 0;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
 }
-.container .main .service .top .noticebox .tab_contents ul li .left {
-    float: left;
+.container .main .service .top .noticebox .tap ul li .detail ul li {
     width: 200px;
-    height: 300px;
-    font-family: SBAggro;
     text-align: center;
-    background-image: url(../images/main/service_sunshine_illust_ico.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
-.container .main .service .top .noticebox .tab_contents ul li.sunshine .left {
+
+.container .main .service .top .noticebox .tap ul li .detail.sunshine ul li.left {
     color: #3d3d3d;
-    font-family: SBAggro;
 }
-.container .main .service .top .noticebox .tab_contents ul li .left .left_ico {
+.container .main .service .top .noticebox .tap ul li .detail ul li.left .left_ico {
     display: block;
     margin: 20px 0 0 0;
     text-align: center;
 }
-.container .main .service .top .noticebox .tab_contents ul li .right {
-    float: right;
-    width: calc(100% - 200px);
+.container .main .service .top .noticebox .tap ul li .detail ul li .txt_group {
+    padding: 60px 0 0 100px;
 }
-.container .main .service .top .noticebox .tab_contents ul li .right a {
-    display: block;
+.container .main .service .top .noticebox .tap ul li .detail ul li .txt_group a {
+    padding: 20px 0 20px 0;
+}
+.container .main .service .top .noticebox .tap ul li .detail ul li.right {
+    width: 988px;
     height: 300px;
 }
-.container .main .service .top .noticebox .tab_contents ul li .right a img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.container .main .service .top .noticebox .tab_contents ul li.active {
-    display: block;
+.container .main .service .top .noticebox .tap ul li.active .detail {
+    display: flex;
     position: absolute;
     left: 0;
-    top: 30px;
-    width: 100%;
+    top: 80px;
+    width: 1190px;
     height: 300px;
 }
 
-
-.container .main .service .top .noticebox .tab_contents ul li .left strong {
+.container .main .service .top .noticebox .tap ul li.active .detail ul li.left {
+    font-family: SBAggro;
+}
+.container .main .service .top .noticebox .tap ul li.active .detail ul li.left strong {
     display: block;
     margin: 30px 0 10px 0;
     font-size: 24px;
 }
-.container .main .service .top .noticebox .tab_contents ul li .left span {
+.container .main .service .top .noticebox .tap ul li.active .detail ul li.left span {
     font-size: 14px;
     line-height: 0;
     font-weight: 200;
 }
 
+.container .main .service .top .noticebox .tap ul li.active .detail.sunshine ul li.left {
+    font-family: SBAggro;
+    border-top: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    background-image: url(../images/main/service_sunshine_illust_ico.png);
+}
+.container .main .service .top .noticebox .tap ul li .detail ul li.left {
+    height: 300px;
+}
+
+
+
+.container .main .service .top .noticebox .tap ul li .detail.army ul li.left {
+    color: #fff;
+    background-color: #367570;
+}
+.container .main .service .top .noticebox .tap ul li .detail.welfare ul li.left {
+    color: #fff;
+    background-color: #F08300;
+}
+.container .main .service .top .noticebox .tap ul li .detail.industry ul li.left {
+    color: #fff;
+    background-color: #009FDE;
+}
+.container .main .service .top .noticebox .tap ul li .detail.construction ul li.left {
+    color: #fff;
+    background-color: #B8589D;
+}
+.container .main .service .top .noticebox .tap ul li .detail.life ul li.left {
+    color: #fff;
+    background-color: #001A4B;
+}
+.container .main .service .top .noticebox .tap ul li .detail.safe ul li.left {
+    color: #fff;
+    background-color: #fbbd21;
+}
+.container .main .service .top .noticebox .tap ul li .detail.traffic ul li.left {
+    color: #fff;
+    background-color: #4D0014;
+}
+.container .main .service .top .noticebox .tap ul li .detail.eco ul li.left {
+    color: #fff;
+    background-color: #E11B47;
+}
+.container .main .service .top .noticebox .tap ul li .detail.edu ul li.left {
+    color: #fff;
+    background-color: #7A73D1;
+}
 
 
 
 .container .main .service .bottom {
     margin: 350px 0 0 0;
+    width: 1190px;
     height: 300px;
 }
-.container .main .service .bottom .userbox .tab > ul {
-    position: relative;
+.container .main .service .bottom .userbox .tap {
+    display: inline-block;
+}
+.container .main .service .bottom .userbox .tap ul {
     display: flex;
-    
+    align-items: center;
+    justify-content: space-evenly;
+    width: 1190px;
 }
-.container .main .service .bottom .userbox .tab > ul > li {
-    width: 33.33%;
+.container .main .service .bottom .userbox .tap ul li {
+    position: relative;
+    width: 33.3%;
     height: 50px;
-}
-.container .main .service .bottom .userbox .tab > ul > li a {
     text-align: center;
 }
-.container .main .service .bottom .userbox .tab > ul > li .who {
+.container .main .service .bottom .userbox .tap ul li .who {
     line-height: 50px;
     font-size: 16px;
     font-weight: 400;
 }
-.container .main .service .bottom .userbox .tab > ul > .citizen.active .who {
+.container .main .service .bottom .userbox .tap ul .citizen.active .who {
     display: flex;
     justify-content: center;
     background-color: #7DC243;
@@ -1217,7 +1225,7 @@
     border-radius: 0 10px 0 0;
     box-shadow: 10px 0 10px rgba(0,0,0,0.1);
 }
-.container .main .service .bottom .userbox .tab > ul > .businessman.active .who {
+.container .main .service .bottom .userbox .tap ul .businessman.active .who {
     display: flex;
     justify-content: center;
     background-color: #367570;
@@ -1226,7 +1234,7 @@
     border-radius: 10px 10px 0 0;
     box-shadow: 10px 0 10px rgba(0,0,0,0.1);
 }
-.container .main .service .bottom .userbox .tab > ul > li.active .who {
+.container .main .service .bottom .userbox .tap ul li.active .who {
     display: flex;
     justify-content: center;
     background-color: #003994;
@@ -1235,69 +1243,52 @@
     border-radius: 10px 0 0 0;
     box-shadow: 10px 0 10px rgba(0,0,0,0.1);
 }
-.container .main .service .bottom .userbox .tab > ul > li.active .who h3 {
+.container .main .service .bottom .userbox .tap ul li.active .who h3 {
     font-size: 16px;
     font-weight: 700;
 }
-.container .main .service .bottom .userbox .tab ul > li .who h3 {
+.container .main .service .bottom .userbox .tap ul li .who h3 {
     font-size: 16px;
     font-weight: 400;
 }
-.container .main .service .bottom .userbox .tab .detail {
+.container .main .service .bottom .userbox .tap ul li .detail {
     display: none;
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
 }
-.container .main .service .bottom .userbox .tab .detail > ul {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px 0 0 80px;
-}
-.container .main .service .bottom .userbox .tab .detail > ul > li {
-    position: relative;
-    padding-left: 10px;
-    width: 20%;
+.container .main .service .bottom .userbox .tap ul li .detail ul li {
+    width: 200px;
     line-height: 50px;
 }
-.container .main .service .bottom .userbox .tab .detail > ul > li::before {
-    position: absolute;
-    left: 0;
-    top: 22px;
-    width: 3px;
-    height: 3px;
-    border: 2px;
-    background-color: #ccc;
-    content: "";
-}
-
-
-.container .main .service .bottom .userbox .tab ul .citizen.active .detail {
+.container .main .service .bottom .userbox .tap ul .citizen.active .detail {
     display: flex;
     justify-content: space-evenly;
     position: absolute;
     left: 0;
     top: 50px;
+    width: 1190px;
     height: 200px;
     border: 1px solid #7DC243;
 }
-.container .main .service .bottom .userbox .tab ul .businessman.active .detail {
+.container .main .service .bottom .userbox .tap ul .businessman.active .detail {
     display: flex;
     justify-content: space-evenly;
     position: absolute;
-    left: 0;
+    left: -395px;
     top: 50px;
+    width: 1190px;
     height: 200px;
     border: 1px solid #367570;
 }
-.container .main .service .bottom .userbox .tab ul .tourist.active .detail {
+.container .main .service .bottom .userbox .tap ul .tourist.active .detail {
     display: flex;
     justify-content: space-evenly;
     position: absolute;
-    left: 0;
+    left: -791px;
     top: 50px;
+    width: 1190px;
     height: 200px;
     border: 1px solid #003994;
 }
@@ -1306,53 +1297,7 @@
 
 
 /* service 반응형 시작 */
-@media screen and (max-width:1700px) {
-    .container .main .service .top .tit h2::after {
-        display: none;
-    }
-}
-@media screen and (max-width:1000px) {
-    .container .main .service {
-        height: 500px;
-    }
-    .container .main .service .top .noticebox .tab_menu {
-        display: block;
-    }
-    .container .main .service .top .noticebox .tab_menu ul {
-        height: 50px;
-        line-height: 50px;
-    }
-    .container .main .service .top .noticebox .tab_menu ul li {
-        text-align: center;
-    }
-    .container .main .service .top .noticebox .tab_menu button {
-        display: none;
-    }
-    .container .main .service .top .noticebox .tab_contents ul li .more {
-        display: none;
-        font-size: 0;
-        line-height: 0;
-    }
-    .container .main .service .top .noticebox .tab_contents ul li.active .more {
-        display: none;
-        font-size: 0;
-        line-height: 0;
-    }
-    .container .main .service .top .noticebox .tab_contents ul li.active .detail {
-        top: 30px;
-    }
-    .container .main .service .bottom {
-        display: none;
-    }
-}
-@media screen and (max-width:700px) {
-    .container .main .service .top .noticebox .tab_contents ul li .left {
-        display: none;
-    }
-    .container .main .service .top .noticebox .tab_contents ul li .right {
-        width: 100%;
-    }
-}
+
 /* service 반응형 종료 */
 
 
@@ -1376,13 +1321,33 @@
     .container .main .service .top .noticebox {
         margin: 30px 0 0 0;
     }
-    .container .main .service .top .noticebox .tab_menu.open {
+    .container .main .service .top .noticebox .m_menu {
+        position: relative;
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        z-index: 200;
+    }
+    .container .main .service .top .noticebox .m_menu.open {
         display: block;
         text-align: center;
         font-size: 14px;
         font-weight: 700;
     }
-    .container .main .service .top .noticebox .tab_menu button {
+    .container .main .service .top .noticebox .m_menu.open::after {
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        width: 15px;
+        height: 15px;
+        background-image: url(../images/main/service_m_menu_close_ico.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+    }
+    .container .main .service .top .noticebox .m_menu button {
         position: relative;
         border: 1px solid #ccc;
         line-height: 38px;
@@ -1391,87 +1356,117 @@
         text-align: left;
         padding: 0 20px;
     }
-    .container .main .service .top .noticebox .tab_menu ul li {
+    .container .main .service .top .noticebox .m_menu button::after {
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        width: 15px;
+        height: 15px;
+        background-image: url(../images/main/service_m_menu_open_ico.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+    }
+    .container .main .service .top .noticebox .m_menu.open button::after {
+        display: none;
+    }
+    .container .main .service .top .noticebox .m_menu.close {
+        display: none;
+    }
+    .container .main .service .top .noticebox .m_menu ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 39px;
+        width: 100%;
+    }
+    .container .main .service .top .noticebox .m_menu.open ul {
+        display: block;
+    }
+    .container .main .service .top .noticebox .m_menu ul li {
         background-color: #fff;
+        border: 1px solid #ccc;
         border-top: 0;
     }
-    .container .main .service .top .noticebox .tab_menu ul li a {
+    .container .main .service .top .noticebox .m_menu ul li a {
         display: block;
         line-height: 38px;
         padding: 0 20px;
     }
-    .container .main .service .top .noticebox .tab_contents ul li {
+    .container .main .service .top .noticebox .tap ul li {
         width: auto;
         height: auto;
     }
-    .container .main .service .top .noticebox .tab_contents ul li .more {
+    .container .main .service .top .noticebox .tap ul li .more {
         display: none;
     }
-    .container .main .service .top .noticebox .tab_contents ul li .more_last {
+    .container .main .service .top .noticebox .tap ul li .more_last {
         padding-right: 0;
     }
-    .container .main .service .top .noticebox .tab_contents ul li.active .more {
+    .container .main .service .top .noticebox .tap ul li.active .more {
         background-color: transparent;
         color: #003994;
         border-radius: 0;
         line-height: 40px;
         box-shadow: none;
     }
-    .container .main .service .top .noticebox .tab_contents ul li.active .more h3 {
+    .container .main .service .top .noticebox .tap ul li.active .more h3 {
         display: none;
     }
-    .container .main .service .top .noticebox .tab_contents ul li .more h3 {
+    .container .main .service .top .noticebox .tap ul li .more h3 {
         font-size: 16px;
         font-weight: 400;
     }
-    .container .main .service .top .noticebox .tab_contents ul li.active .detail {
+    .container .main .service .top .noticebox .tap ul li.active .detail {
         top: 20px;
         width: 320px;
         height: 280px;
     }
-    .container .main .service .top .noticebox .tab_contents ul li .detail ul li {
+    .container .main .service .top .noticebox .tap ul li .detail ul li {
         padding: 20px 0 15px 0;
         width: 160px;
     }
-    .container .main .service .top .noticebox .tab_contents ul li .detail ul li.left {
+    .container .main .service .top .noticebox .tap ul li .detail ul li.left {
         display: none;
     }
-    .container .main .service .top .noticebox .tab_contents ul li .detail ul li .txt_group {
+    .container .main .service .top .noticebox .tap ul li .detail ul li .txt_group {
         padding: 0;
     }
-    .container .main .service .top .noticebox .tab_contents ul li .detail ul li .txt_group .group3,
-    .container .main .service .top .noticebox .tab_contents ul li .detail ul li .txt_group .group4 {
+    .container .main .service .top .noticebox .tap ul li .detail ul li .txt_group .group3,
+    .container .main .service .top .noticebox .tap ul li .detail ul li .txt_group .group4 {
         display: none;
     }
-    .container .main .service .top .noticebox .tab_contents ul li .detail ul li .txt_group a {
+    .container .main .service .top .noticebox .tap ul li .detail ul li .txt_group a {
         padding: 0;
     }
-    .container .main .service .top .noticebox .tab_contents ul li .detail ul li.right {
+    .container .main .service .top .noticebox .tap ul li .detail ul li.right {
         width: 320px;
     }
+    
 
 
-    .container .main .service .top .noticebox .tab_contents ul li.active .detail.sunshine .right {
+    .container .main .service .top .noticebox .tap ul li.active .detail.sunshine .right {
         height: 280px;
         background-image: url(../images/main/service_sunshine_mobile.png);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
     }
-    .container .main .service .top .noticebox .tab_contents ul li.active .detail.sunshine .right .m_no {
+    .container .main .service .top .noticebox .tap ul li.active .detail.sunshine .right .m_no {
         display: none;
     }
-    .container .main .service .top .noticebox .tab_contents ul li.active .detail.army .right {
+    .container .main .service .top .noticebox .tap ul li.active .detail.army .right {
         height: 280px;
         background-image: url(../images/main/service_army_mobile.png);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
     }
-    .container .main .service .top .noticebox .tab_contents ul li.active .detail.army .right .m_no {
+    .container .main .service .top .noticebox .tap ul li.active .detail.army .right .m_no {
         display: none;
     }
-    .container .main .service .top .noticebox .tab_contents ul li.active .detail {
+    .container .main .service .top .noticebox .tap ul li.active .detail {
         border: 1px solid #ccc;
     }
 
@@ -1538,7 +1533,7 @@
 .container .main .introduce .photo .left {
     float: left;
     position: relative;
-    width: 49.5%;
+    width: 590px;
     height: 600px;
     background-image: url(../images/main/introduce_photo_left.png);
     background-position: center center;
@@ -1550,7 +1545,7 @@
     position: absolute;
     left: 20px;
     top: 20px;
-    width: calc(100% - 40px);
+    width: 550px;
     height: 560px;
     border: 2px solid #fff;
     border-radius: 20px;
@@ -1589,12 +1584,13 @@
 }
 .container .main .introduce .photo .right {
     float: left;
-    width: 50.5%;
+    width: 600px;
+    height: 560px;
 }
 .container .main .introduce .photo .right ul li {
     display: inline-block;
     margin: 0 0 40px 37px;
-    width: calc(50% - 40px);
+    width: 260px;
     height: 280px;
     border-radius: 20px;
 }
@@ -1643,71 +1639,7 @@
 
 
 /* introduce 반응형 시작 */
-@media screen and (max-width:1500px) {
-    .container .main .introduce .photo .left .line h3 {
-        margin: 30px 0 0 30px;
-        font-size: 30px;
-    }
-    .container .main .introduce .photo .left .line .more {
-        margin-left: 30px;
-    }
-    .container .main .introduce .photo .right ul li a h3 {
-        font-size: 16px;
-    }
-}
-@media screen and (max-width:900px) {
-    .container .main .introduce .photo .right ul li {
-        width: calc(100% - 40px);
-        
-    }
-    .container .main .introduce .photo .right ul li a h3 {
-        margin-top: 120px;
-        font-size: 24px;
-    }
-    .container .main .introduce .photo .right ul li:nth-child(2),
-    .container .main .introduce .photo .right ul li:nth-child(4) {
-        display: none;
-    }
-}
-@media screen and (max-width:800px) {
-    .container .main .introduce .photo .left .line h3 {
-        margin: 20px 0 0 20px;
-        font-size: 30px;
-        width: 200px;
-    }
-    .container .main .introduce .photo .left .line .more {
-        margin-top: 20px;
-        margin-left: 20px;
-    }
-}
-@media screen and (max-width:600px) {
-    .container .main .introduce .txt span {
-        display: none;
-    }
-    .container .main .introduce .photo .left {
-        width: 100%;
-    }
-    .container .main .introduce .photo .left .line h3 {
-        margin: 30px 0 0 30px;
-        font-size: 40px;
-        width: auto;
-    }
-    .container .main .introduce .photo .left .line .more {
-        margin-left: 30px;
-    }
-    .container .main .introduce .photo .left .line .more a {
-        width: 180px;
-        height: 50px;
-        border-radius: 25px;
-    }
-    .container .main .introduce .photo .left .line .more a p {
-        font-size: 16px;
-        line-height: 50px;
-    }
-    .container .main .introduce .photo .right ul li {
-        display: none;
-    }
-}
+
 /* introduce 반응형 종료 */
 
 
@@ -1927,39 +1859,7 @@
 
 
 /* travel 반응형 시작 */
-@media screen and (max-width:1400px) {
-    .container .main .travel .group .about {
-        left: 100px;
-    }
-    .container .main .travel .group .controlbox {
-        left: 244px;
-    }
-}
-@media screen and (max-width:800px) {
-    .container .main .travel .group .about {
-        left: 70px;
-        width: 240px;
-        height: 240px;
-    }
-    .container .main .travel .group .about .txt_group .top::after {
-        width: 200px;
-    }
-    .container .main .travel .group .about .middle span {
-        margin: 0 0 20px 0;
-    }
-    .container .main .travel .group .about .bottom p {
-        display: none;
-    }
-    .container .main .travel .group .controlbox {
-        left: 156px;
-        top: 282px;
-    }
-}
-@media screen and (max-width:600px) {
-    .container .main .travel .txt span {
-        display: none;
-    }
-}
+
 /* travel 반응형 종료 */
 
 
@@ -1997,11 +1897,10 @@
         font-size: 14px;
     }
     .container .main .travel .group .about .txt_group .middle {
-        padding: 10px 0 0 0;
+        padding: 15px 0 0 0;
     }
     .container .main .travel .group .about .txt_group .middle span {
         font-size: 14px;
-        margin-bottom: 5px;
     }
     .container .main .travel .group .about .txt_group .middle strong {
         font-size: 18px;
