@@ -179,8 +179,8 @@ $(document).ready(function(){
         })
 
 
-        $('.container .main .service .bottom .userbox .tap > ul > li').on('click', function(){
-            $('.container .main .service .bottom .userbox .tap > ul > li').removeClass('active')
+        $('.container .main .service .bottom .userbox .tab > ul > li').on('click', function(){
+            $('.container .main .service .bottom .userbox .tab > ul > li').removeClass('active')
             $(this).addClass('active')
         })
 
@@ -195,15 +195,16 @@ $(document).ready(function(){
 
 
         $('.container .main .service .top .noticebox .tab_menu ul li').on('click', function(){
-            $('.container .main .service .top .noticebox .tab_menu').removeClass('open')
 
-            let service_name = $(this).attr('class')
+            let service_name = $(this).attr('data-name')
+            if(service_name != 'none'){
+                $('.container .main .service .top .noticebox .tab_menu ul li').removeClass('active')
+                $(this).addClass('active')
+                $('.container .main .service .noticebox .tab_contents ul li').removeClass('active')
+                $('.container .main .service .noticebox .tab_contents ul li[data-name = "'+service_name+'"]').addClass('active')
+            }
 
             console.log(service_name)
-
-            $('.container .main .service .noticebox .tab_contents ul li').removeClass('active')
-            $('.container .main .service .noticebox .tab_contents ul li[data-name = "'+service_name+'"]').addClass('active')
-
         })
 
 

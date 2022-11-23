@@ -691,7 +691,6 @@
 .container .main .news .noticebox .tab ul li.active .more i {
     display: block;
     margin: 17px 0 0 0;
-    font-size: 24px;
 }
 .container .main .news .noticebox .tab ul li .more i {
     display: none;
@@ -709,7 +708,7 @@
     border-bottom: transparent;
 }
 .container .main .news .noticebox .tab ul li .more h3 {
-    margin: 0 0 0 22px;
+    margin: 0 0 0 20px;
     font-size: 16px;
     font-weight: 400;
 }
@@ -864,6 +863,9 @@
         border-bottom: transparent;
         box-shadow: none;
     }
+    .container .main .news .noticebox .tab ul li.active .more i {
+        display: none;
+    }
     .container .main .news .noticebox .tab ul li.active .more h3 {
         height: 30px;
         line-height: 30px;
@@ -876,7 +878,10 @@
         font-size: 16px;
         font-weight: 400;
         border-bottom: none;
-    }    
+    }
+    .container .main .news .noticebox .tab ul li .more h3 {
+        margin-left: 0;
+    }
     .container .main .news .noticebox .tab ul li .more img {
         display: none;
     }
@@ -929,12 +934,6 @@
         display: block;
         padding: 0;
     }
-    .container .main .news .noticebox .tab ul li.last {
-        background-image: url(../images/main/plus_black_ico.svg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 18px;
-    }
     .container .main .news .noticebox .tab ul li.active .more {
         display: inline-block;
         width: 56px;
@@ -950,6 +949,7 @@
     .container .main .news .noticebox .tab ul li.active .more h3 {
         font-size: 14px;
         font-weight: 700;
+        line-height: 21px;
     }
     .container .main .news .noticebox .tab ul li .more {
         display: inline-block;
@@ -964,11 +964,7 @@
         font-size: 14px;
         font-weight: 400;
         text-align: center;
-    }
-    .container .main .news .noticebox .tab ul li:last-child h3 {
-        display: none;
-    }
-    
+    }    
     .container .main .news .noticebox .tab ul li .more img {
         display: none;
     }
@@ -980,18 +976,19 @@
     }
     .container .main .news .noticebox .tab ul li.active .detail.bulletin {
         top: 50px;
-        left: -66px;
+        left: -64px;
     }
     .container .main .news .noticebox .tab ul li.active .detail.area {
         top: 50px;
-        left: -132px;
+        left: -128px;
     }
     .container .main .news .noticebox .tab ul li.active .detail.bidding {
         top: 50px;
-        left: -198px;
+        left: -192px;
     }
     .container .main .news .noticebox .tab ul li.active .detail.report {
         top: 50px;
+        left: -256px;
     }
     .container .main .news .noticebox .tab ul li.active .detail {
         display: block;
@@ -1135,19 +1132,28 @@
     height: 300px;
     font-family: SBAggro;
     text-align: center;
+}
+.container .main .service .top .noticebox .tab_contents ul li[data-name="sunshine"] .left {
+    color: #3d3d3d;
+    font-family: SBAggro;
     background-image: url(../images/main/service_sunshine_illust_ico.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.container .main .service .top .noticebox .tab_contents ul li.sunshine .left {
-    color: #3d3d3d;
-    font-family: SBAggro;
+.container .main .service .top .noticebox .tab_contents ul li[data-name="army"] .left {
+    background-color: #367570;
+    color: #fff;
 }
 .container .main .service .top .noticebox .tab_contents ul li .left .left_ico {
     display: block;
     margin: 20px 0 0 0;
     text-align: center;
+}
+.container .main .service .top .noticebox .tab_contents ul li .left .left_ico i {
+    margin: 10px 0 0 0;
+    font-size: 100px;
+    color: #fff;
 }
 .container .main .service .top .noticebox .tab_contents ul li .right {
     float: right;
@@ -1311,10 +1317,12 @@
         display: none;
     }
 }
-@media screen and (max-width:1000px) {
-    .container .main .service {
-        height: 500px;
+@media screen and (max-width:1440px) {
+    .container .main .service .bottom .userbox .tab .detail > ul {
+        padding-left: 40px;
     }
+}
+@media screen and (max-width:1000px) {
     .container .main .service .top .noticebox .tab_menu {
         display: block;
     }
@@ -1340,6 +1348,12 @@
     }
     .container .main .service .top .noticebox .tab_contents ul li.active .detail {
         top: 30px;
+    }
+
+}
+@media screen and (max-width:900px) {
+    .container .main .service {
+        height: 500px;
     }
     .container .main .service .bottom {
         display: none;
@@ -1583,9 +1597,8 @@
     font-size: 12px;
     line-height: 35px;
 }
-.container .main .introduce .photo .left .line .more a img {
-    width: 13px;
-    height: 13px;
+.container .main .introduce .photo .left .line .more a i {
+    font-size: 15px;
 }
 .container .main .introduce .photo .right {
     float: left;
@@ -1708,6 +1721,11 @@
         display: none;
     }
 }
+@media screen and (max-width:500px) {
+    .container .main .introduce .txt h2 {
+        font-size: 40px;
+    }
+}
 /* introduce 반응형 종료 */
 
 
@@ -1715,7 +1733,7 @@
 /* introduce 모바일 시작 */
 @media screen and (max-width:360px) {
     .container .main .introduce::before {
-        height: 1900px;
+        height: 540px;
     }
     .container .main .introduce .txt {
         padding: 50px 0 0 0;
@@ -1958,6 +1976,11 @@
 @media screen and (max-width:600px) {
     .container .main .travel .txt span {
         display: none;
+    }
+}
+@media screen and (max-width:500px) {
+    .container .main .travel .txt h2 {
+        font-size: 40px;
     }
 }
 /* travel 반응형 종료 */
