@@ -1,0 +1,754 @@
+@import url(default.css);
+@import url(common.css);
+
+
+
+
+.section .fp-overflow {
+    padding: 100px 0;
+    height: 100%;
+}
+.section .wrapper {
+    position: relative;
+    height: 100%;
+}
+.fp-watermark {
+    display: none;
+}
+
+
+
+/* hello 시작 */
+.hello .inner h1 {
+    font-size: 18px;
+    font-weight: 400;
+}
+.hello .inner strong {
+    display: block;
+    margin: 92px 0 0 870px;
+    font-size: 72px;
+    font-weight: 700;
+}
+.hello .inner strong .hi {
+    font-weight: 400;
+}
+.hello .inner .port {
+    position: absolute;
+    left: 20px;
+    top: 280px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+.hello .inner p {
+    position: absolute;
+    left: 890px;
+    bottom: 0;
+}
+/* hello 종료 */
+
+
+
+/* about 시작 */
+.about .left {
+    float: left;
+    width: 780px;
+}
+.about .right {
+    float: right;
+    padding: 0 0 0 90px;
+    width: calc(100% - 780px);
+}
+.about .left h1 {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+}
+.about .left .port {
+    position: absolute;
+    left: 20px;
+    top: 280px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+.about .left img {
+   float: right;
+   object-fit: cover;
+   width: 580px;
+   height: 741px;
+}
+.about .right .resume {
+    font-size: 18px;
+}
+.about .right ul {
+    margin: 150px 0 0 0;
+}
+.about .right ul li {
+    float: left;
+    width: 33%;
+}
+.about .right ul li.project {
+    margin: 58px 0 0 0;
+    width: auto;
+}
+.about .right ul li strong {
+    font-size: 18px;
+    font-weight: 600;
+}
+.about .right ul li p {
+    margin-top: 23px;
+    line-height: 2;
+}
+/* about 종료 */
+
+
+
+/* project1 시작 */
+.project1 {
+    position: relative;
+}
+.project1 .wrapper {
+    position: relative;
+}
+.project1 .txt h2 {
+    margin: 0 0 30px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+.project1 .txt strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+.project1 .txt span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ccc;
+}
+.project1 img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.project1 .button_area {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    height: 40px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.project1 .button_area button {
+    margin-left: 20px;
+    font-weight: 600;
+    line-height: 40px;
+}
+.project1 .button_area i {
+    margin: 10px 20px 0 0;
+    font-size: 18px;
+}
+/* project1 종료 */
+
+
+
+/* project1_about 시작 */
+.project1_about .left {
+    float: left;
+    width: 270px;
+}
+.project1_about .right {
+    float: right;
+    width: 1430px;
+}
+.project1_about .left h1 {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+}
+.project1_about .left .port {
+    position: absolute;
+    left: 20px;
+    top: 280px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+.project1_about .right .top .button_area {
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    height: 40px;
+    border: 1px solid #1d1d1d;
+}
+.project1_about .right .top .button_area button {
+    margin-left: 20px;
+    font-weight: 600;
+    line-height: 40px;
+}
+.project1_about .right .top .button_area i {
+    margin: 10px 20px 0 0;
+    font-size: 18px;
+}
+.project1_about .right .top .design_concept {
+    float: right;
+    width: 850px;
+}
+.project1_about .right .top .design_concept strong {
+    display: block;
+    margin: 0 0 24px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.project1_about .right .top .design_concept span {
+    display: block;
+    width: 670px;
+    word-break: normal;
+}
+.project1_about .right .bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 107px;
+}
+.project1_about .right .bottom ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 1208px;
+    height: 250px;
+}
+.project1_about .right .bottom ul li {
+    width: 170px;  
+}
+.project1_about .right .bottom ul li.tit {
+    font-size: 28px;
+    font-weight: 600;
+}
+.project1_about .right .bottom ul li:nth-child(2),
+.project1_about .right .bottom ul li:nth-child(3),
+.project1_about .right .bottom ul li:nth-child(4) {
+    margin-top: 100px;
+}
+.project1_about .right .bottom .keyword li {
+    position: relative;
+}
+.project1_about .right .bottom .keyword li.circle::after {
+    position: absolute;
+    left: -60px;
+    top: -120px;
+    width: 280px;
+    height: 280px;
+    border: 1px solid #1d1d1d;
+    border-radius: 150px;
+    content: "";
+}
+.project1_about .right .bottom .keyword li strong {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+}
+.project1_about .right .bottom .contents li {
+    position: relative;
+}
+.project1_about .right .bottom .contents li.circle::after {
+    position: absolute;
+    left: -60px;
+    top: -120px;
+    width: 280px;
+    height: 280px;
+    border: 1px solid #1d1d1d;
+    border-radius: 150px;
+    content: "";
+}
+/* project1_about 종료 */
+
+
+
+/* project2 시작 */
+.project2 {
+    position: relative;
+}
+.project2 .wrapper {
+    position: relative;
+}
+.project2 .txt {
+    float: right;
+    width: 270px;
+}
+.project2 .txt h2 {
+    margin: 0 0 30px 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+.project2 .txt strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+.project2 .txt span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #999;
+}
+.project2 img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.project2 .button_area {
+    position: absolute;
+    right: 20px;
+    top: 298px;
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    height: 40px;
+    border: 1px solid #1d1d1d;
+}
+.project2 .button_area button {
+    margin-left: 20px;
+    font-weight: 600;
+    line-height: 40px;
+}
+.project2 .button_area i {
+    margin: 10px 20px 0 0;
+    font-size: 18px;
+}
+/* project2 종료 */
+
+
+
+/* project2_about 시작 */
+.project2_about .left {
+    float: left;
+    width: 270px;
+}
+.project2_about .right {
+    float: right;
+    width: 1430px;
+}
+.project2_about .left h1 {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+}
+.project2_about .left .port {
+    position: absolute;
+    left: 20px;
+    top: 280px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+.project2_about .right .top .button_area {
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    height: 40px;
+    border: 1px solid #1d1d1d;
+}
+.project2_about .right .top .button_area button {
+    margin-left: 20px;
+    font-weight: 600;
+    line-height: 40px;
+}
+.project2_about .right .top .button_area i {
+    margin: 10px 20px 0 0;
+    font-size: 18px;
+}
+.project2_about .right .top .design_concept {
+    float: right;
+    width: 850px;
+}
+.project2_about .right .top .design_concept strong {
+    display: block;
+    margin: 0 0 24px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.project2_about .right .top .design_concept span {
+    display: block;
+    width: 670px;
+    word-break: normal;
+}
+.project2_about .right .bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 107px;
+}
+.project2_about .right .bottom ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 1208px;
+    height: 250px;
+}
+.project2_about .right .bottom ul li {
+    width: 170px;  
+}
+.project2_about .right .bottom ul li.tit {
+    font-size: 28px;
+    font-weight: 600;
+}
+.project2_about .right .bottom ul li:nth-child(2),
+.project2_about .right .bottom ul li:nth-child(3),
+.project2_about .right .bottom ul li:nth-child(4) {
+    margin-top: 100px;
+}
+.project2_about .right .bottom .keyword li {
+    position: relative;
+}
+.project2_about .right .bottom .keyword li.circle::after {
+    position: absolute;
+    left: -60px;
+    top: -120px;
+    width: 280px;
+    height: 280px;
+    border: 1px solid #1d1d1d;
+    border-radius: 150px;
+    content: "";
+}
+.project2_about .right .bottom .keyword li strong {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+}
+.project2_about .right .bottom .contents li {
+    position: relative;
+}
+.project2_about .right .bottom .contents li.circle::after {
+    position: absolute;
+    left: -60px;
+    top: -120px;
+    width: 280px;
+    height: 280px;
+    border: 1px solid #1d1d1d;
+    border-radius: 150px;
+    content: "";
+}
+/* project2_about 종료 */
+
+
+
+/* thanks 시작 */
+.thanks .inner h1 {
+    font-size: 18px;
+    font-weight: 400;
+}
+.thanks .inner strong {
+    display: block;
+    margin: 92px 0 0 870px;
+    font-size: 72px;
+    font-weight: 700;
+}
+.thanks .inner .port {
+    position: absolute;
+    left: 20px;
+    top: 280px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+.thanks .inner p {
+    position: absolute;
+    left: 890px;
+    bottom: 0;
+}
+/* thanks 종료 */
+
+
+
+
+
+/* 애니메이션 시작 */
+
+/* hello 애니메이션 */
+.hello .inner strong .block {
+    display: block;
+    overflow: hidden;
+}
+.hello .inner strong .block span {
+    display: block;
+    transition: 1s;
+    transform: translate(0, 100px);
+}
+.hello .inner strong .block:nth-child(2) span {
+    transition-delay: 0.4s;
+}
+.hello.fp-completely .inner strong .block span {
+    transform: translate(0, 0);
+}
+/* hello 애니메이션 */
+
+
+/* about 애니메이션 */
+.about .right ul li.one {
+    transition: 1s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.about.fp-completely .right ul li.one {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.about .right ul li.two {
+    transition: 1s;
+    transition-delay: 0.3s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.about.fp-completely .right ul li.two {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.about .right ul li.three {
+    transition: 1s;
+    transition-delay: 0.6s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.about.fp-completely .right ul li.three {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.about .right ul li.four {
+    transition: 1s;
+    transition-delay: 0.9s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.about.fp-completely .right ul li.four {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+/* about 애니메이션 */
+
+
+
+/* project1 애니메이션 */
+.project1 .txt {
+    transition: 1s;
+    opacity: 0;
+    transform: translate(-100px, 0);
+}
+.project1.fp-completely .txt{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project1 .button_area {
+    transition: 1s;
+    transition-delay: 0.3s;
+    opacity: 0;
+    transform: translate(-100px, 0);
+}
+.project1.fp-completely .button_area {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+/* project1 애니메이션 */
+
+
+
+
+
+/* project1_about 애니메이션 */
+.project1_about .button_area {
+    transition: 1s;
+    opacity: 0;
+    transform: translate(0, -100px);
+}
+.project1_about.fp-completely .button_area {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project1_about .right .design_concept {
+    transition: 1s;
+    transition-delay: 0.3s;
+    opacity: 0;
+    transform: translate(100px, 0);
+}
+.project1_about.fp-completely .right .design_concept {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project1_about .bottom ul li.one {
+    transition: 0.8s;
+    transition-delay: 0.7s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project1_about.fp-completely .bottom ul li.one {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project1_about .bottom ul li.two {
+    transition: 0.8s;
+    transition-delay: 0.9s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project1_about.fp-completely .bottom ul li.two {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project1_about .bottom ul li.three {
+    transition: 0.8s;
+    transition-delay: 1.1s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project1_about.fp-completely .bottom ul li.three {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project1_about .bottom ul li.four {
+    transition: 0.8s;
+    transition-delay: 1.3s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project1_about.fp-completely .bottom ul li.four {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project1_about .bottom ul li.five {
+    transition: 0.8s;
+    transition-delay: 1.5s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project1_about.fp-completely .bottom ul li.five {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project1_about .bottom ul li.six {
+    transition: 0.8s;
+    transition-delay: 1.7s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project1_about.fp-completely .bottom ul li.six {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+/* project1_about 애니메이션 */
+
+
+
+/* project2 애니메이션 */
+.project2 .txt {
+    transition: 1s;
+    opacity: 0;
+    transform: translate(100px, 0);
+}
+.project2.fp-completely .txt{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project2 .button_area {
+    transition: 1s;
+    transition-delay: 0.3s;
+    opacity: 0;
+    transform: translate(100px, 0);
+}
+.project2.fp-completely .button_area {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+/* project2 애니메이션 */
+
+
+
+/* project2_about 애니메이션 */
+.project2_about .button_area {
+    transition: 1s;
+    opacity: 0;
+    transform: translate(0, -100px);
+}
+.project2_about.fp-completely .button_area {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project2_about .right .design_concept {
+    transition: 1s;
+    transition-delay: 0.3s;
+    opacity: 0;
+    transform: translate(100px, 0);
+}
+.project2_about.fp-completely .right .design_concept {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project2_about .bottom ul li.one {
+    transition: 0.8s;
+    transition-delay: 0.7s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project2_about.fp-completely .bottom ul li.one {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project2_about .bottom ul li.two {
+    transition: 0.8s;
+    transition-delay: 0.9s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project2_about.fp-completely .bottom ul li.two {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project2_about .bottom ul li.three {
+    transition: 0.8s;
+    transition-delay: 1.1s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project2_about.fp-completely .bottom ul li.three {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project2_about .bottom ul li.four {
+    transition: 0.8s;
+    transition-delay: 1.3s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project2_about.fp-completely .bottom ul li.four {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project2_about .bottom ul li.five {
+    transition: 0.8s;
+    transition-delay: 1.5s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project2_about.fp-completely .bottom ul li.five {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.project2_about .bottom ul li.six {
+    transition: 0.8s;
+    transition-delay: 1.7s;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+.project2_about.fp-completely .bottom ul li.six {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+/* project2_about 애니메이션 */
