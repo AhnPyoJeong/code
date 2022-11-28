@@ -146,8 +146,8 @@
     color: #fff;
     border: 1px solid #fff;
 }
-.project1 .button_area button {
-    margin-left: 20px;
+.project1 .button_area span {
+    margin: 8px 0 0 20px;
     font-weight: 600;
     line-height: 40px;
 }

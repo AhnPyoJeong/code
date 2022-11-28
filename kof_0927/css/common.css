@@ -1,5 +1,5 @@
 /* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
 html, body {
     color: #3D3D3D;
     line-height: 1.5;
@@ -33,7 +33,7 @@ html, body {
         font-size: 13px;
     }
     #wrap {
-        min-width: 350px;
+        min-width: 320px;
     }
     .wrapper {
         width: auto;
@@ -49,7 +49,6 @@ html, body {
     position: relative;
 }
 
-
 .skip_nav {
     position: absolute;
     left: 0;
@@ -64,14 +63,13 @@ html, body {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    background-color: #0074BD;
-    color: #fff;
+    background-color: #0059A8;
+    color: #FFF;
     text-align: center;
 }
 .skip_nav a:focus {
     top: 0;
 }
-
 
 .header {
     position: absolute;
@@ -79,24 +77,25 @@ html, body {
     top: 0;
     z-index: 300;
     /*
-        header와 서브메뉴(lnb)와 footer에서 풀다운 메뉴가 있을 수 있음
-        중복될 때 header가 맨 위에 올라가려고 제일 높은 숫자를 주었음
+        header와 서브메뉴(lnb)와 footer에서 풀다운 메뉴가
+        중복될때 header가 맨 위에 올라가려고 제일 높은 숫자
         header - 300
         lnb - 200
         footer - 100
     */
     width: 100%;
     height: 100px;
-    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: #FFF;
 }
 .header .logo {
     float: left;
-    margin: 26px 0 0 60px;
+    margin: 33px 0 0 30px;
 }
 .header .logo a {
     display: block;
-    width: 213px;
-    height: 47px;
+    width: 171px;
+    height: 38px;
     background-image: url(../images/common/logo_w.svg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -104,70 +103,74 @@ html, body {
     font-size: 0;
     line-height: 0;
 }
-@media screen and (min-width:641px) {
-    /* 브라우저 사이즈 641px 이상에서만 적용하는 스타일 */
+@media screen and (min-width:641px){
+    /* 브라우저사이즈 641이상에서만 적용하는 스타일 */
     .header .gnb {
         float: right;
-        margin: 0 60px 0 0;
+        margin: 0 30px 0 0;
     }
     .header .gnb .gnb_open {
-        display: none; /* 모바일에서만 보임 */
+        display: none; /* 모바일에서만 보인 */
     }
     .header .gnb .gnb_close {
-        display: none; /* 모바일에서만 보임 */
+        display: none; /* 모바일에서만 보인 */
     }
-    .header .gnb > ul > li {
+    .header .gnb>ul>li {
         float: left;
-        width: 200px;
+        width: 220px;
     }
-    .header .gnb > ul > li > a { /* 1차 메뉴 */
+    .header .gnb>ul>li>a { /* 1차메뉴 */
         display: block;
         font-size: 22px;
         line-height: 100px;
         text-align: center;
     }
-    .header .gnb > ul > li {
-        position: relative; /* 2차 메뉴 정렬의 중심 */
+    .header .gnb>ul>li {
+        position: relative;/* 2차메뉴 정렬의 중심 */
     }
-    .header .gnb > ul > li > ul { /* 2차 메뉴 */
+    .header .gnb>ul>li>ul { /* 2차메뉴 */
         display: none;
         position: absolute;
         left: 0;
-        top: 100px;
+        top: 100px;/* 1차메뉴 높이 제외하고 정확하게 그 아래 배치 */
         width: 100%;
-        height: 550px;
-        padding: 37px 0 0 0;
-        border-left: 1px solid #ededed;
+        height: 473px;
+        padding: 35px 0 0 0;
+        border-left: 1px solid #EDEDED;
     }
-    .header .gnb > ul > li > ul > li > a {
+    .header .gnb>ul>li>ul>li>a {
         display: block;
-        padding: 0 0 0 34px;
-        line-height: 45px;
+        padding: 0 0 0 30px;
+        font-size: 17px;
+        line-height: 40px;
     }
-    /* 마우스 오버 스타일 */
-    .header .gnb > ul > li:hover > a {
-        color: #004485;
+    
+    /* 오버스타일 */
+    .header .gnb>ul>li:hover>a {
+        color: #0059A8;
         font-weight: 700;
     }
-    .header .gnb > ul > li:hover > ul {
-        background-color: #004485;
-        color: #fff;
+    .header .gnb>ul>li:hover>ul {
+        background-color: #0059A8;
+        color: #FFF;
     }
-    .header .gnb > ul > li > ul > li > a:hover {
+    .header .gnb>ul>li>ul>li>a:hover {
+        color: #B1D9F9;
         font-weight: 700;
     }
-} /* gnb의 pc 스타일 */
+}/* gnb의 PC 스타일 */
 
-/* header가 고정됐을 때 & 메뉴가 열렸을 때 */
+/* header가 고정됐을때 & 메뉴가 열렸을때 */
 .header.fixed {
-    position: fixed; /* 무조건 body와만 정렬 - 넓이 100% - 1400px 이하에서는 window의 넓이만큼만 인식해서 메뉴가 깨짐 */
-    min-width: 1400px; /* 최소 넓이 */
-    border-bottom: 1px solid #ccc;
+    position: fixed; /* 무조건 body와만 정렬 - 넓이 100% 
+    - 1400px 이하에서 window의 넓이 만큼만 넓이를 인식해서 메뉴 깨짐 */
+    min-width: 1400px; /* 최소넓이 */
+    background-color: #FFF;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 .header.fixed,
 .header.menu_open {
-    background-color: #fff;
-    color: #3d3d3d;
+    color: #3D3D3D;
 }
 .header.fixed .logo a,
 .header.menu_open .logo a {
@@ -177,18 +180,15 @@ html, body {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1; /*
-                    position 속성이 있는 요소와 없는 요소가 나란히 존재하면
-                    무조건 position 속성이 있는 요소가 위로 올라감
-                    이 때, position 속성이 있는 요소를 일반 요소 아래로 내리는 방법이
-                    z-index: -1;
-                */
+    z-index: -1;
+    /* position 속성이 있는 요소와 없는 요소가 나란히 존재하면 
+     무조건 position 있는 요소가 위로 올라감. 
+     이때 position있는 요소를 일반 요소 아래로 내리는 방법 z-index: -1 */
     width: 100%;
-    height: 650px;
-    background-color: #fff;
+    height: 573px;
+    background-color: #FFF;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     content: "";
-
 }
 .header.menu_open::after {
     position: absolute;
@@ -196,33 +196,34 @@ html, body {
     top: 100px;
     width: 100%;
     height: 1px;
-    background-color: #ededed;
+    background-color: #EDEDED;
     content: "";
 }
-.header.menu_open .gnb > ul > li > ul { /* 2차 메뉴 */
+.header.menu_open .gnb>ul>li>ul { /* 2차메뉴 */
     display: block;
 }
-@media screen and (max-width:640px) {
+
+@media screen and (max-width:640px){
     .header {
         height: 60px;
     }
     .header .logo {
-        margin: 19px 0 0 20px;
+        margin: 17px 0 0 20px;
     }
     .header .logo a {
-        width: 96px;
-        height: 21px;
+        width: 122px;
+        height: 27px;
     }
     .header .gnb {
         float: right;
-        overflow-y: auto; /* 모바일 메뉴가 길어지면 스크롤 되도록하는 값 */
+        overflow-y: auto; /* 모바일 메뉴가 길어지면 메뉴가 스크롤 되도록 하는 값 */
     }
-    .header .gnb button { /* gnb_open, gnb_close, 둘 다 동일한 스타일 */
+    .header .gnb button { /* gnb_open, gnb_close 둘다에 동일한 스타일 */
         height: 60px;
         padding: 0 20px;
     }
     .header .gnb button span {
-        display: none; /* 글자 숨김 - 웹 표준 때문에 적어뒀던 것 */
+        display: none; /* 글자숨김 */
     }
     .header .gnb button i {
         font-size: 21px;
@@ -232,26 +233,24 @@ html, body {
         margin: 60px 20px;
     }
     .header .gnb > ul > li {
-        border-top: 1px solid #ededed;
+        border-top: 1px solid #EDEDED;
     }
     .header .gnb > ul > li:last-child {
-        border-bottom: 1px solid #ededed;
+        border-bottom: 1px solid #EDEDED;
     }
     .header .gnb > ul > li > a {
         display: block;
         position: relative;
         padding: 0 0 0 20px;
-        font-size: 20px;
-        line-height: 50px;
+        font-size: 22px;
+        line-height: 60px;
     }
     .header .gnb > ul > li > a::after {
         position: absolute;
         right: 0;
-        top: 20px;
-        color: #666;
-        font-size: 10px;
-        font-weight: 900;
-        font-family: "Font Awesome 6 Free";
+        top: 23px;
+        color: #CCCCCC;
+        font-size: 15px;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         display: inline-block;
@@ -259,57 +258,50 @@ html, body {
         font-variant: normal;
         line-height: 1;
         text-rendering: auto;
-        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        content: "\f107";
     }
     .header .gnb > ul > li > ul {
         display: none;
-        padding: 37px 0;
-        background-color: #004485;
-        color: #fff;
-        font-size: 15px;
+        padding: 20px 0;
+        background-color: #0059A8;
+        color: #FFF;
     }
     .header .gnb > ul > li > ul > li > a {
         display: block;
-        padding: 0 0 0 60px;
-        line-height: 45px;
+        padding: 0 0 0 30px;
+        font-size: 17px;
+        line-height: 40px;
     }
     .header .gnb .gnb_close {
         display: none;
         position: fixed;
         right: 0;
         top: 0;
-
+        color: #3D3D3D;
     }
-    /* 서브 메뉴가 열렸을 때 */
+    /* 서브메뉴가 열렸을때 */
     .header .gnb > ul > li.sub_open > a {
-        color: #004485;
+        color: #0059A8;
         font-weight: 700;
     }
     .header .gnb > ul > li.sub_open > a::after {
-        color: #004485;
-        content: "\f077";
-        font-weight: 900;
-        font-family: "Font Awesome 6 Free";
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        line-height: 1;
-        text-rendering: auto;
+        color: #0059A8;
+        content: "\f106";
     }
     .header .gnb > ul > li.sub_open > ul {
         display: block;
     }
-    /* 메뉴가 열렸을 때 */
+    /* 메뉴가 열렸을때 */
     .header.menu_mobile .gnb {
-        position: fixed; /* fixed는 body와만 정렬함 */
+        position: fixed; /* fixed는 body와만 정렬 */
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: #fff;
-        color: #3d3d3d;
+        background-color: #FFF;
+        color: #1D1D1D;
     }
     .header.menu_mobile .gnb .gnb_open {
         display: none;
@@ -320,107 +312,110 @@ html, body {
     .header.menu_mobile .gnb .gnb_close {
         display: block;
     }
-
+    
     /* header 고정 */
     .header.fixed {
-        min-width: 350px; /* 최소 넓이 */
-        border-bottom: 1px solid #ccc;
+        min-width: 320px; /* 최소넓이 */
     }
     .header.fixed,
     .header.menu_open {
-        color: #3d3d3d;
+        color: #1D1D1D;
     }
     .header.fixed .gnb .gnb_open i {
         color: #004485;
     }
-} /* header 모바일 스타일 종료 */
 
+}/* header 모바일 스타일 */
 
-/*
-    common.css는 모든 페이지에서 호출함. .top이라고 스타일을 주면 다른 콘텐츠에서 .top이라는 이름을 가진 태그들에게
-    스타일이 모두 적용됨. 절대 콘텐츠 페이지에서 사용하지 않을만한 이름으로 주어야 함.
-    aside라는 태그는 거의 사용하지 않는 태그라서 aside.top라고 주었음.
-*/
+/* common.css 모든 페이지에서 호출. .top이라고만 스타일주면 다른 콘텐츠에서 top이라고 
+   클래스명을 주면 해당 스타일이 적용됨. 
+   절대 콘텐츠 페이지에서 사용하지 않을 이름으로 줘야함. 
+   aside라는 태그가 거의 사용하지 않는 태그라 aside.top이라고 함 */
 aside.top {
     display: none;
     position: fixed;
-    right: 30px;
-    bottom: 50px;
+    right: 20px;
+    bottom: 150px;
     z-index: 250;
 }
 aside.top button {
-    width: 45px;
-    height: 45px;
-    background-color: #0074BD;
-    border-radius: 25px;
-    color: #fff;
+    width: 50px;
+    height: 60px;
+    background-color: #0059A8;
+    border-radius: 0 5px 0 5px;
+    color: #FFF;
 }
 aside.top button span {
     display: none;
 }
 aside.top button i {
-    font-size: 15px;
+    font-size: 20px;
 }
-@media screen and (max-width:640px) {
+
+@media screen and (max-width:640px){
     aside.top {
-        right: 20px;
+        position: absolute;
         bottom: 270px;
     }
     aside.top button {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 30px;
     }
     aside.top button i {
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 
 
 .footer {
-    background-color: #3D3D3D;
-    color: rgb(255,255,255,0.8);
+    background-color: #242D36;
+    color: rgba(255,255,255,0.8);
 }
 .footer .sns {
     position: absolute;
     right: 0;
-    top: 54px;
+    top: 49px;
 }
 .footer .sns ul li {
     float: left;
+    border-width: 1px 1px 1px 0; /* 왼쪽만 두께 0 */
+    border-style: solid;
+    border-color: rgba(255,255,255,0.3);
 }
-.footer .sns ul li img {
-    width: 25px;
-    height: 21px;
+.footer .sns ul li:first-child {
+    border-left-width: 1px;
 }
 .footer .sns ul li a {
     display: block;
     width: 40px;
     height: 40px;
-    /* img를 a 영역 위아래, 좌우 가운데에 배치하기 위해 */
+    /* img를 a영역에  위아래/좌우 가운데 배치하기 위해서 */
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .footer .flogo {
     float: left;
-    margin: 50px 194px 0 0;
+    margin: 55px 75px 0 0;
 }
 .footer .flogo img {
     width: 120px;
 }
 .footer .inner {
     float: left;
-    margin: 54px 0 0 0;
+    margin: 55px 0 0 0;
 }
 .footer .fnav li {
     position: relative;
     float: left;
-    margin: 0 39px 0 0;
+    margin: 0 38px 0 0;
 }
 .footer .fnav li::after {
     position: absolute;
-    right: -22px;
-    top: 6px;
+    right: -21px;
+    top: 4px;
     width: 1px;
-    height: 10px;
+    height: 12px;
     background-color: rgba(255,255,255,0.3);
     content: "";
 }
@@ -428,28 +423,29 @@ aside.top button i {
     display: none;
 }
 .footer .finfo {
-    margin: 40px 0 10px 0;
+    margin: 32px 0 9px 0;
 }
 .footer .finfo span {
     display: inline-block;
-    /* 전화번호나 팩스처럼 짧은 span 태그로 묶인 요소들이 display:inline-block를 주면
-    모바일에서 전화번호, 팩스가 2줄로 분리되어 나타나지않음 */
-    margin: 0 38px 0 0;
+    /* 전화번호나 팩스처럼 짧은 span태그로 묶인 요소들이 display:inline-block;을 주면
+       모바일에서 전화번호, 팩스가 2줄로 분리되어 나타나지 않음. */
+    margin: 0 33px 0 0;
 }
 .footer .copyright {
-    margin: 0 0 140px 0;
+    margin: 0 0 98px 0;
     color: rgba(255,255,255,0.6);
 }
-@media screen and (max-width:640px) {
+
+@media screen and (max-width:640px){
     .footer .sns {
         position: relative;
         right: auto;
         top: auto;
-        height: 90px;
+        height: 75px;
         /* ul을 가운데 정렬 */
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }
     .footer .sns::after {
         position: absolute;
@@ -459,55 +455,46 @@ aside.top button i {
         height: 1px;
         background-color: rgba(255,255,255,0.2);
         content: "";
-        
     }
     .footer .sns ul li {
-        float: left;
-        display: flex;
-        justify-content: center;
-        align-content: center;
+        border-width: 0; 
     }
-    .footer .sns ul li img {
-        width: auto;
-        height: auto;
+    .footer .sns ul li:first-child {
+        border-left-width: 0;
     }
     .footer .sns ul li a {
         width: 50px;
-        height: auto;
-        /* img를 a 영역 위아래, 좌우 가운데에 배치하기 위해 */
-        display: flex;
-        justify-content: center;
-        align-content: center;
+        height: 50px;
     }
     .footer .sns ul li a img {
-        transform: scale(1.2, 1.2);
+        transform: scale(1.14, 1.14);
+        /* 이미지의 원래 사이즈 대비 1.14배 늘리기  */
     }
     .footer .flogo {
         float: none;
-        margin: 30px 0 30px 0;
+        margin: 35px 0 35px 0;
     }
     .footer .flogo img {
-        width: 100px;
+        width: 102px;
     }
     .footer .inner {
         float: none;
         margin: 0;
     }
     .footer .fnav li {
-        margin: 0 33px 5px 0;
+        margin: 0 32px 5px 0;
     }
     .footer .fnav li::after {
-        right: -20px;
-        top: 5px;
-        height: 10px;
+        right: -18px;
+        height: 11px;
     }
     .footer .finfo {
-        margin: 30px 0 20px 0;
+        margin: 28px 0 18px 0;
     }
     .footer .finfo span {
-        margin: 0 38px 5px 0;
+        margin: 0 26px 5px 0;
     }
     .footer .copyright {
-        margin: 0 0 54px 0;
+        margin: 0 0 46px 0;
     }
 }
